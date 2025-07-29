@@ -1,0 +1,21 @@
+# --- NORMALIZACIÓN DE LÍNEAS ---
+* text=auto
+
+# --- NORMALIZACIÓN DE LÍNEAS EN ARCHIVOS ---
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+
+# --- ARCHIVOS BINARIOS --- 
+*.ico binary
+*.gif binary
+
+# --- LINGUIST (GitHub lenguaje stats) ---
+*.html linguist-language=HTML
+*.css  linguist-language=CSS
+*.js   linguist-language=JavaScript
+
+# --- IGNORAR DIFF EN ARCHIVOS MINIFICADOS ---
+*.min.js  -diff
+*.min.css -diff

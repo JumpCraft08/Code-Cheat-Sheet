@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css">
+<title>Code Cheat Sheet</title>
+</head>
+<body>
+
+<!-- =========================
+    WALLPAPER VISIBLE
+========================= -->
+<main class="wallpaper">
+
+  <!-- PRIMERA COLUMNA -->
+  <div class="column">
+    <a href="index.html" class="title">Java       Core</a>
+
+    <!-- CARD 1: FUNDAMENTOS -->
+    <div class="card" style="--card-color: #2b6cb0;">
+      <div class="head">
+        <a href="#modal-card-1">Fundamentos</a>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td><a href="#modal-card-1-1" class="row-link">Tipos de Datos</a></td>
+          </tr>
+          <tr>
+            <td><a href="#modal-card-1-2" class="row-link">Variables</a></td>
+          </tr>
+          <tr>
+            <td><a href="#modal-card-1-3" class="row-link">Operadores</a></td>
+          </tr>
+          <tr>
+            <td><a href="#modal-card-1-4" class="row-link">Strings</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 2: ESTRUCTURAS DE CONTROL -->
+    <div class="card" style="--card-color: #dd9b00;">
+      <div class="head">
+        <a href="#modal-card-2">Control Structures</a>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td><a href="#modal-card-2-1" class="row-link">Estructuras de Condición</a></td>
+          </tr>
+          <tr>
+            <td><a href="#modal-card-2-2" class="row-link">Estructuras de Bucle</a></td>
+          </tr>
+          <tr>
+            <td><a href="#modal-card-2-3" class="row-link">Estructuras de Salto</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 3: ERRORES -->
+    <div class="card" style="--card-color: #0ea5e9;">
+      <div class="head">
+        <a href="#modal-card-3">Errores</a>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td><a href="#modal-card-3-1" class="row-link">Excepciones</a></td>
+          </tr>
+          <tr>
+            <td><a href="#modal-card-3-2" class="row-link">Anotaciones</a></td>
+          </tr>
+          <tr>
+            <td><a href="#modal-card-3-3" class="row-link">Bloque Try...Catch</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SEGUNDA COLUMNA -->
+  <div class="column">
+
+    <!-- CARD 4: JAVA OOP -->
+    <div class="card" style="--card-color: #2563eb;">
+      <div class="head">Java OOP</div>
+      <table>
+        <tbody>
+          <tr><td>Constructores</td></tr>
+          <tr><td>Metodos</td></tr>
+          <tr><td>Modificadores de acceso</td></tr>
+          <tr><td>Abtracción</td></tr>
+          <tr><td>Encapsulación</td></tr>
+          <tr><td>Herencia</td></tr>
+          <tr><td>Polimorfismo</td></tr>
+          <tr><td>Enums</td></tr>
+          <tr><td>Clases Genericas</td></tr>
+          <tr><td>Clases Anidadas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 5: OOP AVANZADO -->
+    <div class="card" style="--card-color: #ef4444;">
+      <div class="head">OOP Avanzado</div>
+      <table>
+        <tbody>
+          <tr><td>Lambda</td></tr>
+          <tr><td>Clases Record</td></tr>
+          <tr><td>Sealed Classes</td></tr>
+          <tr><td>Interfaces funcionales</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+     
+  </div>
+
+  <!-- TERCERA COLUMNA -->
+  <div class="column">
+
+    <!-- CARD 6: CONCURRENCIA -->
+    <div class="card" style="--card-color: #0ea5e9;">
+      <div class="head">Concurrencia</div>
+      <table>
+        <tbody>
+          <tr><td>Threads / Runnable</td></tr>
+          <tr><td>Executor Framework</td></tr>
+          <tr><td>Sincronizacion</td></tr>
+          <tr><td>Clases Concurrentes</td></tr>
+          <tr><td>Parallel Streams</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 7: ESTRUCTURAS DE DATOS -->
+    <div class="card" style="--card-color: #9333ea;">
+      <div class="head">Estructuras de Datos</div>
+      <table>
+        <tbody>
+          <tr><td>Array</td></tr>
+          <tr><td>Listas</td></tr>
+          <tr><td>Sets</td></tr>
+          <tr><td>Map</td></tr>
+          <tr><td>Queue / Deque</td></tr>
+          <tr><td>Stack</td></tr>
+          <tr><td>Comparator / Comparable</td></tr>
+          <tr><td>Iterador</td></tr>
+          <tr><td>Streams</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CUARTA COLUMNA -->
+  <div class="column">
+
+    <!-- CARD 8: NETWORKING -->
+    <div class="card" style="--card-color: #1e40af;">
+      <div class="head">Networking</div>
+      <table>
+        <tbody>
+          <tr><td>Sockets</td></tr>
+          <tr><td>HTTP Requests</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 9: SEGURIDAD -->
+    <div class="card" style="--card-color: #ef4444;">
+      <div class="head">Seguridad</div>
+      <table>
+        <tbody>
+          <tr><td>Criptografía</td></tr>
+          <tr><td>Hashing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 10: JAVA UTIL -->
+    <div class="card" style="--card-color: #eab308;">
+      <div class="head">Java Util</div>
+      <table>
+        <tbody>
+          <tr><td>Math</td></tr>
+          <tr><td>Date</td></tr>
+          <tr><td>RegEx</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 11: COMPILACION -->
+    <div class="card" style="--card-color: #0ea5e9;">
+      <div class="head">Compilación</div>
+      <table>
+        <tbody>
+          <tr><td>JVM / JIT</td></tr>
+          <tr><td>Javac / Javadoc / jar</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    
+  </div>
+
+  <!-- QUINTA COLUMNA -->
+  <div class="column">
+
+    <!-- CARD 12: INPUT/OUTPUT -->
+    <div class="card" style="--card-color: #eab308;">
+      <div class="head">Entrada / Salida (I / O)</div>
+      <table>
+        <tbody>
+          <tr><td>Files</td></tr>
+          <tr><td>NIO</td></tr>
+          <tr><td>Scanner</td></tr>
+          <tr><td>Serializer / Serializable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 13: JAVA MEMORY -->
+    <div class="card" style="--card-color: #9333ea;">
+      <div class="head">Java Memory</div>
+      <table>
+        <tbody>
+          <tr><td>Stack vs Heap</td></tr>
+          <tr><td>Garbage Collector</td></tr>
+          <tr><td>String Pool</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CARD 14: JAVA MISC -->
+    <div class="card" style="--card-color: #ef4444;">
+      <div class="head">Java Misc</div>
+      <table>
+        <tbody>
+          <tr><td>Paquetes / API</td></tr>
+          <tr><td>Historico de Versiones</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- =========================
+      BOTONES FINALES
+    ========================= -->
+    <div class="final-buttons">
+        <a aria-label="Python">
+            <svg viewBox="0.21 -0.077 110 110" xmlns="http://www.w3.org/2000/svg">
+                <lineargradient id="svgid-1" gradientUnits="userSpaceOnUse" 
+                                x1="63.8159" y1="56.6829" x2="118.4934" y2="1.8225" 
+                                gradientTransform="matrix(1 0 0 -1 -53.2974 66.4321)">
+                  <stop offset="0" style="stop-color:#387EB8"/>
+                  <stop offset="1" style="stop-color:#366994"/>
+                </lineargradient>
+              
+                <path fill="url(#svgid-1)" 
+                      d="M55.023-0.077c-25.971,0-26.25,10.081-26.25,12.156c0,3.148,0,12.594,0,12.594h26.75v3.781
+                         c0,0-27.852,0-37.375,0c-7.949,0-17.938,4.833-17.938,26.25c0,19.673,7.792,27.281,15.656,27.281c2.335,0,9.344,0,9.344,0
+                         s0-9.765,0-13.125c0-5.491,2.721-15.656,15.406-15.656c15.91,0,19.971,0,26.531,0c3.902,0,14.906-1.696,14.906-14.406
+                         c0-13.452,0-17.89,0-24.219C82.054,11.426,81.515-0.077,55.023-0.077z 
+                         M40.273,8.392c2.662,0,4.813,2.15,4.813,4.813c0,2.661-2.151,4.813-4.813,4.813s-4.813-2.151-4.813-4.813
+                         C35.46,10.542,37.611,8.392,40.273,8.392z"/>
+                
+                <lineargradient id="svgid-2" gradientUnits="userSpaceOnUse" 
+                                x1="97.0444" y1="21.6321" x2="155.6665" y2="-34.5308" 
+                                gradientTransform="matrix(1 0 0 -1 -53.2974 66.4321)">
+                  <stop offset="0" style="stop-color:#FFE052"/>
+                  <stop offset="1" style="stop-color:#FFC331"/>
+                </lineargradient>
+              
+                <path fill="url(#svgid-2)" 
+                      d="M55.397,109.923c25.959,0,26.282-10.271,26.282-12.156c0-3.148,0-12.594,0-12.594H54.897v-3.781
+                         c0,0,28.032,0,37.375,0c8.009,0,17.938-4.954,17.938-26.25c0-23.322-10.538-27.281-15.656-27.281c-2.336,0-9.344,0-9.344,0
+                         s0,10.216,0,13.125c0,5.491-2.631,15.656-15.406,15.656c-15.91,0-19.476,0-26.532,0c-3.892,0-14.906,1.896-14.906,14.406
+                         c0,14.475,0,18.265,0,24.219C28.366,100.497,31.562,109.923,55.397,109.923z 
+                         M70.148,101.454c-2.662,0-4.813-2.151-4.813-4.813s2.15-4.813,4.813-4.813c2.661,0,4.813,2.151,4.813,4.813
+                         S72.809,101.454,70.148,101.454z"/>
+              </svg>              
+            </a>
+        
+        <a aria-label="C++">
+            <svg viewBox="0 0 306 344.35" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#00599C" d="M302.107,258.262c2.401-4.159,3.893-8.845,3.893-13.053V99.14c0-4.208-1.49-8.893-3.892-13.052L153,172.175 L302.107,258.262z"/>
+                <path fill="#004482" d="M166.25,341.193l126.5-73.034c3.644-2.104,6.956-5.737,9.357-9.897L153,172.175L3.893,258.263 c2.401,4.159,5.714,7.793,9.357,9.896l126.5,73.034C147.037,345.401,158.963,345.401,166.25,341.193z"/>
+                <path fill="#659AD2" d="M302.108,86.087c-2.402-4.16-5.715-7.793-9.358-9.897L166.25,3.156c-7.287-4.208-19.213-4.208-26.5,0 L13.25,76.19C5.962,80.397,0,90.725,0,99.14v146.069c0,4.208,1.491,8.894,3.893,13.053L153,172.175L302.108,86.087z"/>
+                
+                <path fill="#FFFFFF" d="M153,274.175c-56.243,0-102-45.757-102-102s45.757-102,102-102c36.292,0,70.139,19.53,88.331,50.968
+                      l-44.143,25.544c-9.105-15.736-26.038-25.512-44.188-25.512c-28.122,0-51,22.878-51,51c0,28.121,22.878,51,51,51
+                      c18.152,0,35.085-9.776,44.191-25.515l44.143,25.543C223.142,254.644,189.294,274.175,153,274.175z"/>
+                
+                <polygon fill="#FFFFFF" points="255,166.508 243.666,166.508 243.666,155.175 232.334,155.175 232.334,166.508 221,166.508 
+                      221,177.841 232.334,177.841 232.334,189.175 243.666,189.175 243.666,177.841 255,177.841"/>
+                
+                <polygon fill="#FFFFFF" points="297.5,166.508 286.166,166.508 286.166,155.175 274.834,155.175 274.834,166.508 263.5,166.508 
+                      263.5,177.841 274.834,177.841 274.834,189.175 286.166,189.175 286.166,177.841 297.5,177.841"/>
+              </svg>              
+            </a>
+        
+        <a aria-label="JavaScript">
+            <svg viewBox="0 0 630 630" xmlns="http://www.w3.org/2000/svg">
+                <rect width="630" height="630" fill="#f7df1e"/>
+                <path fill="#000000" d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 
+                      0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 
+                      37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 
+                      25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 
+                      82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 
+                      31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z"/>
+            </svg>
+              
+              
+        </a>
+        
+        <a href= "index.html" aria-label="Java">
+            <svg viewBox="0 0 256 346" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path d="M82.5539491,267.472524 C82.5539491,267.472524 69.35552,275.147869 91.9468218,277.745105 C119.315549,280.867375 133.303389,280.419607 163.463913,274.711273 C163.463913,274.711273 171.393396,279.683258 182.467491,283.989644 C114.855564,312.966982 29.4483782,282.311215 82.5539491,267.472524" fill="#5382A1"></path>
+                    <path d="M74.2921309,229.658996 C74.2921309,229.658996 59.4888145,240.616727 82.0968727,242.955171 C111.333004,245.971316 134.421411,246.218007 174.373236,238.524975 C174.373236,238.524975 179.899113,244.127185 188.588218,247.190807 C106.841367,271.094691 15.79008,249.075898 74.2921309,229.658996" fill="#5382A1"></path>
+                    <path d="M143.941818,165.514705 C160.601367,184.695156 139.564684,201.955142 139.564684,201.955142 C139.564684,201.955142 181.866124,180.117876 162.438982,152.772422 C144.294633,127.271098 130.380335,114.600495 205.706705,70.9138618 C205.706705,70.9138618 87.4691491,100.44416 143.941818,165.514705" fill="#E76F00"></path>
+                    <path d="M233.364015,295.441687 C233.364015,295.441687 243.131113,303.489396 222.60736,309.715316 C183.580858,321.537862 60.1748945,325.107898 25.8932364,310.186356 C13.5698618,304.825251 36.67968,297.385425 43.9491491,295.824291 C51.5304727,294.180305 55.8629236,294.486575 55.8629236,294.486575 C42.15808,284.832116 -32.7195927,313.443607 17.8287709,321.637469 C155.681513,343.993251 269.121164,311.570618 233.364015,295.441687" fill="#5382A1"></path>
+                    <path d="M88.9008873,190.479825 C88.9008873,190.479825 26.1287564,205.389265 66.6717091,210.803433 C83.7901964,213.095331 117.915462,212.576815 149.702284,209.913484 C175.680233,207.722124 201.765236,203.062924 201.765236,203.062924 C201.765236,203.062924 192.605091,206.985775 185.977949,211.510924 C122.233949,228.275665 -0.907636364,220.476509 34.5432436,203.328233 C64.5241018,188.83584 88.9008873,190.479825 88.9008873,190.479825" fill="#5382A1"></path>
+                    <path d="M201.506444,253.422313 C266.305164,219.7504 236.344785,187.392 215.432844,191.751447 C210.307258,192.818269 208.021876,193.742662 208.021876,193.742662 C208.021876,193.742662 209.924655,190.761891 213.558924,189.471651 C254.929455,174.927127 286.746065,232.368873 200.204102,255.11936 C200.204102,255.120291 201.206691,254.223825 201.506444,253.422313" fill="#5382A1"></path>
+                    <path d="M162.438982,0.371432727 C162.438982,0.371432727 198.325527,36.27008 128.402153,91.4720582 C72.3307055,135.753542 115.616116,161.001658 128.37888,189.848669 C95.6490473,160.318371 71.6297309,134.322735 87.7437673,110.128407 C111.395375,74.6132945 176.918342,57.3942691 162.438982,0.371432727" fill="#E76F00"></path>
+                    <path d="M95.2683055,344.665367 C157.466996,348.646865 252.980131,342.45632 255.24224,313.025629 C255.24224,313.025629 250.893964,324.182575 203.838371,333.042967 C150.750487,343.033484 85.2740655,341.867055 46.4393309,335.464262 C46.4402618,335.463331 54.3892945,342.043927 95.2683055,344.665367" fill="#5382A1"></path>
+                </g>
+            </svg>            
+        </a>
+    </div>
+  </div>
+</main>
+
+
+<!-- =========================
+    MODALES TOTALES
+========================= -->
+<section class="modals">
+
+  <!-- MODAL 1: SINTAXIS BASICA -->
+  <section class="modal" id="modal-card-1">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Sintaxis Básica</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: SINTAXIS BASICA -->
+        <div class="slide active" data-title="Sintaxis Básica">
+          <p>Un programa en Java está compuesto por <strong>clases</strong> y <strong>métodos</strong>. 
+          El método <code class="mtd">main</code> es el punto de entrada de la aplicación. Sus
+          características principales son:</p>
+          <ul>
+            <li>Sensible a mayúsculas y minúsculas.</li>
+            <li>Cada sentencia termina con punto y coma (<code>;</code>).</li>
+            <li>Las llaves <code>{ }</code> definen bloques de código.</li>
+          </ul>
+
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">public class</span> <span class="cls">Main</span> {</li>
+              <li>  <span class="kw">public static void</span> <span class="mtd">main</span>(<span class="type">String</span>[] args) {</li>
+              <li>    <span class="type">System</span>.<span class="mtd">out</span>.<span class="mtd">println</span>(<span class="str">"¡Hola Mundo!"</span>);</li>
+              <li>  }</li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 2: ESTRUCTURA PROYECTO -->
+        <div class="slide" data-title="Estructura de un Proyecto Java">
+          <p>Un proyecto Java básico suele tener esta estructura:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Carpeta / Archivo</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>src/</code></td>
+                <td>Contiene el código fuente (archivos .java).</td>
+              </tr>
+              <tr>
+                <td><code>bin/</code></td>
+                <td>Contiene los archivos compilados (.class).</td>
+              </tr>
+              <tr>
+                <td><code>lib/</code></td>
+                <td>Bibliotecas externas (JARs).</td>
+              </tr>
+              <tr>
+                <td><code>Main.java</code></td>
+                <td>Punto de entrada del programa.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>Para compilar en terminal se usa <code class="mtd">javac Main.java</code></p>
+          <p>Para ejecutar en terminal se usa <code class="mtd">java Main</code></p>
+        </div>
+
+        <!-- SLIDER 3: COMENTARIOS -->
+        <div class="slide" data-title="Comentarios">
+          <p>Los comentarios permiten dejar notas en el código que no se ejecutan. En Java hay tres tipos:</p>
+          <ul>
+            <li><strong>Comentario de una línea:</strong> <code>// Esto es un comentario</code></li>
+            <li><strong>Comentario de varias líneas:</strong> <code>/* Esto es un comentario largo */</code></li>
+            <li><strong>JavaDoc:</strong> Se usa para documentar clases y métodos. <code>/** ... */</code></li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="cm">// Comentario de una línea</span></li>
+              <li><span class="cm">/* Comentario de varias</span></li>
+              <li><span class="cm">   líneas */</span></li>
+              <li><span class="cm">/**</span></li>
+              <li><span class="cm"> * Documentación de clase</span></li>
+              <li><span class="cm"> */</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="arrow left prev-slide">‹</a>
+      <a href="#" class="arrow right next-slide">›</a>
+
+      <div class="dots slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- MODAL 1.1: TIPOS DE DATOS -->
+  <section class="modal" id="modal-card-1-1">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Sintaxis Básica</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: TIPOS DE DATOS PRIMITIVOS -->
+        <div class="slide active" data-title="Tipos de Datos - Datos Primitivos">
+          <p>Son los más básicos y se almacenan directamente en memoria. No son objetos.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Tamaño</th>
+                <th>Valor mínimo</th>
+                <th>Valor máximo</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>byte</td>
+                <td>8 bits</td>
+                <td>-128</td>
+                <td>127</td>
+                <td><code>byte edad = 20;</code></td>
+              </tr>
+              <tr>
+                <td>short</td>
+                <td>16 bits</td>
+                <td>-32,768</td>
+                <td>32,767</td>
+                <td><code>short temperatura = 300;</code></td>
+              </tr>
+              <tr>
+                <td>int</td>
+                <td>32 bits</td>
+                <td>-2³¹</td>
+                <td>2³¹ - 1</td>
+                <td><code>int poblacion = 100000;</code></td>
+              </tr>
+              <tr>
+                <td>long</td>
+                <td>64 bits</td>
+                <td>-2⁶³</td>
+                <td>2⁶³ - 1</td>
+                <td><code>long distancia = 9999999999L;</code></td>
+              </tr>
+              <tr>
+                <td>float</td>
+                <td>32 bits</td>
+                <td>≈ ±3.4e−038</td>
+                <td>≈ ±3.4e+038</td>
+                <td><code>float precio = 10.99f;</code></td>
+              </tr>
+              <tr>
+                <td>double</td>
+                <td>64 bits</td>
+                <td>≈ ±1.7e−308</td>
+                <td>≈ ±1.7e+308</td>
+                <td><code>double pi = 3.1415926535;</code></td>
+              </tr>
+              <tr>
+                <td>char</td>
+                <td>16 bits</td>
+                <td>0</td>
+                <td>65,535</td>
+                <td><code>char letra = 'A';</code></td>
+              </tr>
+              <tr>
+                <td>boolean</td>
+                <td>1 bit (lógico)</td>
+                <td>false</td>
+                <td>true</td>
+                <td><code>boolean activo = true;</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SLIDER 2: TIPOS DE DATOS NO PRIMITIVOS -->
+        <div class="slide" data-title="Tipos de Datos - Datos No Primitivos">
+          <p>Los tipos de datos no primitivos se denominan tipos de referencia porque se refieren a objetos, no valores directos.
+            Ademas, tienen métodos y propiedades asociados. Son:
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>String</td>
+                <td>Cadena de texto, secuencia de caracteres.</td>
+                <td><code>String nombre = "Juan";</code></td>
+              </tr>
+              <tr>
+                <td>Arrays</td>
+                <td>Conjunto de valores del mismo tipo.</td>
+                <td><code>int[] numeros = {1, 2, 3};</code></td>
+              </tr>
+              <tr>
+                <td>Clases</td>
+                <td>Plantillas para crear objetos.</td>
+                <td><code>class Persona { ... }</code></td>
+              </tr>
+              <tr>
+                <td>Interfaces</td>
+                <td>Contratos que definen métodos sin implementar.</td>
+                <td><code>interface Vehiculo { ... }</code></td>
+              </tr>
+              <tr>
+                <td>Enums</td>
+                <td>Conjuntos de valores constantes predefinidos.</td>
+                <td><code>enum Dia { LUNES, MARTES }</code></td>
+              </tr>
+              <tr>
+                <td>Wrapper Classes</td>
+                <td>Clases que envuelven tipos primitivos (como Integer, Double).</td>
+                <td><code>Integer edad = 30;</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SLIDER 3: TYPE CASTING -->
+        <div class="slide" data-title="Type Casting">
+          <p>El <strong>type casting</strong> es el proceso de convertir una variable de un tipo de dato a otro.
+            En Java, existen dos tipos principales:
+          </p>  
+          <ul>
+            <li>
+              <strong>Type Casting Implícito (Widening):</strong> Conversión automática cuando no hay pérdida de datos.
+              <br><code>int → long → float → double</code>
+            </li>
+            <li>
+              <strong>Type Casting Explícito (Narrowing):</strong> Conversión manual usando paréntesis, ya que puede haber pérdida de datos.
+              <br><code>double → float → long → int</code>
+            </li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="cm">double myDouble = 9.78d;</span></li>
+              <li><span class="cm">int myInt = (int) myDouble;</span></li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#" class="arrow left prev-slide">‹</a>
+      <a href="#" class="arrow right next-slide">›</a>
+
+      <div class="dots slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- MODAL 1.2: VARIABLES -->
+  <section class="modal" id="modal-card-1-2">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Sintaxis Básica</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: VARIABLES -->
+        <div class="slide active" data-title="Variables">
+          <p>Las <strong>variables</strong> almacenan datos de un tipo específico.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>int</code></td>
+                <td>Números enteros.</td>
+                <td><code>int edad = 20;</code></td>
+              </tr>
+              <tr>
+                <td><code>double</code></td>
+                <td>Números decimales.</td>
+                <td><code>double precio = 19.99;</code></td>
+              </tr>
+              <tr>
+                <td><code>boolean</code></td>
+                <td>Valores verdadero/falso.</td>
+                <td><code>boolean activo = true;</code></td>
+              </tr>
+              <tr>
+                <td><code>String</code></td>
+                <td>Cadenas de texto.</td>
+                <td><code>String nombre = "Ana";</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="cm">// Declaración e inicialización</span></li>
+              <li><span class="type">int</span> x = <span class="num">10</span>;</li>
+              <li><span class="type">String</span> nombre = <span class="str">"Carlos"</span>;</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 2: CONSTANTES -->
+        <div class="slide" data-title="Constantes">
+          <p>Una <strong>constante</strong> es una variable cuyo valor no puede cambiar. En Java, se declaran con <code class="kw">final</code>.</p>
+          <ul>
+            <li>Las constantes se escriben en mayúsculas por convención.</li>
+            <li>Se recomienda usarlas para valores fijos como PI, tasas, etc.</li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">final</span> <span class="type">double</span> PI = <span class="num">3.1416</span>;</li>
+              <li><span class="kw">final</span> <span class="type">int</span> MAX_USUARIOS = <span class="num">100</span>;</li>
+            </ol>
+          </div>
+          <p>Intentar cambiar el valor de una constante genera error de compilación.</p>
+        </div>
+        
+      </div>
+
+      <a href="#" class="arrow left prev-slide">‹</a>
+      <a href="#" class="arrow right next-slide">›</a>
+
+      <div class="dots slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- MODAL 1.3: OPERADORES -->
+  <section class="modal" id="modal-card-1-3">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Operadores en Java</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: OPERADORES -->
+        <div class="slide active" data-title="Operadores">
+          <p>En java hay distintos tipos de operadores: </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aritméticos</td>
+                <td>Suma, resta, etc.</td>
+                <td><code>a + b</code></td>
+              </tr>
+              <tr>
+                <td>Asignación</td>
+                <td>Asigna valores.</td>
+                <td><code>x = 5</code>, <code>x += 2</code></td>
+              </tr>
+              <tr>
+                <td>Comparación</td>
+                <td>Compara valores.</td>
+                <td><code>x == y</code>, <code>x &gt; y</code></td>
+              </tr>
+              <tr>
+                <td>Lógicos</td>
+                <td>Operaciones booleanas.</td>
+                <td><code>a && b</code>, <code>a || b</code></td>
+              </tr>
+              <tr>
+                <td>Incremento / Decremento</td>
+                <td>Aumenta o reduce en 1.</td>
+                <td><code>x++</code>, <code>--y</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SLIDER 2: OPERADORES ARITMÉTICOS -->
+        <div class="slide" data-title="Operadores Aritméticos">
+          <p>Los operadores aritméticos permiten realizar operaciones matemáticas básicas.</p>
+          <table>
+            <thead>
+              <tr><th>Operador</th><th>Descripción</th><th>Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>+</code></td><td>Suma</td><td><code>int suma = 5 + 3;</code></td></tr>
+              <tr><td><code>-</code></td><td>Resta</td><td><code>int resta = 5 - 3;</code></td></tr>
+              <tr><td><code>*</code></td><td>Multiplicación</td><td><code>int mul = 5 * 3;</code></td></tr>
+              <tr><td><code>/</code></td><td>División</td><td><code>int div = 10 / 2;</code></td></tr>
+              <tr><td><code>%</code></td><td>Módulo (resto)</td><td><code>int mod = 10 % 3;</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SLIDER 3: OPERADORES DE ASIGNACIÓN -->
+        <div class="slide" data-title="Operadores de Asignación">
+          <p>Asignan valores a variables, a veces combinados con operaciones.</p>
+          <table>
+            <thead>
+              <tr><th>Operador</th><th>Descripción</th><th>Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>=</code></td><td>Asignación simple</td><td><code>int x = 5;</code></td></tr>
+              <tr><td><code>+=</code></td><td>Suma y asigna</td><td><code>x += 3;  // x = x + 3;</code></td></tr>
+              <tr><td><code>-=</code></td><td>Resta y asigna</td><td><code>x -= 2;  // x = x - 2;</code></td></tr>
+              <tr><td><code>*=</code></td><td>Multiplica y asigna</td><td><code>x *= 4;  // x = x * 4;</code></td></tr>
+              <tr><td><code>/=</code></td><td>Divide y asigna</td><td><code>x /= 2;  // x = x / 2;</code></td></tr>
+              <tr><td><code>%=</code></td><td>Módulo y asigna</td><td><code>x %= 3;  // x = x % 3;</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SLIDER 4: OPERADORES DE COMPARACIÓN -->
+        <div class="slide" data-title="Operadores de Comparación">
+          <p>Comparan valores y devuelven <code>true</code> o <code>false</code>.</p>
+          <table>
+            <thead>
+              <tr><th>Operador</th><th>Descripción</th><th>Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>==</code></td><td>Igualdad</td><td><code>if(a == b)</code></td></tr>
+              <tr><td><code>!=</code></td><td>Diferente</td><td><code>if(a != b)</code></td></tr>
+              <tr><td><code>&lt;</code></td><td>Menor que</td><td><code>if(a &lt; b)</code></td></tr>
+              <tr><td><code>&gt;</code></td><td>Mayor que</td><td><code>if(a &gt; b)</code></td></tr>
+              <tr><td><code>&lt;=</code></td><td>Menor o igual que</td><td><code>if(a &lt;= b)</code></td></tr>
+              <tr><td><code>&gt;=</code></td><td>Mayor o igual que</td><td><code>if(a &gt;= b)</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SLIDER 5: OPERADORES LÓGICOS -->
+        <div class="slide" data-title="Operadores Lógicos">
+          <p>Combinan condiciones booleanas.</p>
+          <table>
+            <thead>
+              <tr><th>Operador</th><th>Descripción</th><th>Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>&&</code></td><td>AND lógico (y)</td><td><code>if(cond1 && cond2)</code></td></tr>
+              <tr><td><code>||</code></td><td>OR lógico (o)</td><td><code>if(cond1 || cond2)</code></td></tr>
+              <tr><td><code>!</code></td><td>NOT lógico (negación)</td><td><code>if(!cond)</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SLIDER 6: OPERADORES DE INCREMENTO / DECREMENTO -->
+        <div class="slide" data-title="Operadores Incremento / Decremento">
+          <p>Incrementan o decrementan el valor de una variable en 1.</p>
+          <table>
+            <thead>
+              <tr><th>Operador</th><th>Descripción</th><th>Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>++</code></td><td>Incremento (pre y post)</td><td><code>i++; ++i;</code></td></tr>
+              <tr><td><code>--</code></td><td>Decremento (pre y post)</td><td><code>i--; --i;</code></td></tr>
+            </tbody>
+          </table>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="type">int</span> i = <span class="num">5</span>;</li>
+              <li><span class="cm">// Post-incremento: usa i, luego incrementa</span></li>
+              <li><span class="type">int</span> a = i<span class="kw">++</span>;</li>
+              <li><span class="cm">// Pre-incremento: incrementa, luego usa</span></li>
+              <li><span class="type">int</span> b = <span class="kw">++</span>i;</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="arrow left prev-slide">‹</a>
+      <a href="#" class="arrow right next-slide">›</a>
+
+      <div class="dots slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- MODAL 1.4: JAVA STRINGS -->
+  <section class="modal" id="modal-card-1-4">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Java Strings</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: MÉTODOS PARA STRINGS -->
+        <div class="slide active" data-title="Métodos para Strings">
+          <p>Las <strong>Strings</strong> en Java son objetos con métodos útiles para manipular texto.</p>
+          <table>
+            <thead>
+              <tr><th>Método</th><th>Descripción</th><th>Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>length()</code></td><td>Devuelve la longitud</td><td><code>str.length()</code></td></tr>
+              <tr><td><code>toUpperCase()</code></td><td>Convierte a mayúsculas</td><td><code>str.toUpperCase()</code></td></tr>
+              <tr><td><code>toLowerCase()</code></td><td>Convierte a minúsculas</td><td><code>str.toLowerCase()</code></td></tr>
+              <tr><td><code>substring(int start, int end)</code></td><td>Extrae subcadena</td><td><code>str.substring(0, 4)</code></td></tr>
+              <tr><td><code>charAt(int index)</code></td><td>Devuelve carácter en índice</td><td><code>str.charAt(0)</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SLIDER 2: CONCATENACIÓN -->
+        <div class="slide" data-title="Concatenación">
+          <p>La concatenación une cadenas para formar una sola.</p>
+          <ul>
+            <li>Usa el operador <code>+</code> para concatenar strings.</li>
+            <li>También se puede con <code>concat()</code>.</li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="type">String</span> saludo = <span class="str">"Hola"</span> + <span class="str">" Mundo"</span>;</li>
+              <li><span class="type">String</span> saludo2 = <span class="str">"Hola"</span>.concat(<span class="str">" Java"</span>);</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 3: NÚMEROS CON STRINGS -->
+        <div class="slide" data-title="Números con Strings">
+          <p>Convertir números a strings y viceversa.</p>
+          <ul>
+            <li><code>String.valueOf(número)</code> convierte un número a String.</li>
+            <li><code>Integer.parseInt(cadena)</code> convierte String a entero.</li>
+            <li><code>Double.parseDouble(cadena)</code> convierte String a decimal.</li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="type">int</span> num = <span class="num">100</span>;</li>
+              <li><span class="type">String</span> strNum = <span class="kw">String</span>.valueOf(num);</li>
+              <li><span class="type">int</span> n2 = <span class="kw">Integer</span>.parseInt(strNum);</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 4: CARACTERES ESPECIALES -->
+        <div class="slide" data-title="Caracteres Especiales">
+          <p>Secuencias de escape para caracteres especiales en strings.</p>
+          <table>
+            <thead>
+              <tr><th>Carácter</th><th>Secuencia</th><th>Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Salto de línea</td><td><code>\n</code></td><td><code>String texto = "Hola\nMundo";</code></td></tr>
+              <tr><td>Tabulación</td><td><code>\t</code></td><td><code>String tab = "Col1\tCol2";</code></td></tr>
+              <tr><td>Comillas dobles</td><td><code>\"</code></td><td><code>String comillas = "Ella dijo: \"Hola\"";</code></td></tr>
+              <tr><td>Barra invertida</td><td><code>\\</code></td><td><code>String path = "C:\\Users\\Juan";</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <a href="#" class="arrow left prev-slide">‹</a>
+      <a href="#" class="arrow right next-slide">›</a>
+
+      <div class="dots slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- MODAL 2: ESTRUCTURAS DE CONTROL -->
+  <section class="modal" id="modal-card-2">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Estructuras de Control</header>
+      <div class="content modal-content">
+        <div class="slide active" data-title="Breve Explicación">
+          <p>Las <strong>estructuras de control</strong> permiten dirigir el flujo de ejecución de un programa, tomando decisiones o repitiendo bloques de código según condiciones.</p>
+          <ul>
+            <li><strong>Estructuras de Condición:</strong> ejecutan código según condiciones (if, else, switch).</li>
+            <li><strong>Estructuras de Bucle:</strong> repiten código varias veces (for, while, do-while).</li>
+            <li><strong>Estructuras de Salto:</strong> alteran el flujo de bucles o saltan instrucciones (break, continue, return).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL 2.1: ESTRUCTURA DE CONDICION -->
+  <section class="modal" id="modal-card-2-1">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Estructuras de Condicion</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: IF ELSE -->
+        <div class="slide active" data-title="Bloque If...Else">
+          <p>La estructura <code class="kw">if</code> ejecuta un bloque si la condición es verdadera. <code class="kw">else</code> ejecuta el bloque alternativo.</p>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">if</span> (<span class="type">edad</span> &gt; <span class="num">18</span>) {</li>
+              <li>  <span class="cm">// Código si es mayor de edad</span></li>
+              <li>} <span class="kw">else</span> {</li>
+              <li>  <span class="cm">// Código si es menor de edad</span></li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 2: ELSE IF -->
+        <div class="slide" data-title="Bloque Else If">
+          <p>Permite comprobar múltiples condiciones en secuencia.</p>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">if</span> (<span class="type">nota</span> &gt;= <span class="num">90</span>) {</li>
+              <li>  <span class="cm">// Sobresaliente</span></li>
+              <li>} <span class="kw">else if</span> (<span class="type">nota</span> &gt;= <span class="num">70</span>) {</li>
+              <li>  <span class="cm">// Notable</span></li>
+              <li>} <span class="kw">else</span> {</li>
+              <li>  <span class="cm">// Suspenso</span></li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 3: SWITCH -->
+        <div class="slide" data-title="Bloque Switch">
+          <p>Evalúa una expresión y ejecuta el bloque que coincida con el valor.</p>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">switch</span> (<span class="type">dia</span>) {</li>
+              <li>  <span class="kw">case</span> <span class="num">1</span>:</li>
+              <li>    <span class="cm">// Lunes</span></li>
+              <li>    <span class="kw">break</span>;</li>
+              <li>  <span class="kw">default</span>:</li>
+              <li>    <span class="cm">// Otro día</span></li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#" class="arrow left prev-slide">‹</a>
+      <a href="#" class="arrow right next-slide">›</a>
+
+      <div class="dots slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- MODAL 2.2: ESTRUCTURAS DE BUCLE -->
+  <section class="modal" id="modal-card-2-2">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Estructuras de Bucle</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: FOR -->
+        <div class="slide active" data-title="for">
+          <p>El bucle <code class="kw">for</code> itera un número determinado de veces.</p>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">for</span> (<span class="type">int</span> i = <span class="num">0</span>; i &lt; <span class="num">10</span>; i<span class="kw">++</span>) {</li>
+              <li>  <span class="cm">// Código a repetir</span></li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 2: WHILE -->
+        <div class="slide" data-title="while">
+          <p>El bucle <code class="kw">while</code> repite mientras la condición sea verdadera.</p>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">while</span> (<span class="type">condición</span>) {</li>
+              <li>  <span class="cm">// Código a repetir</span></li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 3: DO WHILE -->
+        <div class="slide" data-title="do...while">
+          <p>El bucle <code class="kw">do...while</code> ejecuta al menos una vez y luego repite mientras la condición sea verdadera.</p>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">do</span> {</li>
+              <li>  <span class="cm">// Código a repetir</span></li>
+              <li>} <span class="kw">while</span> (<span class="type">condición</span>);</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 4: FOR EACH (Arrays) -->
+        <div class="slide" data-title="for (arrays)">
+          <p>Recorre todos los elementos de un array o colección.</p>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">for</span> (<span class="type">String</span> nombre : <span class="type">nombres</span>) {</li>
+              <li>  <span class="cm">// Código para cada nombre</span></li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+      <a href="#" class="arrow left prev-slide">‹</a>
+      <a href="#" class="arrow right next-slide">›</a>
+      <div class="dots slide-dots"></div>
+    </div>
+  </section>
+
+  <!-- MODAL 2.3: ESTRUCTURAS DE SALTO -->
+  <section class="modal" id="modal-card-2-3">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Estructuras de Salto</header>
+      <div class="content modal-content">
+        <div class="slide active" data-title="Estructuras de Salto">
+          <p>Las estructuras de salto permiten modificar el flujo de ejecución interrumpiendo o saltando iteraciones o métodos.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Estructura</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>break</code></td>
+                <td>Termina el bucle o switch actual.</td>
+                <td>
+                  <code>
+                    <span class="kw">for</span> (int i = 0; i &lt; 10; i++) {<br>
+                    &nbsp;&nbsp;<span class="kw">if</span> (i == 5) <span class="kw">break</span>;<br>
+                    }
+                  </code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>continue</code></td>
+                <td>Salta la iteración actual y continúa con la siguiente.</td>
+                <td>
+                  <code>
+                    <span class="kw">for</span> (int i = 0; i &lt; 10; i++) {<br>
+                    &nbsp;&nbsp;<span class="kw">if</span> (i % 2 == 0) <span class="kw">continue</span>;<br>
+                    }
+                  </code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>return</code></td>
+                <td>Termina la ejecución del método actual y devuelve un valor si lo hay.</td>
+                <td>
+                  <code>
+                    <span class="kw">return</span> <span class="num">0</span>;<br>
+                  </code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL 3: MANEJO DE ERRORES -->
+  <section class="modal" id="modal-card-3">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Manejo de Errores</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: MANEJO DE ERRORES -->
+        <div class="slide active" data-title="Manejo de Errores">
+          <p>En Java, los errores son problemas graves que generalmente no se pueden manejar en tiempo de ejecución (por ejemplo, <code>OutOfMemoryError</code>).</p>
+          <ul>
+            <li>Los errores derivan de la clase <code>Error</code>.</li>
+            <li>Normalmente no deben capturarse con <code>try-catch</code>.</li>
+            <li>Se recomienda prevenirlos mediante una buena gestión de recursos y memoria.</li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="cm">// Ejemplo de Error</span></li>
+              <li><span class="kw">throw</span> <span class="kw">new</span> <span class="type">OutOfMemoryError</span>(<span class="str">"Memoria insuficiente"</span>);</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL 3.1: EXCEPCIONES -->
+  <section class="modal" id="modal-card-3-1">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Excepciones</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: EXCEPCIONES -->
+        <div class="slide active" data-title="Excepciones">
+          <p>Las <strong>excepciones</strong> son situaciones anómalas que pueden manejarse en tiempo de ejecución.</p>
+          <ul>
+            <li>Derivan de la clase <code>Exception</code>.</li>
+            <li>Pueden ser <strong>comprobadas</strong> (<code>IOException</code>) o <strong>no comprobadas</strong> (<code>NullPointerException</code>).</li>
+            <li>Se gestionan mediante bloques <code>try-catch-finally</code>.</li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="cm">// Lanza una excepción comprobada</span></li>
+              <li><span class="kw">throw</span> <span class="kw">new</span> <span class="type">IOException</span>(<span class="str">"Archivo no encontrado"</span>);</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL 3.2: ANOTACIONES -->
+  <section class="modal" id="modal-card-3-2">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Anotaciones</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: ANOTACIONES -->
+        <div class="slide active" data-title="Anotaciones">
+          <p>Las <strong>anotaciones</strong> proporcionan metadatos al compilador y al entorno de ejecución.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Anotación</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>@Override</code></td>
+                <td>Indica que un método sobrescribe uno de la clase padre.</td>
+              </tr>
+              <tr>
+                <td><code>@Deprecated</code></td>
+                <td>Marca un elemento como obsoleto.</td>
+              </tr>
+              <tr>
+                <td><code>@SuppressWarnings</code></td>
+                <td>Oculta advertencias del compilador.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">@Override</span></li>
+              <li><span class="kw">public</span> <span class="type">String</span> toString() {</li>
+              <li>&nbsp;&nbsp;<span class="kw">return</span> <span class="str">"Objeto"</span>;</li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL 3.3: TRY...CATCH y FINALLY -->
+  <section class="modal" id="modal-card-3-3">
+    <div class="dialog">
+      <a class="close" href="#">×</a>
+      <header class="modal-header">Try...Catch y Finally</header>
+      <div class="content modal-content">
+
+        <!-- SLIDER 1: TRY...CATCH -->
+        <div class="slide active" data-title="Try...Catch">
+          <p>El bloque <code>try...catch</code> permite manejar excepciones evitando que el programa se detenga.</p>
+          <ul>
+            <li>El código susceptible de fallar se coloca en <code>try</code>.</li>
+            <li>Los errores se capturan en uno o más bloques <code>catch</code>.</li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">try</span> {</li>
+              <li>&nbsp;&nbsp;<span class="type">int</span> x = <span class="num">10</span> / <span class="num">0</span>;</li>
+              <li>} <span class="kw">catch</span> (<span class="type">ArithmeticException</span> e) {</li>
+              <li>&nbsp;&nbsp;System.out.println(<span class="str">"Error: "</span> + e.getMessage());</li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SLIDER 2: FINALLY -->
+        <div class="slide" data-title="Finally">
+          <p>El bloque <code>finally</code> se ejecuta siempre, ocurra o no una excepción.</p>
+          <ul>
+            <li>Es útil para liberar recursos como archivos o conexiones.</li>
+          </ul>
+          <div class="ide">
+            <div class="ide-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <ol class="code">
+              <li><span class="kw">try</span> {</li>
+              <li>&nbsp;&nbsp;<span class="type">int</span> x = <span class="num">10</span> / <span class="num">0</span>;</li>
+              <li>} <span class="kw">catch</span> (<span class="type">ArithmeticException</span> e) {</li>
+              <li>&nbsp;&nbsp;System.out.println(<span class="str">"Error: "</span> + e.getMessage());</li>
+              <li>} <span class="kw">finally</span> {</li>
+              <li>&nbsp;&nbsp;System.out.println(<span class="str">"Bloque finally ejecutado"</span>);</li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+      <a href="#" class="arrow left prev-slide">‹</a>
+      <a href="#" class="arrow right next-slide">›</a>
+      <div class="dots slide-dots"></div>
+    </div>
+  </section>
+
+</section>
+  
+</body>
+<script src="script.js"></script>
+</html>

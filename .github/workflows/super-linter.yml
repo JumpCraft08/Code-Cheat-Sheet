@@ -1,0 +1,44 @@
+name: Validar código
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  super-linter:
+    name: Super-Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ejecutar Super-Linter
+        uses: super-linter/super-linter@v8.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BRANCH: main
+
+          # Validar solo los lenguajes que te interesan
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_HTML: true
+          VALIDATE_CSS: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_YAML: true
+
+          # No corregir automáticamente
+          FIX_JAVASCRIPT_ES: false
+          FIX_HTML_PRETTIER: false
+          FIX_CSS_PRETTIER: false
+          FIX_MARKDOWN_PRETTIER: false
+          FIX_YAML_PRETTIER: false
+
+          LINTER_RULES_PATH: ".github/linters"

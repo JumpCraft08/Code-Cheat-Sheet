@@ -1,0 +1,38 @@
+name: "Sugerencia de mejora"
+description: "Propón una nueva funcionalidad o mejora para el Cheat Sheet"
+title: "[MEJORA] "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ¿Tienes una idea para mejorar el proyecto?
+        Completa el siguiente formulario para compartir tu propuesta.
+
+  - type: input
+    id: feature-section
+    attributes:
+      label: "¿A qué sección se refiere la mejora?"
+      description: Por ejemplo, una nueva sección, un cambio de diseño, etc.
+      placeholder: "Ejemplo: Añadir sección sobre Streams en Java"
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "Descripción de la mejora"
+      description: Explica en qué consiste y cómo funcionaría.
+      placeholder: Describe tu idea...
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-benefit
+    attributes:
+      label: "¿Por qué es útil?"
+      description: Describe cómo esta mejora ayudaría a los usuarios del Cheat Sheet.
+      placeholder: Mejora la comprensión de los conceptos...
+    validations:
+      required: false
