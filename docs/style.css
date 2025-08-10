@@ -12,17 +12,6 @@
 }
 
 /* =========================
-   ESCALADO RESPONSIVE
-========================= */
-@media (min-width: 1600px)  { :root { --base-scale: 0.8; } }
-@media (min-width: 1920px)  { :root { --base-scale: 0.7; } }
-@media (min-height: 900px)  { :root { --base-scale: 1; } }
-@media (min-height: 1000px) { :root { --base-scale: 0.7; } }
-@media (max-width: 1366px)  { :root { --base-scale: 0.9; } }
-@media (max-width: 1280px)  { :root { --base-scale: 0.85; } }
-@media (max-width: 1024px)  { :root { --base-scale: 0.7; } }
-
-/* =========================
    RESET / BODY
 ========================= */
 html, body {
@@ -44,8 +33,10 @@ body { animation: fade-in 0.5s ease forwards; }
    CONTENEDOR PRINCIPAL
 ========================= */
 main.wallpaper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 260px);
   gap: 24px;
+  flex-wrap: wrap;
   padding: 32px;
   transform: scale(var(--base-scale));
   transform-origin: center top;
@@ -58,6 +49,7 @@ main.wallpaper {
 ========================= */
 .column {
   display: flex;
+  flex: 1 1 260px;
   flex-direction: column;
   gap: 16px;
   width: 260px;
@@ -71,6 +63,7 @@ main.wallpaper {
   box-shadow: var(--shadow);
 }
 
+
 /* =========================
    TARJETAS
 ========================= */
@@ -78,7 +71,6 @@ main.wallpaper {
   background: #111418;
   border: 2px solid var(--card-color);
   padding: 16px 12px 8px;
-  color: inherit;
   cursor: pointer;
   transition: box-shadow var(--transition), transform var(--transition);
   box-sizing: border-box;
@@ -93,7 +85,6 @@ main.wallpaper {
 .card table td {
   padding: 6px;
   border-bottom: 2px solid var(--card-color);
-  white-space: normal;
   overflow-wrap: break-word;
 }
 
@@ -111,7 +102,6 @@ main.wallpaper {
   background: var(--hover-bg);
 }
 
-/* Hover sobre cabecera */
 .card:has(.head:hover) {
   box-shadow: 0 8px 16px var(--card-color);
   transform: scale(var(--hover-scale));
@@ -162,7 +152,6 @@ main.wallpaper {
   display: flex;
   gap: 8px;
   width: 100%;
-  justify-content: space-between;
 }
 
 .final-buttons > a {
@@ -198,20 +187,6 @@ main.wallpaper {
 .final-buttons > a:active { opacity: 0.5; }
 
 /* =========================
-   ENLACES A MODALES
-========================= */
-a[href^="#modal-card-"] {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-a[href^="#modal-card-"]:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* =========================
    ANIMACIONES
 ========================= */
 @keyframes fade-in {
@@ -223,6 +198,20 @@ a[href^="#modal-card-"]:hover {
     opacity: 1; 
     transform: translateY(0); 
   }
+}
+
+/* =========================
+   ENLACES A MODALES
+========================= */
+a[href^="#modal-card-"] {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a[href^="#modal-card-"]:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* =========================
@@ -249,7 +238,7 @@ a[href^="#modal-card-"]:hover {
 .modal .dialog {
   position: relative;
   width: min(900px, 92%);
-  height: 75vh;
+  height: 76vh;
   padding-bottom: 60px;
   background: #111418;
   border: 1px solid rgb(255 255 255 / 6%);
@@ -267,7 +256,7 @@ a[href^="#modal-card-"]:hover {
 }
 
 .modal .content {
-  padding: 18px 22px 20px;
+  padding: 4px 22px 20px;
   font-size: 1rem;
   line-height: 1.5;
   overflow: hidden;
@@ -301,8 +290,7 @@ a[href^="#modal-card-"]:hover {
   color: #fff;
   font-size: 20px;
   text-decoration: none;
-  transition: transform var(--transition, 0.25s),
-              background var(--transition, 0.25s);
+  transition: transform var(--transition, 0.25s), background var(--transition, 0.25s);
 }
 
 .modal .close:hover {
@@ -384,7 +372,7 @@ a[href^="#modal-card-"]:hover {
   margin: 0;
   padding: 4px 0 4px 48px;
   font-size: 0.9rem;
-  line-height: 0.6;
+  line-height: 0.5;
   white-space: pre;
 }
 
@@ -441,7 +429,6 @@ a[href^="#modal-card-"]:hover {
   font-weight: bold; 
 }
 
-
 /* =========================
    SLIDES
 ========================= */
@@ -451,3 +438,4 @@ a[href^="#modal-card-"]:hover {
 }
 
 .slide.active { display: block; }
+
