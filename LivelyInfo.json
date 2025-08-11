@@ -1,0 +1,14 @@
+{
+  "AppVersion": "1.3.0.0",
+  "Title": "Code Cheat Sheet",
+  "Thumbnail": "thumbnail.jpg",
+  "Preview": "preview.gif",
+  "Desc": "Una pequeña chuleta de programacion",
+  "Author": "JumpCraft",
+  "License": "MIT",
+  "Contact": "https://github.com/JumpCraft08/Code-Cheat-Sheet",
+  "Type": 1,
+  "FileName": "docs/index.html",
+  "Arguments": null,
+  "IsAbsolutePath": false
+}
