@@ -16,7 +16,7 @@
 
   <!-- PRIMERA COLUMNA -->
   <div class="column">
-    <a href="index.html" class="title">Java       Core</a>
+    <a href="index.html" class="title">Java Core</a>
 
     <!-- CARD 1: FUNDAMENTOS -->
     <div class="card" style="--card-color: #2b6cb0;">
@@ -2889,8 +2889,7 @@
               <li><span class="cls">Runnable</span> tarea = <span class="kw">new</span> <span class="cls">Runnable</span>() {</li>
               <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">void</span> <span class="mtd">run</span>() {</li>
               <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cls">System</span>.out.<span class="mtd">println</span>(<span class="str">"Hola"</span>);</li>
-              <li>&nbsp;&nbsp;}</li>
-              <li>};</li>
+              <li>&nbsp;&nbsp;} };</li>
               <li></li>
               <li><span class="cm">// Con Lambda</span></li>
               <li><span class="cls">Runnable</span> tarea = () -> <span class="cls">System</span>.out.<span class="mtd">println</span>(<span class="str">"Hola"</span>);</li>
@@ -2901,15 +2900,6 @@
         <!-- SLIDER 2: CÓMO SE USAN -->
         <div class="slide" data-title="¿Cómo se usan?">
           <p>Las lambdas se usan principalmente con <strong>interfaces funcionales</strong> (interfaces con un solo método abstracto).</p>
-
-          <h3>Casos de uso comunes:</h3>
-          <ul>
-            <li>Operaciones en colecciones (Stream API)</li>
-            <li>Event handling</li>
-            <li>Programación funcional</li>
-            <li>Callbacks y tareas asíncronas</li>
-          </ul>
-
           <div class="ide">
             <div class="ide-header">
               <span class="dot red"></span>
@@ -2986,8 +2976,6 @@
               <li>};</li>
             </ol>
           </div>
-
-          <p><strong>Nota:</strong> Las llaves <code>{ }</code> son obligatorias solo para múltiples líneas.</p>
         </div>
         
       </div>
@@ -3008,7 +2996,8 @@
 
         <!-- SLIDER 1: QUÉ SON RECORDS -->
         <div class="slide active" data-title="¿Qué son los Records?">
-          <p>Los <strong>Records</strong> (Java 14+) son una forma concisa de crear clases inmutables para almacenar datos.</p>
+          <p>Los <strong>Records</strong> (Java 14+) son una forma concisa de crear clases inmutables para almacenar datos.
+          La ventaja es que se usa menos código, es más legible y tambien menos propenso a errores.</p>
           
           <h3>Características:</h3>
           <ul>
@@ -3036,8 +3025,6 @@
               <li><span class="kw">public record</span> <span class="cls">Persona</span>(<span class="cls">String</span> nombre, <span class="type">int</span> edad) {}</li>
             </ol>
           </div>
-
-          <p><strong>Ventaja:</strong> Menos código, más legible y menos propenso a errores.</p>
         </div>
 
         <!-- SLIDER 2: USANDO RECORDS -->
@@ -3168,8 +3155,6 @@
               <li><span class="kw">final class</span> <span class="cls">Rectangulo</span> <span class="kw">extends</span> <span class="cls">Forma</span> { <span class="cm">// implementación...</span> }</li>
             </ol>
           </div>
-
-          <p><strong>Ventaja:</strong> Evita extensiones no deseadas y hace el código más predecible.</p>
         </div>
 
         <!-- SLIDER 2: CASOS DE USO -->
@@ -3266,16 +3251,8 @@
 
         <!-- SLIDER 1: QUÉ SON -->
         <div class="slide active" data-title="¿Qué son las Interfaces Funcionales?">
-          <p>Una <strong>Interfaz Funcional</strong> es una interfaz que tiene exactamente un método abstracto. Son la base para las expresiones lambda.</p>
-          
-          <h3>Características:</h3>
-          <ul>
-            <li>Un solo método abstracto (SAM - Single Abstract Method)</li>
-            <li>Se anotan con <code>@FunctionalInterface</code> (opcional pero recomendado)</li>
-            <li>Pueden tener métodos default y static</li>
-            <li>Son compatibles con expresiones lambda</li>
-          </ul>
-
+          <p>Una <strong>Interfaz Funcional</strong> es una interfaz que tiene exactamente un método abstracto. Son la base para las expresiones lambda.
+          Tienen un solo método abstracto y pueden tener métodos default y static.</p>
           <div class="ide">
             <div class="ide-header">
               <span class="dot red"></span>
@@ -3381,11 +3358,6 @@
               <li>&nbsp;&nbsp;mayusculas.<span class="mtd">andThen</span>(agregarSigno);</li>
               <li></li>
               <li><span class="cls">System</span>.out.<span class="mtd">println</span>(procesarTexto.<span class="mtd">apply</span>(<span class="str">"hola"</span>)); <span class="cm">// "HOLA!"</span></li>
-              <li></li>
-              <li><span class="cm">// Composición de predicados</span></li>
-              <li><span class="cls">Predicate</span>&lt;<span class="cls">Integer</span>&gt; esPar = n -> n % <span class="num">2</span> == <span class="num">0</span>;</li>
-              <li><span class="cls">Predicate</span>&lt;<span class="cls">Integer</span>&gt; esPositivo = n -> n > <span class="num">0</span>;</li>
-              <li><span class="cls">Predicate</span>&lt;<span class="cls">Integer</span>&gt; esParYPositivo = esPar.<span class="mtd">and</span>(esPositivo);</li>
             </ol>
           </div>
         </div>
@@ -3479,30 +3451,16 @@
               <li><span class="cm">// Sin concurrencia - secuencial</span></li>
               <li><span class="mtd">tarea1</span>();</li>
               <li><span class="mtd">tarea2</span>();</li>
-              <li><span class="mtd">tarea3</span>();</li>
               <li></li>
               <li><span class="cm">// Con concurrencia - paralelo</span></li>
               <li><span class="cls">CompletableFuture</span>.<span class="mtd">allOf</span>(</li>
               <li>    <span class="cls">CompletableFuture</span>.<span class="mtd">runAsync</span>(() -> <span class="mtd">tarea1</span>()),</li>
               <li>    <span class="cls">CompletableFuture</span>.<span class="mtd">runAsync</span>(() -> <span class="mtd">tarea2</span>()),</li>
-              <li>    <span class="cls">CompletableFuture</span>.<span class="mtd">runAsync</span>(() -> <span class="mtd">tarea3</span>())</li>
               <li>).<span class="mtd">join</span>();</li>
             </ol>
           </div>
-
-          <ul>
-            <li><strong>Casos de uso:</strong> Interfaces gráficas, servidores web, procesamiento de datos</li>
-            <li><strong>Desafíos:</strong> Sincronización, condiciones de carrera, deadlocks</li>
-            <li><strong>Java:</strong> Proporciona múltiples APIs para manejar concurrencia</li>
-          </ul>
         </div>
-        
       </div>
-
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -3599,16 +3557,8 @@
 
         <!-- SLIDER 3: USO DE RUNNABLE -->
         <div class="slide" data-title="Usando Runnable">
-          <p><strong>Runnable</strong> es una interfaz funcional que representa una tarea ejecutable. Es la forma recomendada para definir tareas concurrentes.</p>
-          
-          <ul>
-            <li><strong>Ventajas de Runnable:</strong></li>
-            <li>• No requiere herencia (puedes extender otra clase)</li>
-            <li>• Separación clara entre la tarea y el hilo</li>
-            <li>• Puede reutilizarse con diferentes ejecutores</li>
-            <li>• Compatible con lambda expressions</li>
-          </ul>
-
+          <p><strong>Runnable</strong> es una interfaz funcional que representa una tarea ejecutable. Es la forma recomendada para definir tareas concurrentes.
+          Ademas, al no requerir de herencia, se puede extender otra clase. Ex compatible con lambda expressions y puede reutilizarse con diferentes ejecutores.</p>
           <div class="ide">
             <div class="ide-header">
               <span class="dot red"></span>
@@ -3870,21 +3820,16 @@
               <span class="dot green"></span>
             </div>
             <ol class="code">
-              <li><span class="kw">class</span> <span class="cls">ContadorSeguro</span> {</li>
               <li>    <span class="kw">private</span> <span class="type">int</span> valor = <span class="num">0</span>;</li>
               <li>    </li>
               <li>    <span class="cm">// Método sincronizado</span></li>
-              <li>    <span class="kw">public</span> <span class="kw">synchronized</span> <span class="kw">void</span> <span class="mtd">incrementar</span>() {</li>
-              <li>        valor++;</li>
-              <li>    }</li>
+              <li>    <span class="kw">public</span> <span class="kw">synchronized</span> <span class="kw">void</span> <span class="mtd">incrementar</span>() { valor++; }</li>
               <li>    </li>
               <li>    <span class="cm">// Bloque sincronizado</span></li>
               <li>    <span class="kw">public</span> <span class="kw">void</span> <span class="mtd">decrementar</span>() {</li>
               <li>        <span class="kw">synchronized</span>(<span class="kw">this</span>) {</li>
-              <li>            valor--;</li>
-              <li>        }</li>
+              <li>            valor--; }</li>
               <li>    }</li>
-              <li>}</li>
             </ol>
           </div>
         </div>
@@ -4273,13 +4218,6 @@
               <li><span class="cls">Set</span>&lt;<span class="type">String</span>&gt; conjunto = <span class="kw">new</span> <span class="cls">HashSet</span>&lt;&gt;(); <span class="cm">// Elementos únicos</span></li>
             </ol>
           </div>
-
-          <ul>
-            <li><strong>Primitivas:</strong> Arrays, variables simples</li>
-            <li><strong>Lineales:</strong> Listas, pilas, colas</li>
-            <li><strong>No lineales:</strong> Árboles, grafos</li>
-            <li><strong>Hash-based:</strong> HashSet, HashMap</li>
-          </ul>
         </div>
 
         <!-- SLIDER 2: COLECCIONES -->
@@ -4317,25 +4255,6 @@
               </tr>
             </tbody>
           </table>
-
-          <div class="ide">
-            <div class="ide-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <ol class="code">
-              <li><span class="cm">// Importar las colecciones</span></li>
-              <li><span class="kw">import</span> java.util.*;</li>
-              <li></li>
-              <li><span class="cm">// Ventajas de las colecciones</span></li>
-              <li><span class="cls">List</span>&lt;<span class="type">String</span>&gt; lista = <span class="kw">new</span> <span class="cls">ArrayList</span>&lt;&gt;();</li>
-              <li>lista.<span class="mtd">add</span>(<span class="str">"Java"</span>); <span class="cm">// Tamaño dinámico</span></li>
-              <li>lista.<span class="mtd">remove</span>(<span class="num">0</span>); <span class="cm">// Métodos incorporados</span></li>
-              <li><span class="type">boolean</span> contiene = lista.<span class="mtd">contains</span>(<span class="str">"Java"</span>); <span class="cm">// Búsqueda fácil</span></li>
-              <li><span class="type">int</span> tamaño = lista.<span class="mtd">size</span>(); <span class="cm">// Información del estado</span></li>
-            </ol>
-          </div>
 
           <ul>
             <li><strong>Genéricos:</strong> Type-safe en tiempo de compilación</li>
@@ -4572,31 +4491,6 @@
               </tr>
             </tbody>
           </table>
-
-          <div class="ide">
-            <div class="ide-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <ol class="code">
-              <li><span class="kw">import</span> java.util.Arrays;</li>
-              <li></li>
-              <li><span class="type">int</span>[] numeros = {<span class="num">3</span>, <span class="num">1</span>, <span class="num">4</span>, <span class="num">1</span>, <span class="num">5</span>};</li>
-              <li></li>
-              <li><span class="cm">// Mostrar array</span></li>
-              <li><span class="cls">System</span>.<span class="mtd">out</span>.<span class="mtd">println</span>(<span class="cls">Arrays</span>.<span class="mtd">toString</span>(numeros));</li>
-              <li></li>
-              <li><span class="cm">// Ordenar</span></li>
-              <li><span class="cls">Arrays</span>.<span class="mtd">sort</span>(numeros);</li>
-              <li></li>
-              <li><span class="cm">// Buscar elemento (debe estar ordenado)</span></li>
-              <li><span class="type">int</span> indice = <span class="cls">Arrays</span>.<span class="mtd">binarySearch</span>(numeros, <span class="num">4</span>);</li>
-              <li></li>
-              <li><span class="cm">// Llenar con valor</span></li>
-              <li><span class="cls">Arrays</span>.<span class="mtd">fill</span>(numeros, <span class="num">0</span>); <span class="cm">// Todos los elementos = 0</span></li>
-            </ol>
-          </div>
         </div>
         
       </div>
@@ -5927,10 +5821,6 @@
               <li><span class="cls">URLConnection</span> conn = url.<span class="mtd">openConnection</span>();</li>
             </ol>
           </div>
-        </div>
-
-        <!-- SLIDER 2: Clases Importantes -->
-        <div class="slide" data-title="Clases Clave">
           <table>
             <thead>
               <tr>
@@ -5956,9 +5846,6 @@
         </div>
 
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -5976,10 +5863,6 @@
             <li>En Java, se usan <code class="cls">Socket</code> (cliente) y <code class="cls">ServerSocket</code> (servidor).</li>
             <li>Permiten comunicación bidireccional mediante TCP/IP.</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Ejemplo Cliente -->
-        <div class="slide" data-title="Cliente TCP">
           <div class="ide">
             <div class="ide-header">
               <span class="dot red"></span>
@@ -5987,33 +5870,19 @@
               <span class="dot green"></span>
             </div>
             <ol class="code">
+              <li><span class="cm">// Ejemplo cliente TCP</span></li>
               <li><span class="cls">Socket</span> socket = <span class="kw">new</span> <span class="cls">Socket</span>(<span class="str">"localhost"</span>, <span class="num">5000</span>);</li>
               <li><span class="cls">OutputStream</span> out = socket.<span class="mtd">getOutputStream</span>();</li>
               <li>out.<span class="mtd">write</span>(<span class="str">"Hola"</span>.<span class="mtd">getBytes</span>());</li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- SLIDER 3: Ejemplo Servidor -->
-        <div class="slide" data-title="Servidor TCP">
-          <div class="ide">
-            <div class="ide-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <ol class="code">
+              <li></li>
+              <li><span class="cm">// Ejemplo servidor TCP</span></li>
               <li><span class="cls">ServerSocket</span> server = <span class="kw">new</span> <span class="cls">ServerSocket</span>(<span class="num">5000</span>);</li>
               <li><span class="cls">Socket</span> client = server.<span class="mtd">accept</span>();</li>
               <li><span class="cm">// Comunicación con el cliente...</span></li>
             </ol>
           </div>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6031,10 +5900,6 @@
             <li>Protocolos soportados: HTTP y HTTPS.</li>
             <li>En Java, se pueden realizar con <code class="cls">HttpURLConnection</code> o <code class="cls">HttpClient</code> (Java 11+).</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Ejemplo GET -->
-        <div class="slide" data-title="GET Request">
           <div class="ide">
             <div class="ide-header">
               <span class="dot red"></span>
@@ -6048,11 +5913,7 @@
             </ol>
           </div>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6071,10 +5932,6 @@
             <li>Cifrado de datos.</li>
             <li>Validación de entradas para evitar ataques.</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Clases Clave -->
-        <div class="slide" data-title="API de Seguridad">
           <table>
             <thead>
               <tr>
@@ -6098,11 +5955,7 @@
             </tbody>
           </table>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6114,15 +5967,11 @@
       <div class="content modal-content">
 
         <!-- SLIDER 1: Introducción -->
-        <div class="slide active" data-title="Qué es">
+        <div class="slide active" data-title="Criptografía">
           <p>La <strong>Criptografía</strong> en Java se usa para proteger información mediante cifrado, asegurando que solo el destinatario pueda leerla.</p>
           <ul>
             <li>Tipos: Simétrica (AES, DES) y Asimétrica (RSA, ECC).</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Ejemplo Cifrado Simétrico -->
-        <div class="slide" data-title="AES">
           <div class="ide">
             <div class="ide-header">
               <span class="dot red"></span>
@@ -6136,11 +5985,7 @@
             </ol>
           </div>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6152,16 +5997,12 @@
       <div class="content modal-content">
 
         <!-- SLIDER 1: Introducción -->
-        <div class="slide active" data-title="Qué es">
+        <div class="slide active" data-title="Hashing">
           <p><strong>Hashing</strong> es el proceso de transformar datos en una cadena de longitud fija usando una función hash.</p>
           <ul>
             <li>Se usa para integridad de datos y almacenamiento seguro de contraseñas.</li>
             <li>Ejemplos: SHA-256, MD5.</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Ejemplo -->
-        <div class="slide" data-title="SHA-256">
           <div class="ide">
             <div class="ide-header">
               <span class="dot red"></span>
@@ -6174,11 +6015,7 @@
             </ol>
           </div>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6190,31 +6027,12 @@
       <div class="content modal-content">
 
         <!-- SLIDER 1: Introducción -->
-        <div class="slide active" data-title="Introducción">
+        <div class="slide active" data-title="Java Util">
           <p>La librería <strong>java.util</strong> contiene colecciones, utilidades de fecha/hora, y otras herramientas.</p>
           <ul>
             <li>Contiene clases como <code class="cls">ArrayList</code>, <code class="cls">HashMap</code>, <code class="cls">Date</code>, <code class="cls">Scanner</code>, etc.</li>
             <li>Se usa para manipular datos y estructuras comunes.</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Colecciones básicas -->
-        <div class="slide" data-title="Colecciones">
-          <p>Algunas colecciones comunes en <code class="cls">java.util</code>:</p>
-          <table>
-            <thead>
-              <tr><th>Clase</th><th>Descripción</th><th>Ejemplo</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><code class="cls">ArrayList</code></td><td>Lista dinámica.</td><td><code>ArrayList<String> lista = new ArrayList<>();</code></td></tr>
-              <tr><td><code class="cls">HashMap</code></td><td>Mapa clave-valor.</td><td><code>HashMap<Integer, String> mapa = new HashMap<>();</code></td></tr>
-              <tr><td><code class="cls">HashSet</code></td><td>Conjunto sin duplicados.</td><td><code>HashSet<String> set = new HashSet<>();</code></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- SLIDER 3: Utilidades -->
-        <div class="slide" data-title="Utilidades">
           <p>Otras clases útiles:</p>
           <ul>
             <li><code class="cls">Scanner</code> para leer entrada.</li>
@@ -6230,13 +6048,8 @@
               <li><span class="cls">Random</span> rnd = <span class="kw">new</span> <span class="cls">Random</span>();</li>
               <li><span class="cls">Collections</span>.sort(lista);</li>
             </ol>
-          </div>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6307,17 +6120,8 @@
       <header class="modal-header">Clase Date</header>
       <div class="content modal-content">
 
-        <!-- SLIDER 1: Introducción -->
-        <div class="slide active" data-title="Introducción">
-          <p>La clase <code class="cls">Date</code> representa fechas y horas.</p>
-          <ul>
-            <li>Está en <code class="cls">java.util</code>.</li>
-            <li>Permite crear, comparar y manipular fechas.</li>
-          </ul>
-        </div>
-
         <!-- SLIDER 2: Creación y métodos -->
-        <div class="slide" data-title="Creación y métodos">
+        <div class="slide" data-title="Java Dates">
           <p>Crear un objeto Date:</p>
           <div class="ide">
             <div class="ide-header">
@@ -6335,15 +6139,7 @@
           </ul>
         </div>
 
-        <!-- SLIDER 3: Alternativa moderna -->
-        <div class="slide" data-title="Alternativa moderna">
-          <p>Desde Java 8, se recomienda usar <code class="cls">java.time</code> (ej. <code class="cls">LocalDate</code>, <code class="cls">LocalDateTime</code>), por mayor funcionalidad y precisión.</p>
-        </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6447,21 +6243,22 @@
             <li>Detecta errores de sintaxis.</li>
             <li>Genera archivos <code class="str">.class</code> con bytecode.</li>
           </ul>
+          <p>Java compila a <strong>bytecode</strong>, que es código intermedio portable. El bytecode puede ser ejecutado en cualquier plataforma con
+          una JVM. La JVM interpreta o compila justo a tiempo (JIT) este bytecode para la máquina real.</p>
+          <p>El proceso de compilación en Java consta de varias etapas:</p>
+          <table>
+            <thead>
+              <tr><th>Etapa</th><th>Descripción</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Procesamiento</strong></td><td>El código fuente se prepara para la compilación (aunque Java no tiene preprocesador clásico).</td></tr>
+              <tr><td><strong>Compilación</strong></td><td>El compilador <code>javac</code> traduce el código fuente <code>.java</code> a bytecode <code>.class</code>.</td></tr>
+              <tr><td><strong>Verificación</strong></td><td>La JVM verifica que el bytecode sea seguro y válido.</td></tr>
+              <tr><td><strong>Ejecutación</strong></td><td>La JVM interpreta o compila justo a tiempo (JIT) el bytecode en código máquina.</td></tr>
+            </tbody>
+          </table>
         </div>
-
-        <!-- SLIDER 2: ¿Qué hace Java y qué es bytecode? -->
-        <div class="slide" data-title="Java y bytecode">
-          <p>Java compila a <strong>bytecode</strong>, que es código intermedio portable.</p>
-          <ul>
-            <li>El bytecode puede ser ejecutado en cualquier plataforma con una JVM.</li>
-            <li>La JVM interpreta o compila justo a tiempo (JIT) este bytecode para la máquina real.</li>
-          </ul>
-        </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6472,27 +6269,26 @@
       <header class="modal-header">JVM y JIT</header>
       <div class="content modal-content">
 
-        <!-- SLIDER 1: ¿Qué son? -->
-        <div class="slide active" data-title="¿Qué son?">
-          <p><strong>JVM (Java Virtual Machine)</strong> es la máquina virtual que ejecuta bytecode Java.</p>
-          <p><strong>JIT (Just-In-Time compiler)</strong> compila bytecode a código máquina en tiempo de ejecución para acelerar la ejecución.</p>
-        </div>
+        <div class="slide active" data-title="JVM y JIT">
+          <p><strong>JVM (Java Virtual Machine)</strong> es la máquina virtual que ejecuta el bytecode generado por el compilador Java (<code>javac</code>).</p>
 
-        <!-- SLIDER 2: ¿Cómo usarlos? -->
-        <div class="slide" data-title="¿Cómo usarlos?">
-          <p>Para ejecutar un programa Java:</p>
+          <p>La JVM proporciona un entorno independiente de la plataforma para ejecutar programas Java, asegurando la portabilidad del código con la filosofía <em>write once, run anywhere</em>.</p>
+
+          <p><strong>JIT (Just-In-Time compiler)</strong> es un componente de la JVM que traduce el bytecode a código máquina nativo en tiempo de ejecución, optimizando la velocidad de ejecución.</p>
+
+          <p>Esto permite que los programas Java alcancen un rendimiento cercano al de los programas compilados directamente a código máquina.</p>
+
+          <h3>Funciones clave de la JVM:</h3>
           <ul>
-            <li>Se compila el código fuente con <code class="kw">javac</code> generando bytecode.</li>
-            <li>La JVM ejecuta el bytecode.</li>
-            <li>El JIT optimiza el código durante la ejecución para mejor rendimiento.</li>
+            <li><strong>Verificación:</strong> Comprueba que el bytecode es seguro y válido para evitar errores o exploits.</li>
+            <li><strong>Gestión de memoria:</strong> Incluye recolección automática de basura (garbage collector).</li>
+            <li><strong>Interpretación y compilación:</strong> Ejecuta bytecode interpretándolo o compilándolo dinámicamente mediante JIT.</li>
           </ul>
-          <p>No se requiere interacción directa con JVM o JIT, se manejan automáticamente.</p>
+          <h3>¿Cómo usar JVM y JIT?</h3>
+          <p>Al compilar un programa Java con <code>javac</code>, se genera bytecode portable (<code>.class</code>).</p>
+          <p>Luego, ejecutas el programa con el comando <code>java</code>, que lanza la JVM para interpretar y optimizar el código usando el compilador JIT automáticamente.</p>        
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6511,10 +6307,6 @@
             <li><code class="kw">javadoc</code>: genera documentación HTML desde comentarios.</li>
             <li><code class="kw">jar</code>: empaqueta archivos .class y recursos en un archivo .jar.</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Uso básico -->
-        <div class="slide" data-title="Uso básico">
           <p>Ejemplos de comandos:</p>
           <ul>
             <li><code>javac MiClase.java</code></li>
@@ -6522,11 +6314,7 @@
             <li><code>jar cf archivo.jar *.class</code></li>
           </ul>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6545,10 +6333,6 @@
             <li>Streams: flujo de datos que pueden ser de bytes o caracteres.</li>
             <li>Se dividen en InputStream (entrada) y OutputStream (salida).</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Streams de Bytes y Caracteres -->
-        <div class="slide" data-title="Streams Bytes/Caracteres">
           <p>Streams en Java:</p>
           <table>
             <thead>
@@ -6562,11 +6346,7 @@
             </tbody>
           </table>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6735,22 +6515,6 @@
           </table>
         </div>
 
-        <!-- SLIDER 3: Guardar Valores y Evitar Problemas -->
-        <div class="slide" data-title="Guardar y Evitar Problemas">
-          <p>Cuando se usa <code>nextInt()</code> seguido de <code>nextLine()</code> puede haber problemas por salto de línea pendiente.</p>
-          <p>Solución común:</p>
-          <div class="ide">
-            <div class="ide-header">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            </div>
-            <ol class="code">
-              <li><span class="type">int</span> edad = sc.nextInt();</li>
-              <li>sc.nextLine(); <span class="cm">// consumir salto de línea pendiente</span></li>
-              <li><span class="type">String</span> nombre = sc.nextLine();</li>
-            </ol>
-          </div>
-        </div>
-
       </div>
       <a href="#" class="arrow left prev-slide">‹</a>
       <a href="#" class="arrow right next-slide">›</a>
@@ -6848,10 +6612,6 @@
             <li>Las principales áreas son: <strong>Heap</strong>, <strong>Stack</strong>, <strong>Method Area</strong>, y <strong>PC Register</strong>.</li>
             <li>Cada área tiene un propósito específico durante la ejecución.</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Áreas de Memoria -->
-        <div class="slide" data-title="Áreas de Memoria">
           <table>
             <thead>
               <tr>
@@ -6886,9 +6646,6 @@
         </div>
 
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -6951,15 +6708,6 @@
           <p><code>saludo</code> referencia objeto en <code>heap</code>, <code>numero</code> está en <code>stack</code>.</p>
         </div>
 
-        <!-- SLIDER 3: Manejo y buenas prácticas -->
-        <div class="slide" data-title="Manejo y Buenas Prácticas">
-          <ul>
-            <li>Evitar mantener referencias innecesarias para liberar objetos en heap.</li>
-            <li>Variables primitivas y referencias pequeñas van en stack.</li>
-            <li>Entender esta diferencia ayuda a optimizar memoria y evitar fugas.</li>
-          </ul>
-        </div>
-
       </div>
       <a href="#" class="arrow left prev-slide">‹</a>
       <a href="#" class="arrow right next-slide">›</a>
@@ -6974,56 +6722,30 @@
       <header class="modal-header">Garbage Collector (GC)</header>
       <div class="content modal-content">
 
-        <!-- SLIDER 1: Qué es el GC -->
-        <div class="slide active" data-title="¿Qué es GC?">
-          <p>El <strong>Garbage Collector</strong> es un proceso automático que libera memoria eliminando objetos que ya no se usan.</p>
-          <ul>
-            <li>Evita fugas de memoria.</li>
-            <li>Funciona en el <code>heap</code>.</li>
-            <li>No es necesario liberar memoria manualmente en Java.</li>
-          </ul>
-        </div>
+        <div class="slide active" data-title="Garbage Collector">
 
-        <!-- SLIDER 2: Cómo funciona -->
-        <div class="slide" data-title="Funcionamiento">
-          <p>El GC identifica objetos no referenciados y los marca para ser eliminados:</p>
+          <h3>¿Qué es el Garbage Collector?</h3>
+          <p>El <strong>Garbage Collector (GC)</strong> es un mecanismo automático en Java que libera memoria eliminando objetos que ya no son accesibles ni utilizados por el programa.</p>
           <ul>
-            <li><strong>Mark and Sweep:</strong> marca objetos vivos y limpia el resto.</li>
-            <li><strong>Generacional:</strong> divide objetos jóvenes y viejos para optimizar.</li>
-            <li>GC se ejecuta en hilos de fondo sin detener completamente el programa.</li>
+            <li>Previene <em>fugas de memoria</em> y mejora la gestión eficiente de recursos.</li>
+            <li>Opera principalmente en el <code>heap</code>, donde se almacenan los objetos dinámicos.</li>
+            <li>No es necesario que el programador gestione la memoria manualmente.</li>
           </ul>
-        </div>
 
-        <!-- SLIDER 3: Tipos comunes de GC -->
-        <div class="slide" data-title="Tipos Comunes">
-          <table>
-            <thead>
-              <tr>
-                <th>Tipo</th>
-                <th>Características</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Serial GC</td>
-                <td>Simple, para aplicaciones pequeñas o pruebas.</td>
-              </tr>
-              <tr>
-                <td>Parallel GC</td>
-                <td>GC paralelo para aprovechar múltiples núcleos.</td>
-              </tr>
-              <tr>
-                <td>G1 GC</td>
-                <td>Garbage First, para baja latencia en aplicaciones grandes.</td>
-              </tr>
-            </tbody>
-          </table>
+          <h3>¿Cómo funciona el Garbage Collector?</h3>
+          <p>El GC identifica objetos inaccesibles y recupera la memoria que ocupan, a través de varias técnicas:</p>
+          <ul>
+            <li><strong>Mark and Sweep:</strong> Marca objetos vivos y elimina el resto.</li>
+            <li><strong>Generacional:</strong> Divide el heap en generaciones (jóvenes, viejas) para optimizar el proceso.</li>
+            <li>Se ejecuta en hilos de fondo, minimizando pausas en la aplicación (<em>pausas pausadas</em> o <em>concurrentes</em>).</li>
+          </ul>
+
+          <h3>Cómo influye el GC en el rendimiento</h3>
+          <p>Un GC bien configurado mejora la estabilidad y el rendimiento de las aplicaciones Java, mientras que uno mal configurado puede causar pausas largas y afectar la experiencia del usuario.</p>
+
         </div>
 
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -7042,10 +6764,6 @@
             <li>Reduce la duplicación de objetos <code>String</code>.</li>
             <li>Strings creados con <code>new String()</code> no se guardan en el pool automáticamente.</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Ejemplo -->
-        <div class="slide" data-title="Ejemplo">
           <div class="ide">
             <div class="ide-header">
               <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
@@ -7059,11 +6777,7 @@
             </ol>
           </div>
         </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 
@@ -7075,46 +6789,8 @@
       <div class="content modal-content">
 
         <!-- SLIDER 1: Manejo de excepciones -->
-        <div class="slide active" data-title="Manejo de Excepciones">
-          <p>Java usa bloques <code>try-catch-finally</code> para manejar errores y excepciones.</p>
-          <div class="ide">
-            <div class="ide-header">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            </div>
-            <ol class="code">
-              <li><span class="kw">try</span> {</li>
-              <li>  <span class="cm">// código que puede lanzar excepción</span></li>
-              <li>} <span class="kw">catch</span> (<span class="type">Exception</span> e) {</li>
-              <li>  e.printStackTrace();</li>
-              <li>} <span class="kw">finally</span> {</li>
-              <li>  <span class="cm">// código que siempre se ejecuta</span></li>
-              <li>}</li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- SLIDER 2: Uso de anotaciones -->
-        <div class="slide" data-title="Anotaciones">
-          <p>Las <strong>anotaciones</strong> agregan metadata al código y ayudan a frameworks y compiladores.</p>
-          <ul>
-            <li><code>@Override</code>: indica que un método sobreescribe otro.</li>
-            <li><code>@Deprecated</code>: marca métodos obsoletos.</li>
-            <li><code>@SuppressWarnings</code>: suprime avisos de compilación.</li>
-          </ul>
-        </div>
-
-        <!-- SLIDER 3: Lambdas y Streams -->
-        <div class="slide" data-title="Lambdas y Streams">
-          <p>Java 8 introdujo <strong>expresiones lambda</strong> y <strong>Streams</strong> para programación funcional.</p>
-          <div class="ide">
-            <div class="ide-header">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            </div>
-            <ol class="code">
-              <li><span class="type">List</span>&lt;<span class="type">String</span>&gt; nombres = <span class="kw">Arrays</span>.<span class="mtd">asList</span>(<span class="str">"Ana"</span>, <span class="str">"Luis"</span>, <span class="str">"Eva"</span>);</li>
-              <li>nombres.<span class="mtd">stream</span>().<span class="mtd">filter</span>(n -&gt; n.<span class="mtd">startsWith</span>(<span class="str">"A"</span>)).<span class="mtd">forEach</span>(System.out::<span class="mtd">println</span>);</li>
-            </ol>
-          </div>
+        <div class="slide active" data-title="Java Misc">
+          <p>Nada que mostrar ¯\_(ツ)_/¯</p>
         </div>
 
       </div>
@@ -7218,10 +6894,6 @@
             <li><strong>Java 5 (2004):</strong> Generics, annotations, enums.</li>
             <li><strong>Java 8 (2014):</strong> Lambdas y Streams.</li>
           </ul>
-        </div>
-
-        <!-- SLIDER 2: Versiones Clave -->
-        <div class="slide" data-title="Versiones Clave">
           <table>
             <thead>
               <tr><th>Versión</th><th>Año</th><th>Novedad Principal</th></tr>
@@ -7235,31 +6907,7 @@
             </tbody>
           </table>
         </div>
-
-        <!-- SLIDER 3: Novedades Principales -->
-        <div class="slide" data-title="Novedades Principales">
-          <ul>
-            <li><strong>Generics:</strong> Tipos parametrizados para seguridad en tiempo de compilación.</li>
-            <li><strong>Lambdas:</strong> Funciones anónimas para programación funcional.</li>
-            <li><strong>Modularidad (Java 9):</strong> Sistema de módulos para aplicaciones más grandes.</li>
-            <li><strong>Records (Java 14):</strong> Clases inmutables simplificadas.</li>
-          </ul>
-        </div>
-
-        <!-- SLIDER 4: Estado Actual -->
-        <div class="slide" data-title="Estado Actual">
-          <p>Java sigue evolucionando con actualizaciones regulares:</p>
-          <ul>
-            <li>Versiones de soporte a largo plazo (LTS) cada pocos años.</li>
-            <li>Mejoras en rendimiento, seguridad y sintaxis.</li>
-            <li>Enfoque en nube, contenedores y microservicios.</li>
-          </ul>
-        </div>
-
       </div>
-      <a href="#" class="arrow left prev-slide">‹</a>
-      <a href="#" class="arrow right next-slide">›</a>
-      <div class="dots slide-dots"></div>
     </div>
   </section>
 </section>
