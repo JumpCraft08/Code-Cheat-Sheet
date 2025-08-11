@@ -10,6 +10,8 @@
 # --- ARCHIVOS BINARIOS --- 
 *.ico binary
 *.gif binary
+*.jpg binary
+*.jpeg binary
 
 # --- LINGUIST (GitHub lenguaje stats) ---
 *.html linguist-language=HTML

@@ -27,7 +27,18 @@ html, body {
   justify-content: center;
   align-items: flex-start;
 }
-body { animation: fade-in 0.5s ease forwards; }
+
+body {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* =========================
    CONTENEDOR PRINCIPAL

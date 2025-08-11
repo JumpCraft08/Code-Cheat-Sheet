@@ -124,3 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', checkHash)
 
 })()
+
+
+/* ==============================
+   ANIMACION FLUIDA DE ENTRADA
+============================== */
+window.addEventListener('load', () => {
+  document.body.classList.add('fade-in');
+});
