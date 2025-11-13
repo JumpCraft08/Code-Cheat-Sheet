@@ -1,0 +1,57 @@
+/* === Slider 1-0 === */
+#slide1-0-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide1-0-1:checked ~ .slide-footer .controls label.next[for="slide1-0-2"] { display: block; }
+#slide1-0-2:checked ~ .slide-footer .controls label.prev[for="slide1-0-1"] { display: block; }
+#slide1-0-2:checked ~ .slide-footer .controls label.next[for="slide1-0-3"] { display: block; }
+#slide1-0-3:checked ~ .slide-footer .controls label.prev[for="slide1-0-2"] { display: block; }
+#slide1-0-3:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide1-0-1:checked ~ .slide-footer .dot[for="slide1-0-1"],
+#slide1-0-2:checked ~ .slide-footer .dot[for="slide1-0-2"],
+#slide1-0-3:checked ~ .slide-footer .dot[for="slide1-0-3"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 1-1 === */
+#slide1-1-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide1-1-1:checked ~ .slide-footer .controls label.next[for="slide1-1-2"] { display: block; }
+#slide1-1-2:checked ~ .slide-footer .controls label.prev[for="slide1-1-1"] { display: block; }
+#slide1-1-2:checked ~ .slide-footer .controls label.next[for="slide1-1-3"] { display: block; }
+#slide1-1-3:checked ~ .slide-footer .controls label.prev[for="slide1-1-2"] { display: block; }
+#slide1-1-3:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide1-1-1:checked ~ .slide-footer .dot[for="slide1-1-1"],
+#slide1-1-2:checked ~ .slide-footer .dot[for="slide1-1-2"],
+#slide1-1-3:checked ~ .slide-footer .dot[for="slide1-1-3"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 1-2 === */
+#slide1-2-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide1-2-1:checked ~ .slide-footer .controls label.next[for="slide1-2-2"] { display: block; }
+#slide1-2-2:checked ~ .slide-footer .controls label.prev[for="slide1-2-1"] { display: block; }
+#slide1-2-2:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide1-2-1:checked ~ .slide-footer .dot[for="slide1-2-1"],
+#slide1-2-2:checked ~ .slide-footer .dot[for="slide1-2-2"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 3-1 === */
+#slide1-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide1-1:checked ~ .slide-footer .controls label.next[for="slide1-2"] { display: block; }
+#slide1-2:checked ~ .slide-footer .controls label.prev[for="slide1-1"] { display: block; }
+#slide1-2:checked ~ .slide-footer .controls label.next[for="slide1-3"] { display: block; }
+#slide1-3:checked ~ .slide-footer .controls label.prev[for="slide1-2"] { display: block; }
+#slide1-3:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide1-1:checked ~ .slide-footer .dot[for="slide1-1"],
+#slide1-2:checked ~ .slide-footer .dot[for="slide1-2"],
+#slide1-3:checked ~ .slide-footer .dot[for="slide1-3"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+

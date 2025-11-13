@@ -57,6 +57,7 @@ ol.code li[data-type="comment"] {
     font-style: italic;
 }
 
+.cm  { color: #6a737d; }
 .kw  { color: #c678dd; }
 .type{ color: #56b6c2; }
 .cls { color: #61afef; }
@@ -100,7 +101,7 @@ ol.code li[data-type="comment"] {
 ========================= */
 .modal ul li,
 .modal ol li { margin-bottom: 2px; }
-.modal ul { margin: 8px 0; }
+.modal ul { margin: 8px 0 8px 40px; }
 .modal ul li::marker { color: #28c840; }
 
 .modal ol li::marker {

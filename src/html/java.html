@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="JumpCraft">
+  <meta name="description" content="Resumen visual de los conceptos básicos de Java.">
+  <title>Columnas con Cards Ajustables</title>
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/modal.css" rel="stylesheet" type="text/css">
+  <link href="../css/modal-body.css" rel="stylesheet" type="text/css">
+  <link href="../css/indicators-java.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<main class="wallpaper">
+
+  <div class="columna">
+
+    <label for="modal-lang-selector" class="title">Java Core</label>
+
+    <div class="card" data-title="Fundamentos" style="--card-color: #0077b6;" role="group" aria-label="Fundamentos">
+      <label for="modal-card-1" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-1-1">Tipos de Datos</label></td></tr>
+        <tr><td><label for="modal-card-1-2">Variables</label></td></tr>
+        <tr><td>Operadores</td></tr>
+        <tr><td>Strings</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Estructuras de Control" style="--card-color: #dd9b00;" role="group" aria-label="Estructuras de Control">
+      <table>
+        <tbody>
+        <tr><td>Estructuras de Condición</td></tr>
+        <tr><td>Estructuras de Bucle</td></tr>
+        <tr><td>Estructuras de Salto</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Errores" style="--card-color: #0ea5e9;" role="group" aria-label="Errores">
+      <table>
+        <tbody>
+        <tr><td>Excepciones</td></tr>
+        <tr><td>Anotaciones</td></tr>
+        <tr><td>Bloque Try... Catch</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" data-title="Java OOP" style="--card-color: #2563eb;" role="group" aria-label="Java OOP">
+      <label for="modal-card-3-1" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-3-1">Constructores</label></td></tr>
+        <tr><td><label for="modal-card-3-1">Métodos</label></td></tr>
+        <tr><td>Modificadores de Acceso</td></tr>
+        <tr><td>Abstracción</td></tr>
+        <tr><td>Encapsulación</td></tr>
+        <tr><td>Herencia</td></tr>
+        <tr><td>Polimorfismo</td></tr>
+        <tr><td>Enums</td></tr>
+        <tr><td>Clases Genéricas</td></tr>
+        <tr><td>Clases Anidadas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="OOP Avanzado" style="--card-color: #ef4444;" role="group" aria-label="OOP Avanzado">
+      <table>
+        <tbody>
+        <tr><td>Lambda</td></tr>
+        <tr><td>Clases Record</td></tr>
+        <tr><td>Sealed Classes</td></tr>
+        <tr><td>interfaces Funcionales</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" data-title="Concurrencia" style="--card-color: #0ea5e9;" role="group" aria-label="Concurrencia">
+      <table>
+        <tbody>
+        <tr><td>Threads / Runnable</td></tr>
+        <tr><td>Executor Framework</td></tr>
+        <tr><td>Sincronización</td></tr>
+        <tr><td>Clases Concurrentes</td></tr>
+        <tr><td>Parallel Streams</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Estructuras de datos" style="--card-color: #9333ea;" role="group" aria-label="Estructuras de datos">
+      <label for="modal-card-3-1" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td>Array</td></tr>
+        <tr><td>Listas</td></tr>
+        <tr><td>Sets</td></tr>
+        <tr><td>Map</td></tr>
+        <tr><td>Queue / Deque</td></tr>
+        <tr><td>Stack</td></tr>
+        <tr><td>Comparator / Comparable</td></tr>
+        <tr><td>Iterator</td></tr>
+        <tr><td>Streams</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" data-title="Networking" style="--card-color: #1e40af;" role="group" aria-label="Networking">
+      <table>
+        <tbody>
+          <tr><td>Sockets</td></tr>
+          <tr><td>HTTP Requests</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Seguridad" style="--card-color: #ef4444;" role="group" aria-label="Seguridad">
+      <table>
+        <tbody>
+        <tr><td>Criptografía</td></tr>
+        <tr><td>Hashing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Java Util" style="--card-color: #eab308;" role="group" aria-label="Java Util">
+      <table>
+        <tbody>
+        <tr><td>Math</td></tr>
+        <tr><td>Date</td></tr>
+        <tr><td>RegEx</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Compilación" style="--card-color: #0ea5e9;" role="group" aria-label="Compilación">
+      <table>
+        <tbody>
+        <tr><td>JVM / JIT</td></tr>
+        <tr><td>Javac</td></tr>
+        <tr><td>Javadoc</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+
+    <div class="card" data-title="Entrada / Salida" style="--card-color: #eab308;" role="group" aria-label="Entrada / Salida">
+      <table>
+        <tbody>
+        <tr><td>Files</td></tr>
+        <tr><td>NIO</td></tr>
+        <tr><td>Scanner</td></tr>
+        <tr><td>Serializer / Serializable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Java Memory" style="--card-color: #9333ea;" role="group" aria-label="Java Memory">
+      <table>
+        <tbody>
+        <tr><td>Stack vs Heap</td></tr>
+        <tr><td>Garbage Collector</td></tr>
+        <tr><td>String Pool</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Java Misc" style="--card-color: #ef4444;" role="group" aria-label="Java Misc">
+      <table>
+        <tbody>
+        <tr><td>Paquetes / API</td></tr>
+        <tr><td>Histórico de Versiones</td></tr>
+        <tr><td>Histórico de Versiones</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="button-group">
+      <button class="title-button">1</button>
+      <button class="title-button">2</button>
+      <button class="title-button">3</button>
+      <button class="title-button">4</button>
+    </div>
+
+  </div>
+</main>
+
+<div class="modals">
+
+  <!-- Modal Selector de Lenguaje -->
+  <input type="checkbox" id="modal-lang-selector" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-lang-selector" class="modal-overlay"></label>
+
+    <div class="modal-content" style="background: #111827;">
+      <h2 style="margin: 0; padding: 1em; background: #1f2937; border-bottom: 1px solid #333;">
+        Cambiar Code-Sheet
+      </h2>
+
+      <div style="display: flex; flex-direction: column; padding: 1.5em; gap: 0.8em;">
+        <label for="modal-lang-selector" class="lang-option" style="--lang-color: #f89820;">Java Core</label>
+        <a href="python.html" class="lang-option" style="--lang-color: #3776ab;">Python</a>
+        <a href="cpp.html" class="lang-option" style="--lang-color: #00599C;">C++</a>
+        <a href="javascript.html" class="lang-option" style="--lang-color: #f7df1e; color:#111;">JavaScript</a>
+        <a href="kotlin.html" class="lang-option" style="--lang-color: #7f52ff;">Kotlin</a>
+      </div>
+
+      <label for="modal-lang-selector" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 1: Sintaxis Básica -->
+  <input type="checkbox" id="modal-card-1" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-1" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides1" id="slide1-0-1" checked>
+      <div class="slide" data-title="Sintaxis Básica">
+        <p>Un programa en Java está compuesto por <strong>clases</strong> y <strong>métodos</strong>.
+          El método <code class="mtd">main</code> es el punto de entrada de la aplicación. Sus
+          características principales son:</p>
+        <ul>
+          <li>Sensible a mayúsculas y minúsculas.</li>
+          <li>Cada sentencia termina con punto y coma (<code>;</code>).</li>
+          <li>Las llaves <code>{ }</code> definen bloques de código.</li>
+        </ul>
+
+          <ol class="code">
+            <li><span class="kw">public class</span> <span class="cls">Main</span> {</li>
+            <li>  <span class="kw">public static void</span> <span class="mtd">main</span>(<span class="type">String</span>[] args) {</li>
+            <li>    <span class="type">System</span>.<span class="mtd">out</span>.<span class="mtd">println</span>(<span class="str">"¡Hola Mundo!"</span>);</li>
+            <li>  }</li>
+            <li>}</li>
+          </ol>
+      </div>
+
+      <input type="radio" name="slides1" id="slide1-0-2">
+      <div class="slide" data-title="Estructura de un Proyecto Java">
+        <p>Un proyecto Java básico suele tener esta estructura:</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Carpeta / Archivo</th>
+            <th>Descripción</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>src/</code></td>
+            <td>Contiene el código fuente (archivos .java).</td>
+          </tr>
+          <tr>
+            <td><code>bin/</code></td>
+            <td>Contiene los archivos compilados (.class).</td>
+          </tr>
+          <tr>
+            <td><code>lib/</code></td>
+            <td>Bibliotecas externas (JARs).</td>
+          </tr>
+          <tr>
+            <td><code>Main.java</code></td>
+            <td>Punto de entrada del programa.</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <p>Para compilar en terminal se usa <code class="mtd">javac Main.java</code></p>
+        <p>Para ejecutar en terminal se usa <code class="mtd">java Main</code></p>
+      </div>
+
+      <input type="radio" name="slides1" id="slide1-0-3">
+      <div class="slide" data-title="Comentarios">
+        <p>Los comentarios permiten dejar notas en el código que no se ejecutan. En Java hay tres tipos:</p>
+        <ul>
+          <li><strong>Comentario de una línea:</strong> <code>// Esto es un comentario</code></li>
+          <li><strong>Comentario de varias líneas:</strong> <code>/* Esto es un comentario largo */</code></li>
+          <li><strong>JavaDoc:</strong> Se usa para documentar clases y métodos. <code>/** ... */</code></li>
+        </ul>
+          <ol class="code">
+            <li><span class="cm">// Comentario de una línea</span></li>
+            <li><span class="cm">/* Comentario de varias</span></li>
+            <li><span class="cm">   líneas */</span></li>
+            <li><span class="cm">/**</span></li>
+            <li><span class="cm"> * Documentación de clase</span></li>
+            <li><span class="cm"> */</span></li>
+          </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide1-0-2" class="next"></label>
+          <label for="slide1-0-1" class="prev"></label>
+          <label for="slide1-0-3" class="next"></label>
+          <label for="slide1-0-2" class="prev"></label>
+
+        </div>
+        <div class="slide-indicators">
+          <label for="slide1-0-1" class="dot"></label>
+          <label for="slide1-0-2" class="dot"></label>
+          <label for="slide1-0-3" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-1" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 1-1: Tipos de Datos -->
+  <input type="checkbox" id="modal-card-1-1" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-1-1" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides1-1" id="slide1-1-1" checked>
+      <div class="slide" data-title="Tipos de Datos - Datos Primitivos">
+        <p>Son los más básicos y se almacenan directamente en memoria. No son objetos.</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Tamaño</th>
+            <th>Valor mínimo</th>
+            <th>Valor máximo</th>
+            <th>Ejemplo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>byte</td>
+            <td>8 bits</td>
+            <td>-128</td>
+            <td>127</td>
+            <td><code>byte edad = 20;</code></td>
+          </tr>
+          <tr>
+            <td>short</td>
+            <td>16 bits</td>
+            <td>-32,768</td>
+            <td>32,767</td>
+            <td><code>short temperatura = 300;</code></td>
+          </tr>
+          <tr>
+            <td>int</td>
+            <td>32 bits</td>
+            <td>-2³¹</td>
+            <td>2³¹ - 1</td>
+            <td><code>int poblacion = 100000;</code></td>
+          </tr>
+          <tr>
+            <td>long</td>
+            <td>64 bits</td>
+            <td>-2⁶³</td>
+            <td>2⁶³ - 1</td>
+            <td><code>long distancia = 9999999999L;</code></td>
+          </tr>
+          <tr>
+            <td>float</td>
+            <td>32 bits</td>
+            <td>≈ ±3.4e−038</td>
+            <td>≈ ±3.4e+038</td>
+            <td><code>float precio = 10.99f;</code></td>
+          </tr>
+          <tr>
+            <td>double</td>
+            <td>64 bits</td>
+            <td>≈ ±1.7e−308</td>
+            <td>≈ ±1.7e+308</td>
+            <td><code>double pi = 3.1415926535;</code></td>
+          </tr>
+          <tr>
+            <td>char</td>
+            <td>16 bits</td>
+            <td>0</td>
+            <td>65,535</td>
+            <td><code>char letra = 'A';</code></td>
+          </tr>
+          <tr>
+            <td>boolean</td>
+            <td>1 bit (lógico)</td>
+            <td>false</td>
+            <td>true</td>
+            <td><code>boolean activo = true;</code></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <input type="radio" name="slides1-1" id="slide1-1-2">
+      <div class="slide" data-title="Tipos de Datos - Datos No Primitivos">
+        <p>Los tipos de datos no primitivos se denominan tipos de referencia porque se refieren a objetos, no valores directos.
+          Ademas, tienen métodos y propiedades asociados. Son:
+        </p>
+        <table>
+          <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>String</td>
+            <td>Cadena de texto, secuencia de caracteres.</td>
+            <td><code>String nombre = "Juan";</code></td>
+          </tr>
+          <tr>
+            <td>Arrays</td>
+            <td>Conjunto de valores del mismo tipo.</td>
+            <td><code>int[] numeros = {1, 2, 3};</code></td>
+          </tr>
+          <tr>
+            <td>Clases</td>
+            <td>Plantillas para crear objetos.</td>
+            <td><code>class Persona { ... }</code></td>
+          </tr>
+          <tr>
+            <td>Interfaces</td>
+            <td>Contratos que definen métodos sin implementar.</td>
+            <td><code>interface Vehiculo { ... }</code></td>
+          </tr>
+          <tr>
+            <td>Enums</td>
+            <td>Conjuntos de valores constantes predefinidos.</td>
+            <td><code>enum Dia { LUNES, MARTES }</code></td>
+          </tr>
+          <tr>
+            <td>Wrapper Classes</td>
+            <td>Clases que envuelven tipos primitivos (como Integer, Double).</td>
+            <td><code>Integer edad = 30;</code></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <input type="radio" name="slides1-1" id="slide1-1-3">
+      <div class="slide" data-title="Type Casting">
+        <p>El <strong>type casting</strong> es el proceso de convertir una variable de un tipo de dato a otro.
+          En Java, existen dos tipos principales:
+        </p>
+        <ul>
+          <li>
+            <strong>Type Casting Implícito (Widening):</strong> Conversión automática cuando no hay pérdida de datos.
+            <br><code>int → long → float → double</code>
+          </li>
+          <li>
+            <strong>Type Casting Explícito (Narrowing):</strong> Conversión manual usando paréntesis, ya que puede haber pérdida de datos.
+            <br><code>double → float → long → int</code>
+          </li>
+        </ul>
+          <ol class="code">
+            <li><span class="cm">double myDouble = 9.78d;</span></li>
+            <li><span class="cm">int myInt = (int) myDouble;</span></li>
+          </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide1-1-2" class="next"></label>
+          <label for="slide1-1-1" class="prev"></label>
+          <label for="slide1-1-3" class="next"></label>
+          <label for="slide1-1-2" class="prev"></label>
+
+        </div>
+        <div class="slide-indicators">
+          <label for="slide1-1-1" class="dot"></label>
+          <label for="slide1-1-2" class="dot"></label>
+          <label for="slide1-1-3" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-1-1" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 1-2: Variables -->
+  <input type="checkbox" id="modal-card-1-2" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-1-2" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides1-2" id="slide1-2-1" checked>
+      <div class="slide" data-title="Variables">
+        <p>Las <strong>variables</strong> almacenan datos de un tipo específico.</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>int</code></td>
+            <td>Números enteros.</td>
+            <td><code>int edad = 20;</code></td>
+          </tr>
+          <tr>
+            <td><code>double</code></td>
+            <td>Números decimales.</td>
+            <td><code>double precio = 19.99;</code></td>
+          </tr>
+          <tr>
+            <td><code>boolean</code></td>
+            <td>Valores verdadero/falso.</td>
+            <td><code>boolean activo = true;</code></td>
+          </tr>
+          <tr>
+            <td><code>String</code></td>
+            <td>Cadenas de texto.</td>
+            <td><code>String nombre = "Ana";</code></td>
+          </tr>
+          </tbody>
+        </table>
+        <ol class="code">
+          <li><span class="cm">// Declaración e inicialización</span></li>
+          <li><span class="type">int</span> x = <span class="num">10</span>;</li>
+          <li><span class="type">String</span> nombre = <span class="str">"Carlos"</span>;</li>
+        </ol>
+      </div>
+
+      <input type="radio" name="slides1-2" id="slide1-2-2">
+      <div class="slide" data-title="Constantes">
+        <p>Una <strong>constante</strong> es una variable cuyo valor no puede cambiar. En Java, se declaran con <code class="kw">final</code>.</p>
+        <ul>
+          <li>Las constantes se escriben en mayúsculas por convención.</li>
+          <li>Se recomienda usarlas para valores fijos como PI, tasas, etc.</li>
+        </ul>
+        <ol class="code">
+          <li><span class="kw">final</span> <span class="type">double</span> PI = <span class="num">3.1416</span>;</li>
+          <li><span class="kw">final</span> <span class="type">int</span> MAX_USUARIOS = <span class="num">100</span>;</li>
+        </ol>
+        <p>Intentar cambiar el valor de una constante genera error de compilación.</p>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide1-2-2" class="next"></label>
+          <label for="slide1-2-1" class="prev"></label>
+        </div>
+        <div class="slide-indicators">
+          <label for="slide1-2-1" class="dot"></label>
+          <label for="slide1-2-2" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-1-2" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 3-1 -->
+  <input type="checkbox" id="modal-card-3-1" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-3-1" class="modal-overlay"></label>
+
+      <div class="modal-content">
+        <input type="radio" name="slides3" id="slide1-1" checked>
+        <div class="slide" data-title="Propiedad del slider">
+            <p>Contenido del slide 1, Modal 1Contenido del slide 1, Modal 1Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+        </div>
+
+        <input type="radio" name="slides3" id="slide1-2">
+        <div class="slide" data-title="Propiedad del slide 2">
+
+          <ol class="code">
+            <li data-type="comment">// Declaración e inicialización</li>
+            <li><span class="type">int</span> x = <span class="num">10</span>;</li>
+            <li><span class="type">String</span> nombre = <span class="str">"Carlos"</span>;</li>
+          </ol>
+        </div>
+
+        <input type="radio" name="slides3" id="slide1-3">
+        <div class="slide" data-title="Propiedad del slide 3">
+            <p>Contenido del slide 3, Modal 1</p>
+        </div>
+
+        <div class="slide-footer">
+          <div class="controls">
+            <label for="slide1-2" class="next"></label>
+            <label for="slide1-1" class="prev"></label>
+            <label for="slide1-3" class="next"></label>
+            <label for="slide1-2" class="prev"></label>
+
+          </div>
+          <div class="slide-indicators">
+            <label for="slide1-1" class="dot"></label>
+            <label for="slide1-2" class="dot"></label>
+            <label for="slide1-3" class="dot"></label>
+          </div>
+        </div>
+
+      <label for="modal-card-3-1" class="close-button"></label>
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+</html>

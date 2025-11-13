@@ -132,6 +132,11 @@
     content: "\00D7";
 }
 
+.modal p {
+    margin-bottom: 4px;
+    color: #94a3b8;
+}
+
 .lang-option {
     display: block;
     text-align: center;
@@ -184,15 +189,15 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #f60;
+    background: #1e293b;
     color: #fff;
-    padding: 4px 8px;
+    padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 .controls label:hover {
-    background: #ff7b00;
+    background: #334155;
     transform: translateY(-50%) scale(1.05);
 }
 
