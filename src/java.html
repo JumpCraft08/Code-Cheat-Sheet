@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Columnas con Cards Ajustables</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/modal.css" rel="stylesheet" type="text/css">
+  <link href="css/modal-body.css" rel="stylesheet" type="text/css">
+  <link href="css/modal-indicators.css" rel="stylesheet" type="text/css">
+  <link href="css/modal-footer.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<main class="wallpaper">
+
+  <div class="columna">
+
+    <a href="java.html" class="title">Java Core</a>
+
+    <div class="card" datatitle="Fundamentos" style="--card-color: #0077b6;">
+      <table>
+        <tbody>
+        <tr><td>Tipos de Datos</td></tr>
+        <tr><td>Variables</td></tr>
+        <tr><td>Operadores</td></tr>
+        <tr><td>Strings</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" datatitle="Control Estructures" style="--card-color: #dd9b00;">
+      <table>
+        <tbody>
+        <tr><td>Estructuras de Condición</td></tr>
+        <tr><td>Estructuras de Bucle</td></tr>
+        <tr><td>Estructuras de Salto</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" datatitle="Errores" style="--card-color: #0ea5e9;">
+      <table>
+        <tbody>
+        <tr><td>Excepciones</td></tr>
+        <tr><td>Anotaciones</td></tr>
+        <tr><td>Bloque Try... Catch</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" datatitle="Java OOP" style="--card-color: #2563eb;">
+      <label for="modal-card-3-1" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-3-1">Constructores</label></td></tr>
+        <tr><td><label for="modal-card-3-1">Métodos</label></td></tr>
+        <tr><td>Modificadores de Acceso</td></tr>
+        <tr><td>Abstracción</td></tr>
+        <tr><td>Encapsulación</td></tr>
+        <tr><td>Herencia</td></tr>
+        <tr><td>Polimorfismo</td></tr>
+        <tr><td>Enums</td></tr>
+        <tr><td>Clases Genéricas</td></tr>
+        <tr><td>Clases Anidadas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" datatitle="OOP Avanzado" style="--card-color: #ef4444;">
+      <table>
+        <tbody>
+        <tr><td>Lambda</td></tr>
+        <tr><td>Clases Record</td></tr>
+        <tr><td>Sealed Classes</td></tr>
+        <tr><td>interfaces Funcionales</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" datatitle="Concurrencia" style="--card-color: #0ea5e9;">
+      <table>
+        <tbody>
+        <tr><td>Threads / Runnable</td></tr>
+        <tr><td>Executor Framework</td></tr>
+        <tr><td>Sincronización</td></tr>
+        <tr><td>Clases Concurrentes</td></tr>
+        <tr><td>Parallel Streams</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" datatitle="Estructuras de datos" style="--card-color: #9333ea;">
+      <label for="modal-card-3-1" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td>Array</td></tr>
+        <tr><td>Listas</td></tr>
+        <tr><td>Sets</td></tr>
+        <tr><td>Map</td></tr>
+        <tr><td>Queue / Deque</td></tr>
+        <tr><td>Stack</td></tr>
+        <tr><td>Comparator / Comparable</td></tr>
+        <tr><td>Iterator</td></tr>
+        <tr><td>Streams</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" datatitle="Networking" style="--card-color: #1e40af;">
+      <table>
+        <tbody>
+          <tr><td>Sockets</td></tr>
+          <tr><td>HTTP Requests</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" datatitle="Seguridad" style="--card-color: #ef4444;">
+      <table>
+        <tbody>
+        <tr><td>Criptografía</td></tr>
+        <tr><td>Hashing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" datatitle="Java Util" style="--card-color: #eab308;">
+      <table>
+        <tbody>
+        <tr><td>Math</td></tr>
+        <tr><td>Date</td></tr>
+        <tr><td>RegEx</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" datatitle="Compilación" style="--card-color: #0ea5e9;">
+      <table>
+        <tbody>
+        <tr><td>JVM / JIT</td></tr>
+        <tr><td>Javac</td></tr>
+        <tr><td>Javadoc</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+
+    <div class="card">Columna 5B<br>Hola.</div>
+    <div class="card">Columna 5C<br>Morbi at justo dictum.</div>
+  </div>
+
+</main>
+
+<div class="modals">
+
+  <!-- Modal 1 -->
+  <input type="checkbox" id="modal-card-3-1" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-3-1" class="modal-overlay"></label>
+
+      <div class="modal-content">
+        <input type="radio" name="slides1" id="slide1-1" checked>
+        <div class="slide" title="Propiedad del slider">
+            <p>Contenido del slide 1, Modal 1Contenido del slide 1, Modal 1Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+            <p>Contenido del slide 1, Modal 1</p>
+        </div>
+
+        <input type="radio" name="slides1" id="slide1-2">
+        <div class="slide" title="Propiedad del slide 2">
+
+          <div class="ide">
+              <ol class="code">
+                <li data-type="comment">// Declaración e inicialización</li>
+                <li><span class="type">int</span> x = <span class="num">10</span>;</li>
+                <li><span class="type">String</span> nombre = <span class="str">"Carlos"</span>;</li>
+              </ol>
+            </div>
+        </div>
+
+        <input type="radio" name="slides1" id="slide1-3">
+        <div class="slide" title="Propiedad del slide 3">
+            <p>Contenido del slide 3, Modal 1</p>
+        </div>
+
+        <div class="slide-footer">
+          <div class="controls">
+            <label for="slide1-2" class="next"></label>
+            <label for="slide1-1" class="prev"></label>
+            <label for="slide1-3" class="next"></label>
+            <label for="slide1-2" class="prev"></label>
+
+          </div>
+          <div class="slide-indicators">
+            <label for="slide1-1" class="dot"></label>
+            <label for="slide1-2" class="dot"></label>
+            <label for="slide1-3" class="dot"></label>
+          </div>
+        </div>
+
+      <label for="modal-card-3-1" class="close-button"></label>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

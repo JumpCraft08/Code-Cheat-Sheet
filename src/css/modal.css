@@ -1,0 +1,151 @@
+/* =========================
+   MODAL + SLIDES
+========================= */
+
+/* Ocultar inputs */
+.modal-toggle,
+.modal input[type="radio"] {
+    display: none;
+}
+
+/* Modal general */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Contenido del modal */
+.modal-content {
+    position: relative;
+    background: #0055aa;
+    padding: 0;
+    border-radius: 12px;
+    color: #fff;
+    width: 900px;
+    height: 800px;
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 32px);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    overflow: hidden;
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.modal-toggle:checked + .modal {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+/* Overlay */
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 128, 0);
+    transition: background 0.3s ease;
+}
+
+.modal-toggle:checked + .modal .modal-overlay {
+    background: rgba(0, 0, 128, 0.7);
+}
+
+/* Slides */
+.slide {
+    display: none;
+    flex-direction: column;
+    position: relative; /* <--- referencia para el footer */
+    width: 900px;
+    max-width: calc(100vw - 32px);
+    height: 800px;
+    max-height: calc(100vh - 32px);
+    background: #0055aa;
+    border-radius: 12px;
+    color: #fff;
+    padding: 60px 16px 4em 16px; /* espacio para header y footer */
+    overflow-y: auto;
+    font-size: clamp(12px, 2vw, 16px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+/* Mostrar slide seleccionado */
+.modal input[type="radio"]:checked + .slide {
+    display: flex;
+}
+
+/* Cabecera del slide con ::before */
+.slide::before {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 16px;
+    font-weight: bold;
+    font-size: clamp(12px, 1.5vw, 16px);
+    background-color: #003f7f;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Botón cerrar */
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    background: #888;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.close-button:hover {
+    background:#aaa;
+    transform: scale(1.1);
+}
+.close-button::after {
+    content: "\00D7";
+}
+
+/* MEDIA QUERIES */
+/* Pantallas intermedias */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .slide { font-size: clamp(12px, 2vw, 16px); }
+    .controls label { font-size: clamp(12px, 1.5vw, 14px); }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .slide { font-size: clamp(12px, 2vw, 16px); }
+    .controls label { font-size: clamp(12px, 1.5vw, 14px); }
+}
+
+@media (max-width: 680px) {
+    .slide { font-size: clamp(10px, 2.15vw, 16px); padding: 60px 12px 3em 12px; }
+    .controls label { font-size: clamp(10px, 2.5vw, 14px); padding: 3px 6px; }
+}

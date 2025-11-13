@@ -1,0 +1,200 @@
+:root {
+    --gap: 0.5vw;
+    --padding: 1vw;
+    --color-fondo: #0e0e11;
+    --radio-borde: 1vw;
+    --font-size: 1vw;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-family: system-ui, sans-serif;
+    font-size: var(--font-size);
+    padding: var(--gap);
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fade-in 0.3s forwards ease;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main.wallpaper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 95vw;
+    gap: var(--gap);
+    flex-wrap: nowrap;
+}
+
+.title {
+    padding: 8px 12px 8px 1em;
+    background-color: #1a1d22;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: calc(var(--font-size) + 0.55vw);
+    transition: transform 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+}
+
+.title:hover  {
+    transform: scale(1.01);
+    background: #f60;
+}
+
+.columna {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: var(--color-fondo);
+    border-radius: var(--radio-borde);
+    padding: var(--padding);
+    gap: var(--gap);
+    height: auto;
+}
+
+.card {
+    border-radius: calc(var(--radio-borde)/2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    padding: 0.8em 1em 0.6em 1em;
+    box-shadow: 0 0.3vw 0.6vw rgba(0,0,0,0.2);
+    overflow: hidden;
+    border: 0.15em solid var(--card-color, gray);
+    flex: none;
+}
+
+.card[datatitle] {
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.card[datatitle]::before {
+    content: attr(datatitle);
+    display: flex;
+    font-weight: bold;
+    line-height: 1.2em;
+    font-size: calc(var(--font-size) + 0.1vw);
+    margin: 0 0 0.3em 0;
+    padding-left: 1em;
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.card[datatitle]::after {
+    content: '';
+    position: absolute;
+    margin: 0.8em 0 0.3em 0;
+    transform: translateY(-50%);
+    left: 0.8em;
+    width: clamp(0.5vw, calc(var(--font-size) * 0.5), 1.5vw);
+    height: clamp(0.5vw, calc(var(--font-size) * 0.5), 1.5vw);
+    background: var(--card-color, gray);
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--card-color, gray) 35%, transparent);
+    z-index: 1;
+}
+
+.card:has(.title-label:hover) {
+    box-shadow: 0 8px 16px var(--card-color);
+    transform: scale(1.03);
+}
+
+.card .title-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.2em; /* ajusta según altura de tu título */
+    cursor: pointer;
+    z-index: 2;
+    background: transparent;
+}
+
+.card table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.card table tr td {
+    border-bottom: 1px solid currentColor;
+    padding: 0.2em 0;
+}
+
+.card table tr:last-child td {
+    border-bottom: none;
+}
+
+.card table tr td label {
+    cursor: pointer;
+}
+
+
+.card table td label {
+    display:block;
+    cursor:pointer;
+}
+.card table td label:hover {
+    background: color-mix(in srgb, var(--card-color,#555) 40%, transparent);
+    transform: scale(1.03);
+    color:#fff;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* === INTERMEDIO: 769px - 1024px === */
+@media (min-width: 769px) and (max-width: 1024px) {
+    :root { --font-size: 1.3vw; }
+    main.wallpaper {
+        flex-wrap: wrap; /* permite varias filas */
+    }
+    main.wallpaper .columna {
+        flex: 1 1 calc(50% - var(--gap)); /* dos columnas por fila */
+    }
+    main.wallpaper .columna:nth-child(5) {
+        flex: 1 1 100%; /* quinta columna ocupa toda la fila */
+    }
+}
+
+/* === MÓVIL <=768px === */
+@media (max-width: 768px) {
+    :root { --font-size: 3.5vw; }
+    body { align-items: start; height: auto; padding: 0; }
+    main.wallpaper { flex-direction: column; height: auto; width: 100vw; gap: 0.5em; }
+    .columna {
+        height: auto;
+        flex: none;
+        width: 100%;
+        padding: 0.5em;
+    }
+    .card {
+        flex: none;
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+}

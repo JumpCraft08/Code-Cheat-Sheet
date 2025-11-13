@@ -1,0 +1,106 @@
+/* =========================
+   IDE / CODE STYLES
+========================= */
+.ide {
+    margin: 22px 0;
+    border: 1px solid #1e293b;
+    background: #0f172a;
+    border-radius: 10px;
+    box-shadow: inset 0 10px 24px -20px rgb(0 0 0 / 80%);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+    position: relative;
+    padding-top: 30px; /* espacio para el header */
+}
+
+/* Header de fondo */
+.ide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 28px; /* altura del header */
+    background: #1e293b; /* color de fondo del header */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 0; /* detrás de los dots */
+}
+
+/* Dots encima del header */
+.ide::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff5f57; /* rojo */
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #28c840; /* amarillo y verde */
+    z-index: 1; /* sobre el fondo */
+}
+
+
+.code {
+    list-style: decimal;
+    margin: 0;
+    padding: 4px 0 4px 48px;
+    font-size: 0.9rem;
+    line-height: 0.5;
+    white-space: pre;
+}
+
+.code li[data-type="comment"] { color: #6a737d; font-style: italic; }
+
+.code li::marker { color: #475569; }
+.kw  { color: #c678dd; }
+.type{ color: #56b6c2; }
+.cls { color: #61afef; }
+.mtd { color: #98c379; }
+.str { color: #e5c07b; }
+.num { color: #d19a66; }
+
+/* =========================
+   TABLAS
+========================= */
+.modal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    background: #0f172a;
+    border: 1px solid rgb(255 255 255 / 6%);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+.modal table thead {
+    background: #15191f;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.modal table th,
+.modal table td {
+    padding: 6px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgb(255 255 255 / 5%);
+}
+
+.modal table tr:last-child td { border-bottom: none; }
+.modal table tr:hover { background: rgb(255 255 255 / 2%); }
+
+/* =========================
+   LISTAS
+========================= */
+.modal ul li,
+.modal ol li { margin-bottom: 2px; }
+.modal ul { margin: 8px 0; }
+.modal ul li::marker { color: #28c840; }
+
+.modal ol li::marker {
+    color: #94a3b8;
+    font-weight: bold;
+}
