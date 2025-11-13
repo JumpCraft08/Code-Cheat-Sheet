@@ -51,12 +51,12 @@
 .modal-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 128, 0);
-    transition: background 0.3s ease;
+    background: rgba(0, 0, 64, 0.8);
+    transition: background 0.3s ease, -webkit-backdrop-filter 0.3s ease;
 }
 
 .modal-toggle:checked + .modal .modal-overlay {
-    background: rgba(0, 0, 128, 0.7);
+    background: rgba(0, 0, 64, 0.8);
 }
 
 /* Slides */
@@ -68,8 +68,8 @@
     max-width: calc(100vw - 32px);
     height: 800px;
     max-height: calc(100vh - 32px);
-    background: #0055aa;
-    border-radius: 12px;
+    background: #111418;
+    border: 1px solid rgb(255 255 255 / 6%);
     color: #fff;
     padding: 60px 16px 4em 16px; /* espacio para header y footer */
     overflow-y: auto;
@@ -85,7 +85,7 @@
 
 /* Cabecera del slide con ::before */
 .slide::before {
-    content: attr(title);
+    content: attr(data-title);
     position: absolute;
     top: 0;
     left: 0;
@@ -95,8 +95,8 @@
     padding: 0 16px;
     font-weight: bold;
     font-size: clamp(12px, 1.5vw, 16px);
-    background-color: #003f7f;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    background-color: #15191f;
+    border-bottom: 1px solid rgb(255 255 255 / 6%);
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     box-sizing: border-box;
@@ -115,7 +115,7 @@
     align-items: center;
     width: 28px;
     height: 28px;
-    background: #888;
+    background: #1e293b;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
@@ -125,12 +125,116 @@
     transition: background 0.2s ease, transform 0.2s ease;
 }
 .close-button:hover {
-    background:#aaa;
+    background:#334155;
     transform: scale(1.1);
 }
 .close-button::after {
     content: "\00D7";
 }
+
+.lang-option {
+    display: block;
+    text-align: center;
+    padding: 0.8em 1em;
+    background: color-mix(in srgb, var(--lang-color, #555) 30%, #000);
+    border: 1px solid color-mix(in srgb, var(--lang-color, #555) 50%, #000);
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.lang-option:hover {
+    background: color-mix(in srgb, var(--lang-color, #555) 70%, #000);
+    transform: scale(1.03);
+}
+
+/* Footer del slide */
+.slide-footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    max-width: calc(100vw - 32px);
+    padding: 8px 0;
+    border-left: 1px solid rgb(255 255 255 / 6%);
+    border-right: 1px solid rgb(255 255 255 / 6%);
+    border-bottom: 1px solid rgb(255 255 255 / 6%);
+    background-color: #111418;
+    border-radius: 0 0 8px 8px; /* solo las esquinas inferiores */
+    box-sizing: border-box;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Controles de navegación */
+.controls {
+    position: relative; /* para que los botones se posicionen respecto al footer */
+    width: 100%;
+    height: 40px;
+}
+
+/* Estilo común de labels (prev/next) */
+.controls label {
+    display: none; /* ocultos por defecto */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f60;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.controls label:hover {
+    background: #ff7b00;
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Prev siempre a la izquierda */
+.controls label.prev {
+    left: 16px;
+}
+.controls label.prev::after { content: "◀"; }
+
+/* Next siempre a la derecha */
+.controls label.next {
+    right: 16px;
+}
+.controls label.next::after { content: "▶"; }
+
+/* Puntos de control */
+.slide-footer .slide-indicators {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+.slide-footer .slide-indicators label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #888;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.slide-footer .slide-indicators label:hover {
+    transform: scale(1.2);
+}
+
 
 /* MEDIA QUERIES */
 /* Pantallas intermedias */

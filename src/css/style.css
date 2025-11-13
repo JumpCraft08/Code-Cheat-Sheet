@@ -1,5 +1,6 @@
 :root {
-    --gap: 0.5vw;
+    --gap: 0.8vw;
+    --gap-horizontal: 0.2vw;
     --padding: 1vw;
     --color-fondo: #0e0e11;
     --radio-borde: 1vw;
@@ -39,7 +40,7 @@ main.wallpaper {
     justify-content: space-between;
     align-items: flex-start;
     width: 95vw;
-    gap: var(--gap);
+    gap: var(--gap-horizontal);
     flex-wrap: nowrap;
 }
 
@@ -51,6 +52,7 @@ main.wallpaper {
     align-items: center;
     text-decoration: none;
     color: white;
+    border-radius: 8px;
     font-size: calc(var(--font-size) + 0.55vw);
     transition: transform 0.2s ease, background 0.2s ease, opacity 0.3s ease;
 }
@@ -86,14 +88,14 @@ main.wallpaper {
     flex: none;
 }
 
-.card[datatitle] {
+.card[data-title] {
     position: relative;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 
 }
 
-.card[datatitle]::before {
-    content: attr(datatitle);
+.card[data-title]::before {
+    content: attr(data-title);
     display: flex;
     font-weight: bold;
     line-height: 1.2em;
@@ -105,7 +107,7 @@ main.wallpaper {
     pointer-events: auto;
 }
 
-.card[datatitle]::after {
+.card[data-title]::after {
     content: '';
     position: absolute;
     margin: 0.8em 0 0.3em 0;
@@ -129,7 +131,7 @@ main.wallpaper {
     top: 0;
     left: 0;
     width: 100%;
-    height: 2.2em; /* ajusta según altura de tu título */
+    height: 2.2em;
     cursor: pointer;
     z-index: 2;
     background: transparent;
@@ -154,7 +156,6 @@ main.wallpaper {
     cursor: pointer;
 }
 
-
 .card table td label {
     display:block;
     cursor:pointer;
@@ -166,17 +167,43 @@ main.wallpaper {
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
+.button-group {
+    display: flex;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.button-group .title-button {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    background-color: #1a1d22;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+    font-size: calc(var(--font-size) + 0.55vw);
+}
+
+.title-button:hover {
+    transform: scale(1.01);
+    background: #f60;
+}
+
+
 /* === INTERMEDIO: 769px - 1024px === */
 @media (min-width: 769px) and (max-width: 1024px) {
     :root { --font-size: 1.3vw; }
     main.wallpaper {
-        flex-wrap: wrap; /* permite varias filas */
+        flex-wrap: wrap;
     }
     main.wallpaper .columna {
-        flex: 1 1 calc(50% - var(--gap)); /* dos columnas por fila */
+        flex: 1 1 calc(50% - var(--gap));
     }
     main.wallpaper .columna:nth-child(5) {
-        flex: 1 1 100%; /* quinta columna ocupa toda la fila */
+        flex: 1 1 100%;
     }
 }
 
