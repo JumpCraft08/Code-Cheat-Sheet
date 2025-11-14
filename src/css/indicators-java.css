@@ -40,18 +40,143 @@
     transform: scale(1.3);
 }
 
-/* === Slider 3-1 === */
-#slide1-1:checked ~ .slide-footer .controls label.prev { display: none; }
-#slide1-1:checked ~ .slide-footer .controls label.next[for="slide1-2"] { display: block; }
-#slide1-2:checked ~ .slide-footer .controls label.prev[for="slide1-1"] { display: block; }
-#slide1-2:checked ~ .slide-footer .controls label.next[for="slide1-3"] { display: block; }
-#slide1-3:checked ~ .slide-footer .controls label.prev[for="slide1-2"] { display: block; }
-#slide1-3:checked ~ .slide-footer .controls label.next { display: none; }
+/* === Slider 1-3 (Operadores - 6 slides) === */
+#slide1-3-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide1-3-1:checked ~ .slide-footer .controls label.next[for="slide1-3-2"] { display: block; }
+#slide1-3-2:checked ~ .slide-footer .controls label.prev[for="slide1-3-1"] { display: block; }
+#slide1-3-2:checked ~ .slide-footer .controls label.next[for="slide1-3-3"] { display: block; }
+#slide1-3-3:checked ~ .slide-footer .controls label.prev[for="slide1-3-2"] { display: block; }
+#slide1-3-3:checked ~ .slide-footer .controls label.next[for="slide1-3-4"] { display: block; }
+#slide1-3-4:checked ~ .slide-footer .controls label.prev[for="slide1-3-3"] { display: block; }
+#slide1-3-4:checked ~ .slide-footer .controls label.next[for="slide1-3-5"] { display: block; }
+#slide1-3-5:checked ~ .slide-footer .controls label.prev[for="slide1-3-4"] { display: block; }
+#slide1-3-5:checked ~ .slide-footer .controls label.next[for="slide1-3-6"] { display: block; }
+#slide1-3-6:checked ~ .slide-footer .controls label.prev[for="slide1-3-5"] { display: block; }
+#slide1-3-6:checked ~ .slide-footer .controls label.next { display: none; }
 
-#slide1-1:checked ~ .slide-footer .dot[for="slide1-1"],
-#slide1-2:checked ~ .slide-footer .dot[for="slide1-2"],
-#slide1-3:checked ~ .slide-footer .dot[for="slide1-3"] {
+#slide1-3-1:checked ~ .slide-footer .dot[for="slide1-3-1"],
+#slide1-3-2:checked ~ .slide-footer .dot[for="slide1-3-2"],
+#slide1-3-3:checked ~ .slide-footer .dot[for="slide1-3-3"],
+#slide1-3-4:checked ~ .slide-footer .dot[for="slide1-3-4"],
+#slide1-3-5:checked ~ .slide-footer .dot[for="slide1-3-5"],
+#slide1-3-6:checked ~ .slide-footer .dot[for="slide1-3-6"] {
     background-color: #f60;
     transform: scale(1.3);
+}
+
+/* === Slider 1-4 (Strings - 4 slides) === */
+#slide1-4-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide1-4-1:checked ~ .slide-footer .controls label.next[for="slide1-4-2"] { display: block; }
+#slide1-4-2:checked ~ .slide-footer .controls label.prev[for="slide1-4-1"] { display: block; }
+#slide1-4-2:checked ~ .slide-footer .controls label.next[for="slide1-4-3"] { display: block; }
+#slide1-4-3:checked ~ .slide-footer .controls label.prev[for="slide1-4-2"] { display: block; }
+#slide1-4-3:checked ~ .slide-footer .controls label.next[for="slide1-4-4"] { display: block; }
+#slide1-4-4:checked ~ .slide-footer .controls label.prev[for="slide1-4-3"] { display: block; }
+#slide1-4-4:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide1-4-1:checked ~ .slide-footer .dot[for="slide1-4-1"],
+#slide1-4-2:checked ~ .slide-footer .dot[for="slide1-4-2"],
+#slide1-4-3:checked ~ .slide-footer .dot[for="slide1-4-3"],
+#slide1-4-4:checked ~ .slide-footer .dot[for="slide1-4-4"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 2-0 (Estructuras de Control TÍTULO - 1 slide) === */
+#slide2-0-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide2-0-1:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide2-0-1:checked ~ .slide-footer .dot[for="slide2-0-1"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 2-1 (Estructuras de Condición - 3 slides) === */
+#slide2-1-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide2-1-1:checked ~ .slide-footer .controls label.next[for="slide2-1-2"] { display: block; }
+#slide2-1-2:checked ~ .slide-footer .controls label.prev[for="slide2-1-1"] { display: block; }
+#slide2-1-2:checked ~ .slide-footer .controls label.next[for="slide2-1-3"] { display: block; }
+#slide2-1-3:checked ~ .slide-footer .controls label.prev[for="slide2-1-2"] { display: block; }
+#slide2-1-3:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide2-1-1:checked ~ .slide-footer .dot[for="slide2-1-1"],
+#slide2-1-2:checked ~ .slide-footer .dot[for="slide2-1-2"],
+#slide2-1-3:checked ~ .slide-footer .dot[for="slide2-1-3"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 2-2 (Estructuras de Bucle - 4 slides) === */
+#slide2-2-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide2-2-1:checked ~ .slide-footer .controls label.next[for="slide2-2-2"] { display: block; }
+#slide2-2-2:checked ~ .slide-footer .controls label.prev[for="slide2-2-1"] { display: block; }
+#slide2-2-2:checked ~ .slide-footer .controls label.next[for="slide2-2-3"] { display: block; }
+#slide2-2-3:checked ~ .slide-footer .controls label.prev[for="slide2-2-2"] { display: block; }
+#slide2-2-3:checked ~ .slide-footer .controls label.next[for="slide2-2-4"] { display: block; }
+#slide2-2-4:checked ~ .slide-footer .controls label.prev[for="slide2-2-3"] { display: block; }
+#slide2-2-4:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide2-2-1:checked ~ .slide-footer .dot[for="slide2-2-1"],
+#slide2-2-2:checked ~ .slide-footer .dot[for="slide2-2-2"],
+#slide2-2-3:checked ~ .slide-footer .dot[for="slide2-2-3"],
+#slide2-2-4:checked ~ .slide-footer .dot[for="slide2-2-4"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 2-3 (4 slides) === */
+#slide2-3-1:checked ~ .slide-footer .controls label.prev { display:none; }
+#slide2-3-1:checked ~ .slide-footer .controls label.next[for="slide2-3-2"] { display:block; }
+
+#slide2-3-2:checked ~ .slide-footer .controls label.prev[for="slide2-3-1"] { display:block; }
+#slide2-3-2:checked ~ .slide-footer .controls label.next[for="slide2-3-3"] { display:block; }
+
+#slide2-3-3:checked ~ .slide-footer .controls label.prev[for="slide2-3-2"] { display:block; }
+#slide2-3-3:checked ~ .slide-footer .controls label.next[for="slide2-3-4"] { display:block; }
+
+#slide2-3-4:checked ~ .slide-footer .controls label.prev[for="slide2-3-3"] { display:block; }
+#slide2-3-4:checked ~ .slide-footer .controls label.next { display:none; }
+
+#slide2-3-1:checked ~ .slide-footer .dot[for="slide2-3-1"],
+#slide2-3-2:checked ~ .slide-footer .dot[for="slide2-3-2"],
+#slide2-3-3:checked ~ .slide-footer .dot[for="slide2-3-3"],
+#slide2-3-4:checked ~ .slide-footer .dot[for="slide2-3-4"] {
+    background:#f60;
+    transform:scale(1.3);
+}
+
+
+/* === Slider 3-0 (1 slide) === */
+#slide3-0-1:checked ~ .slide-footer .dot[for="slide3-0-1"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 3-1 (1 slide) === */
+#slide3-1-1:checked ~ .slide-footer .dot[for="slide3-1-1"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
+
+/* === Slider 3-2 (1 slide) === */
+#slide3-2-1:checked ~ .slide-footer .controls label.prev { display:none; }
+#slide3-2-1:checked ~ .slide-footer .controls label.next { display:none; }
+
+#slide3-2-1:checked ~ .slide-footer .dot[for="slide3-2-1"] {
+    background:#f60;
+    transform:scale(1.3);
+}
+
+/* === Slider 3-3 (2 slides) === */
+#slide3-3-1:checked ~ .slide-footer .controls label.prev { display:none; }
+#slide3-3-1:checked ~ .slide-footer .controls label.next[for="slide3-3-2"] { display:block; }
+
+#slide3-3-2:checked ~ .slide-footer .controls label.prev[for="slide3-3-1"] { display:block; }
+#slide3-3-2:checked ~ .slide-footer .controls label.next { display:none; }
+
+#slide3-3-1:checked ~ .slide-footer .dot[for="slide3-3-1"],
+#slide3-3-2:checked ~ .slide-footer .dot[for="slide3-3-2"] {
+    background:#f60;
+    transform:scale(1.3);
 }
 

@@ -19,33 +19,35 @@
     <label for="modal-lang-selector" class="title">Java Core</label>
 
     <div class="card" data-title="Fundamentos" style="--card-color: #0077b6;" role="group" aria-label="Fundamentos">
-      <label for="modal-card-1" class="title-label"></label>
+      <label for="modal-card-1-0" class="title-label"></label>
       <table>
         <tbody>
         <tr><td><label for="modal-card-1-1">Tipos de Datos</label></td></tr>
         <tr><td><label for="modal-card-1-2">Variables</label></td></tr>
-        <tr><td>Operadores</td></tr>
-        <tr><td>Strings</td></tr>
+        <tr><td><label for="modal-card-1-3">Operadores</label></td></tr>
+        <tr><td><label for="modal-card-1-4">Strings</label></td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="card" data-title="Estructuras de Control" style="--card-color: #dd9b00;" role="group" aria-label="Estructuras de Control">
+      <label for="modal-card-2-0" class="title-label"></label>
       <table>
         <tbody>
-        <tr><td>Estructuras de Condición</td></tr>
-        <tr><td>Estructuras de Bucle</td></tr>
-        <tr><td>Estructuras de Salto</td></tr>
+        <tr><td><label for="modal-card-2-1">Estructuras de Condición</label></td></tr>
+        <tr><td><label for="modal-card-2-2">Estructuras de Bucle</label></td></tr>
+        <tr><td><label for="modal-card-2-3">Estructuras de Salto</label></td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="card" data-title="Errores" style="--card-color: #0ea5e9;" role="group" aria-label="Errores">
+      <label for="modal-card-3-0" class="title-label"></label>
       <table>
         <tbody>
-        <tr><td>Excepciones</td></tr>
-        <tr><td>Anotaciones</td></tr>
-        <tr><td>Bloque Try... Catch</td></tr>
+        <tr><td><label for="modal-card-3-1">Excepciones</label></td></tr>
+        <tr><td><label for="modal-card-3-2">Anotaciones</label></td></tr>
+        <tr><td><label for="modal-card-3-3">Bloque Try... Catch</label></td></tr>
         </tbody>
       </table>
     </div>
@@ -53,11 +55,10 @@
 
   <div class="columna">
     <div class="card" data-title="Java OOP" style="--card-color: #2563eb;" role="group" aria-label="Java OOP">
-      <label for="modal-card-3-1" class="title-label"></label>
       <table>
         <tbody>
-        <tr><td><label for="modal-card-3-1">Constructores</label></td></tr>
-        <tr><td><label for="modal-card-3-1">Métodos</label></td></tr>
+        <tr><td>Constructores</td></tr>
+        <tr><td>Métodos</td></tr>
         <tr><td>Modificadores de Acceso</td></tr>
         <tr><td>Abstracción</td></tr>
         <tr><td>Encapsulación</td></tr>
@@ -76,7 +77,7 @@
         <tr><td>Lambda</td></tr>
         <tr><td>Clases Record</td></tr>
         <tr><td>Sealed Classes</td></tr>
-        <tr><td>interfaces Funcionales</td></tr>
+        <tr><td>Interfaces Funcionales</td></tr>
         </tbody>
       </table>
     </div>
@@ -96,7 +97,6 @@
     </div>
 
     <div class="card" data-title="Estructuras de datos" style="--card-color: #9333ea;" role="group" aria-label="Estructuras de datos">
-      <label for="modal-card-3-1" class="title-label"></label>
       <table>
         <tbody>
         <tr><td>Array</td></tr>
@@ -221,9 +221,9 @@
   </div>
 
   <!-- Modal 1: Sintaxis Básica -->
-  <input type="checkbox" id="modal-card-1" class="modal-toggle">
+  <input type="checkbox" id="modal-card-1-0" class="modal-toggle">
   <div class="modal">
-    <label for="modal-card-1" class="modal-overlay"></label>
+    <label for="modal-card-1-0" class="modal-overlay"></label>
 
     <div class="modal-content">
       <input type="radio" name="slides1" id="slide1-0-1" checked>
@@ -267,7 +267,7 @@
           </tr>
           <tr>
             <td><code>lib/</code></td>
-            <td>Bibliotecas externas (JARs).</td>
+            <td>Bibliotecas externas (JAR).</td>
           </tr>
           <tr>
             <td><code>Main.java</code></td>
@@ -313,7 +313,7 @@
         </div>
       </div>
 
-      <label for="modal-card-1" class="close-button"></label>
+      <label for="modal-card-1-0" class="close-button"></label>
     </div>
   </div>
 
@@ -400,7 +400,7 @@
       <input type="radio" name="slides1-1" id="slide1-1-2">
       <div class="slide" data-title="Tipos de Datos - Datos No Primitivos">
         <p>Los tipos de datos no primitivos se denominan tipos de referencia porque se refieren a objetos, no valores directos.
-          Ademas, tienen métodos y propiedades asociados. Son:
+          Además, tienen métodos y propiedades asociados. Son:
         </p>
         <table>
           <thead>
@@ -419,7 +419,7 @@
           <tr>
             <td>Arrays</td>
             <td>Conjunto de valores del mismo tipo.</td>
-            <td><code>int[] numeros = {1, 2, 3};</code></td>
+            <td><code>int[] números = {1, 2, 3};</code></td>
           </tr>
           <tr>
             <td>Clases</td>
@@ -561,57 +561,1015 @@
     </div>
   </div>
 
-  <!-- Modal 3-1 -->
+  <!-- Modal 1-3: Operadores -->
+  <input type="checkbox" id="modal-card-1-3" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-1-3" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides1-3" id="slide1-3-1" checked>
+      <div class="slide" data-title="Operadores Aritméticos">
+        <p>Los <strong>operadores aritméticos</strong> realizan operaciones matemáticas básicas.</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Operador</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+            <th>Resultado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>+</code></td>
+            <td>Suma</td>
+            <td><code>5 + 3</code></td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td><code>-</code></td>
+            <td>Resta</td>
+            <td><code>5 - 3</code></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>*</code></td>
+            <td>Multiplicación</td>
+            <td><code>5 * 3</code></td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td><code>/</code></td>
+            <td>División</td>
+            <td><code>15 / 3</code></td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td><code>%</code></td>
+            <td>Módulo (resto)</td>
+            <td><code>5 % 2</code></td>
+            <td>1</td>
+          </tr>
+          </tbody>
+        </table>
+        <ol class="code">
+          <li><span class="type">int</span> a = <span class="num">10</span>, b = <span class="num">3</span>;</li>
+          <li><span class="type">int</span> suma = a + b;      <span class="cm">// 13</span></li>
+          <li><span class="type">int</span> resto = a % b;     <span class="cm">// 1</span></li>
+        </ol>
+      </div>
+
+      <input type="radio" name="slides1-3" id="slide1-3-2">
+      <div class="slide" data-title="Operadores de Asignación">
+        <p>Los <strong>operadores de asignación</strong> asignan valores a variables.</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Operador</th>
+            <th>Ejemplo</th>
+            <th>Equivalente a</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>=</code></td>
+            <td><code>x = 5</code></td>
+            <td><code>x = 5</code></td>
+          </tr>
+          <tr>
+            <td><code>+=</code></td>
+            <td><code>x += 3</code></td>
+            <td><code>x = x + 3</code></td>
+          </tr>
+          <tr>
+            <td><code>-=</code></td>
+            <td><code>x -= 3</code></td>
+            <td><code>x = x - 3</code></td>
+          </tr>
+          <tr>
+            <td><code>*=</code></td>
+            <td><code>x *= 3</code></td>
+            <td><code>x = x * 3</code></td>
+          </tr>
+          <tr>
+            <td><code>/=</code></td>
+            <td><code>x /= 3</code></td>
+            <td><code>x = x / 3</code></td>
+          </tr>
+          <tr>
+            <td><code>%=</code></td>
+            <td><code>x %= 3</code></td>
+            <td><code>x = x % 3</code></td>
+          </tr>
+          </tbody>
+        </table>
+        <ol class="code">
+          <li><span class="type">int</span> x = <span class="num">10</span>;</li>
+          <li>x += <span class="num">5</span>;  <span class="cm">// x = 15</span></li>
+          <li>x *= <span class="num">2</span>;  <span class="cm">// x = 30</span></li>
+        </ol>
+      </div>
+
+      <input type="radio" name="slides1-3" id="slide1-3-3">
+      <div class="slide" data-title="Operadores de Comparación">
+        <p>Los <strong>operadores de comparación</strong> comparan valores y devuelven <code>true</code> o <code>false</code>.</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Operador</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+            <th>Resultado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>==</code></td>
+            <td>Igual a</td>
+            <td><code>5 == 5</code></td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td><code>!=</code></td>
+            <td>Diferente de</td>
+            <td><code>5 != 3</code></td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td><code>&gt;</code></td>
+            <td>Mayor que</td>
+            <td><code>5 &gt; 3</code></td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td><code>&lt;</code></td>
+            <td>Menor que</td>
+            <td><code>5 &lt; 3</code></td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td><code>&gt;=</code></td>
+            <td>Mayor o igual que</td>
+            <td><code>5 &gt;= 5</code></td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td><code>&lt;=</code></td>
+            <td>Menor o igual que</td>
+            <td><code>5 &lt;= 3</code></td>
+            <td>false</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <input type="radio" name="slides1-3" id="slide1-3-4">
+      <div class="slide" data-title="Operadores Lógicos">
+        <p>Los <strong>operadores lógicos</strong> permiten combinar expresiones booleanas.</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Operador</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+            <th>Resultado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>&amp;&amp;</code></td>
+            <td>AND (y lógico)</td>
+            <td><code>true &amp;&amp; false</code></td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td><code>||</code></td>
+            <td>OR (o lógico)</td>
+            <td><code>true || false</code></td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td><code>!</code></td>
+            <td>NOT (negación)</td>
+            <td><code>!true</code></td>
+            <td>false</td>
+          </tr>
+          </tbody>
+        </table>
+        <ol class="code">
+          <li><span class="type">int</span> edad = <span class="num">20</span>;</li>
+          <li><span class="type">boolean</span> mayor = edad &gt;= <span class="num">18</span> &amp;&amp; edad &lt; <span class="num">65</span>;</li>
+          <li><span class="type">boolean</span> valido = !<span class="kw">false</span>; <span class="cm">// true</span></li>
+        </ol>
+      </div>
+
+      <input type="radio" name="slides1-3" id="slide1-3-5">
+      <div class="slide" data-title="Operadores de Incremento y Decremento">
+        <p>Estos operadores incrementan o decrementan el valor de una variable en 1.</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Operador</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>++</code></td>
+            <td>Incremento</td>
+            <td><code>x++</code> o <code>++x</code></td>
+          </tr>
+          <tr>
+            <td><code>--</code></td>
+            <td>Decremento</td>
+            <td><code>x--</code> o <code>--x</code></td>
+          </tr>
+          </tbody>
+        </table>
+        <p><strong>Diferencia entre prefijo y sufijo:</strong></p>
+        <ul>
+          <li><code>++x</code> (prefijo): incrementa primero, luego usa el valor.</li>
+          <li><code>x++</code> (sufijo): usa el valor primero, luego incrementa.</li>
+        </ul>
+        <ol class="code">
+          <li><span class="type">int</span> x = <span class="num">5</span>;</li>
+          <li><span class="type">int</span> y = ++x;  <span class="cm">// x = 6, y = 6</span></li>
+          <li><span class="type">int</span> z = x++;  <span class="cm">// z = 6, x = 7</span></li>
+        </ol>
+      </div>
+
+      <input type="radio" name="slides1-3" id="slide1-3-6">
+      <div class="slide" data-title="Operador Ternario">
+        <p>El <strong>operador ternario</strong> es una forma abreviada del <code>if-else</code>.</p>
+        <p><strong>Sintaxis:</strong> <code>condición ? valorSiTrue : valorSiFalse</code></p>
+        <ol class="code">
+          <li><span class="type">int</span> edad = <span class="num">20</span>;</li>
+          <li><span class="type">String</span> resultado = (edad &gt;= <span class="num">18</span>) ? <span class="str">"Mayor"</span> : <span class="str">"Menor"</span>;</li>
+          <li><span class="cm">// resultado = "Mayor"</span></li>
+        </ol>
+        <p>Es útil para asignaciones simples basadas en condiciones.</p>
+        <ol class="code">
+          <li><span class="cm">// Encontrar el mayor de dos números</span></li>
+          <li><span class="type">int</span> a = <span class="num">10</span>, b = <span class="num">20</span>;</li>
+          <li><span class="type">int</span> mayor = (a &gt; b) ? a : b;</li>
+          <li><span class="cm">// mayor = 20</span></li>
+        </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide1-3-2" class="next"></label>
+          <label for="slide1-3-1" class="prev"></label>
+          <label for="slide1-3-3" class="next"></label>
+          <label for="slide1-3-2" class="prev"></label>
+          <label for="slide1-3-4" class="next"></label>
+          <label for="slide1-3-3" class="prev"></label>
+          <label for="slide1-3-5" class="next"></label>
+          <label for="slide1-3-4" class="prev"></label>
+          <label for="slide1-3-6" class="next"></label>
+          <label for="slide1-3-5" class="prev"></label>
+        </div>
+        <div class="slide-indicators">
+          <label for="slide1-3-1" class="dot"></label>
+          <label for="slide1-3-2" class="dot"></label>
+          <label for="slide1-3-3" class="dot"></label>
+          <label for="slide1-3-4" class="dot"></label>
+          <label for="slide1-3-5" class="dot"></label>
+          <label for="slide1-3-6" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-1-3" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 1-4: Strings -->
+  <input type="checkbox" id="modal-card-1-4" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-1-4" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides1-4" id="slide1-4-1" checked>
+      <div class="slide" data-title="Strings - Introducción">
+        <p>Un <strong>String</strong> es una secuencia de caracteres. En Java, los strings son objetos inmutables.</p>
+        <p><strong>Formas de crear un String:</strong></p>
+        <ol class="code">
+          <li><span class="cm">// Literal</span></li>
+          <li><span class="type">String</span> nombre = <span class="str">"Juan"</span>;</li>
+          <li></li>
+          <li><span class="cm">// Usando el constructor</span></li>
+          <li><span class="type">String</span> apellido = <span class="kw">new</span> <span class="type">String</span>(<span class="str">"Pérez"</span>);</li>
+        </ol>
+        <p><strong>Concatenación:</strong></p>
+        <ol class="code">
+          <li><span class="type">String</span> saludo = <span class="str">"Hola"</span> + <span class="str">" "</span> + <span class="str">"Mundo"</span>;</li>
+          <li><span class="type">String</span> mensaje = <span class="str">"Tengo "</span> + <span class="num">25</span> + <span class="str">" años"</span>;</li>
+        </ol>
+      </div>
+
+      <input type="radio" name="slides1-4" id="slide1-4-2">
+      <div class="slide" data-title="Métodos de String (Parte 1)">
+        <p>Los strings tienen muchos métodos útiles:</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Método</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>length()</code></td>
+            <td>Devuelve la longitud</td>
+            <td><code>"Hola".length() // 4</code></td>
+          </tr>
+          <tr>
+            <td><code>charAt(index)</code></td>
+            <td>Devuelve el carácter en la posición</td>
+            <td><code>"Hola".charAt(0) // 'H'</code></td>
+          </tr>
+          <tr>
+            <td><code>toUpperCase()</code></td>
+            <td>Convierte a mayúsculas</td>
+            <td><code>"hola".toUpperCase() // "HOLA"</code></td>
+          </tr>
+          <tr>
+            <td><code>toLowerCase()</code></td>
+            <td>Convierte a minúsculas</td>
+            <td><code>"HOLA".toLowerCase() // "hola"</code></td>
+          </tr>
+          <tr>
+            <td><code>trim()</code></td>
+            <td>Elimina espacios al inicio y final</td>
+            <td><code>" hola ".trim() // "hola"</code></td>
+          </tr>
+          </tbody>
+        </table>
+        <ol class="code">
+          <li><span class="type">String</span> texto = <span class="str">"  Java  "</span>;</li>
+          <li><span class="type">int</span> longitud = texto.<span class="mtd">length</span>();        <span class="cm">// 8</span></li>
+          <li><span class="type">String</span> limpio = texto.<span class="mtd">trim</span>();         <span class="cm">// "Java"</span></li>
+        </ol>
+      </div>
+
+      <input type="radio" name="slides1-4" id="slide1-4-3">
+      <div class="slide" data-title="Métodos de String (Parte 2)">
+        <p>Más métodos importantes:</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Método</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>substring(inicio)</code></td>
+            <td>Extrae desde inicio hasta el final</td>
+            <td><code>"Hola".substring(1) // "ola"</code></td>
+          </tr>
+          <tr>
+            <td><code>substring(inicio, fin)</code></td>
+            <td>Extrae desde inicio hasta fin-1</td>
+            <td><code>"Hola".substring(1,3) // "ol"</code></td>
+          </tr>
+          <tr>
+            <td><code>contains(secuencia)</code></td>
+            <td>Verifica si contiene la secuencia</td>
+            <td><code>"Hola".contains("ol") // true</code></td>
+          </tr>
+          <tr>
+            <td><code>replace(old, new)</code></td>
+            <td>Reemplaza caracteres</td>
+            <td><code>"Hola".replace('o','a') // "Hala"</code></td>
+          </tr>
+          <tr>
+            <td><code>split(separador)</code></td>
+            <td>Divide el string en un array</td>
+            <td><code>"a,b,c".split(",") // ["a","b","c"]</code></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <input type="radio" name="slides1-4" id="slide1-4-4">
+      <div class="slide" data-title="Comparación de Strings">
+        <p>Para comparar strings, <strong>nunca uses ==</strong>. Usa los métodos apropiados:</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Método</th>
+            <th>Descripción</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>equals(otro)</code></td>
+            <td>Compara contenido (case-sensitive)</td>
+          </tr>
+          <tr>
+            <td><code>equalsIgnoreCase(otro)</code></td>
+            <td>Compara sin importar mayúsculas</td>
+          </tr>
+          <tr>
+            <td><code>compareTo(otro)</code></td>
+            <td>Compara lexicográficamente</td>
+          </tr>
+          </tbody>
+        </table>
+        <ol class="code">
+          <li><span class="type">String</span> s1 = <span class="str">"Hola"</span>;</li>
+          <li><span class="type">String</span> s2 = <span class="str">"hola"</span>;</li>
+          <li></li>
+          <li><span class="type">boolean</span> iguales = s1.<span class="mtd">equals</span>(s2);              <span class="cm">// false</span></li>
+          <li><span class="type">boolean</span> igualesSinCase = s1.<span class="mtd">equalsIgnoreCase</span>(s2); <span class="cm">// true</span></li>
+          <li></li>
+          <li><span class="cm">// ❌ INCORRECTO</span></li>
+          <li><span class="kw">if</span> (s1 == s2) { ... }  <span class="cm">// Compara referencias, no contenido</span></li>
+        </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide1-4-2" class="next"></label>
+          <label for="slide1-4-1" class="prev"></label>
+          <label for="slide1-4-3" class="next"></label>
+          <label for="slide1-4-2" class="prev"></label>
+          <label for="slide1-4-4" class="next"></label>
+          <label for="slide1-4-3" class="prev"></label>
+        </div>
+        <div class="slide-indicators">
+          <label for="slide1-4-1" class="dot"></label>
+          <label for="slide1-4-2" class="dot"></label>
+          <label for="slide1-4-3" class="dot"></label>
+          <label for="slide1-4-4" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-1-4" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 2-0: Estructuras de Control (TÍTULO) -->
+  <input type="checkbox" id="modal-card-2-0" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-2-0" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides2-0" id="slide2-0-1" checked>
+      <div class="slide" data-title="Estructuras de Control">
+        <p>Las <strong>estructuras de control</strong> permiten alterar el flujo de ejecución de un programa.</p>
+        <p>Se dividen en tres categorías principales:</p>
+        <table>
+          <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Ejemplos</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><strong>Estructuras de Condición</strong></td>
+            <td>Ejecutan código según una condición</td>
+            <td><code>if</code>, <code>if-else</code>, <code>switch</code></td>
+          </tr>
+          <tr>
+            <td><strong>Estructuras de Bucle</strong></td>
+            <td>Repiten código mientras se cumpla una condición</td>
+            <td><code>for</code>, <code>while</code>, <code>do-while</code>, <code>for-each</code></td>
+          </tr>
+          <tr>
+            <td><strong>Estructuras de Salto</strong></td>
+            <td>Alteran el flujo de ejecución</td>
+            <td><code>break</code>, <code>continue</code>, <code>return</code></td>
+          </tr>
+          </tbody>
+        </table>
+        <p>Estas estructuras son fundamentales para crear programas dinámicos y eficientes, permitiendo tomar decisiones y automatizar tareas repetitivas.</p>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide2-0-1" class="prev"></label>
+          <label for="slide2-0-1" class="next"></label>
+        </div>
+        <div class="slide-indicators">
+          <label for="slide2-0-1" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-2-0" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 2-1: Estructuras de Condición -->
+  <input type="checkbox" id="modal-card-2-1" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-2-1" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <!-- Slide 1: If -->
+      <input type="radio" name="slides2-1" id="slide2-1-1" checked>
+      <div class="slide" data-title="Condición IF">
+        <p>La estructura <strong>if</strong> permite ejecutar un bloque de código solo si se cumple una condición.</p>
+
+        <ol class="code">
+          <li><span class="type">int</span> edad = <span class="num">18</span>;</li>
+          <li><span class="kw">if</span>(edad &gt;= <span class="num">18</span>) {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"Eres mayor de edad"</span>);</li>
+          <li>}</li>
+        </ol>
+      </div>
+
+      <!-- Slide 2: If-Else -->
+      <input type="radio" name="slides2-1" id="slide2-1-2">
+      <div class="slide" data-title="Condición IF-ELSE">
+        <p><strong>if-else</strong> evalúa una condición y ejecuta una alternativa si no se cumple.</p>
+
+        <ol class="code">
+          <li><span class="type">int</span> nota = <span class="num">6</span>;</li>
+          <li><span class="kw">if</span>(nota &gt;= <span class="num">5</span>) {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"Aprobado"</span>);</li>
+          <li>} <span class="kw">else</span> {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"Suspenso"</span>);</li>
+          <li>}</li>
+        </ol>
+      </div>
+
+      <!-- Slide 3: If-Else If-Else -->
+      <input type="radio" name="slides2-1" id="slide2-1-3">
+      <div class="slide" data-title="Condición ELSE IF">
+        <p>La estructura <strong>else if</strong> permite evaluar múltiples condiciones.</p>
+
+        <ol class="code">
+          <li><span class="type">int</span> nota = <span class="num">8</span>;</li>
+          <li><span class="kw">if</span>(nota &gt;= <span class="num">9</span>) {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"Sobresaliente"</span>);</li>
+          <li>} <span class="kw">else if</span>(nota &gt;= <span class="num">7</span>) {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"Notable"</span>);</li>
+          <li>} <span class="kw">else</span> {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"Aprobado"</span>);</li>
+          <li>}</li>
+        </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide2-1-2" class="next"></label>
+          <label for="slide2-1-1" class="prev"></label>
+
+          <label for="slide2-1-3" class="next"></label>
+          <label for="slide2-1-2" class="prev"></label>
+        </div>
+
+        <div class="slide-indicators">
+          <label for="slide2-1-1" class="dot"></label>
+          <label for="slide2-1-2" class="dot"></label>
+          <label for="slide2-1-3" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-2-1" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 2-2: Estructuras de Bucle -->
+  <input type="checkbox" id="modal-card-2-2" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-2-2" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <!-- Slide 1: Bucle FOR -->
+      <input type="radio" name="slides2-2" id="slide2-2-1" checked>
+      <div class="slide" data-title="Bucle FOR">
+        <p><strong>for</strong> se usa cuando sabemos cuántas veces queremos repetir algo.</p>
+
+        <ol class="code">
+          <li><span class="kw">for</span>(<span class="type">int</span> i = <span class="num">0</span>; i &lt; <span class="num">5</span>; i++) {</li>
+          <li>    <span class="mtd">System.out.println</span>(i);</li>
+          <li>}</li>
+        </ol>
+      </div>
+
+      <!-- Slide 2: Bucle WHILE -->
+      <input type="radio" name="slides2-2" id="slide2-2-2">
+      <div class="slide" data-title="Bucle WHILE">
+        <p><strong>while</strong> repite mientras la condición sea verdadera.</p>
+
+        <ol class="code">
+          <li><span class="type">int</span> x = <span class="num">0</span>;</li>
+          <li><span class="kw">while</span>(x &lt; <span class="num">3</span>) {</li>
+          <li>    <span class="mtd">System.out.println</span>(x);</li>
+          <li>    x++;</li>
+          <li>}</li>
+        </ol>
+      </div>
+
+      <!-- Slide 3: Bucle DO-WHILE -->
+      <input type="radio" name="slides2-2" id="slide2-2-3">
+      <div class="slide" data-title="Bucle DO-WHILE">
+        <p><strong>do-while</strong> ejecuta el código al menos una vez antes de comprobar la condición.</p>
+
+        <ol class="code">
+          <li><span class="type">int</span> n = <span class="num">1</span>;</li>
+          <li><span class="kw">do</span> {</li>
+          <li>    <span class="mtd">System.out.println</span>(n);</li>
+          <li>    n++;</li>
+          <li>} <span class="kw">while</span>(n &lt;= <span class="num">3</span>);</li>
+        </ol>
+      </div>
+
+      <!-- Slide 4: For Each -->
+      <input type="radio" name="slides2-2" id="slide2-2-4">
+      <div class="slide" data-title="For-Each">
+        <p><strong>for-each</strong> se usa para recorrer elementos de un array o colección.</p>
+
+        <ol class="code">
+          <li><span class="type">String</span>[] nombres = {<span class="str">"Ana"</span>, <span class="str">"Luis"</span>, <span class="str">"Mar"</span>};</li>
+          <li><span class="kw">for</span>(<span class="type">String</span> n : nombres) {</li>
+          <li>    <span class="mtd">System.out.println</span>(n);</li>
+          <li>}</li>
+        </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide2-2-2" class="next"></label>
+          <label for="slide2-2-1" class="prev"></label>
+
+          <label for="slide2-2-3" class="next"></label>
+          <label for="slide2-2-2" class="prev"></label>
+
+          <label for="slide2-2-4" class="next"></label>
+          <label for="slide2-2-3" class="prev"></label>
+
+          <label for="slide2-2-4" class="prev"></label>
+        </div>
+
+        <div class="slide-indicators">
+          <label for="slide2-2-1" class="dot"></label>
+          <label for="slide2-2-2" class="dot"></label>
+          <label for="slide2-2-3" class="dot"></label>
+          <label for="slide2-2-4" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-2-2" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 2-3: Estructuras de Salto -->
+  <input type="checkbox" id="modal-card-2-3" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-2-3" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <!-- Slide 1: General -->
+      <input type="radio" name="slides2-3" id="slide2-3-1" checked>
+      <div class="slide" data-title="Estructuras de Salto">
+        <p>
+          Las <strong>estructuras de salto</strong> permiten modificar el flujo natural del programa.
+          Son muy útiles dentro de bucles y métodos, ya que permiten:
+        </p>
+
+        <ul>
+          <li>Terminar un bucle antes de tiempo (<strong>break</strong>)</li>
+          <li>Saltar directamente a la siguiente iteración (<strong>continue</strong>)</li>
+          <li>Salir de un método devolviendo un valor (<strong>return</strong>)</li>
+        </ul>
+
+        <p>
+          Su uso adecuado mejora la eficiencia del código y evita condiciones complejas
+          dentro de bucles o funciones.
+        </p>
+      </div>
+
+      <!-- Slide 2: break -->
+      <input type="radio" name="slides2-3" id="slide2-3-2">
+      <div class="slide" data-title="Instrucción break">
+        <p>
+          <strong>break</strong> se utiliza para detener un bucle inmediatamente,
+          independientemente de si la condición del bucle sigue siendo verdadera.
+        </p>
+
+        <p>Se usa principalmente en:</p>
+        <ul>
+          <li>Bucles <strong>for, while, do-while</strong></li>
+          <li>Sentencias <strong>switch</strong></li>
+        </ul>
+
+        <ol class="code">
+          <li><span class="kw">for</span>(<span class="type">int</span> i = <span class="num">0</span>; i &lt; <span class="num">10</span>; i++) {</li>
+          <li>    <span class="kw">if</span>(i == <span class="num">4</span>) <span class="kw">break</span>;</li>
+          <li>    <span class="mtd">System.out.println</span>(i);</li>
+          <li>}</li>
+        </ol>
+
+        <p>Salida del código: 0, 1, 2, 3</p>
+      </div>
+
+      <!-- Slide 3: continue -->
+      <input type="radio" name="slides2-3" id="slide2-3-3">
+      <div class="slide" data-title="Instrucción continue">
+        <p>
+          <strong>continue</strong> permite saltar el resto de instrucciones
+          de la iteración actual y continuar con la siguiente.
+        </p>
+
+        <p>
+          Es útil para ignorar casos concretos sin detener todo el bucle.
+        </p>
+
+        <ol class="code">
+          <li><span class="kw">for</span>(<span class="type">int</span> i = <span class="num">0</span>; i &lt; <span class="num">5</span>; i++) {</li>
+          <li>    <span class="kw">if</span>(i == <span class="num">2</span>) <span class="kw">continue</span>;</li>
+          <li>    <span class="mtd">System.out.println</span>(i);</li>
+          <li>}</li>
+        </ol>
+
+        <p>Salida: 0, 1, 3, 4 (el número 2 es saltado)</p>
+      </div>
+
+      <!-- Slide 4: return -->
+      <input type="radio" name="slides2-3" id="slide2-3-4">
+      <div class="slide" data-title="Instrucción return">
+        <p>
+          <strong>return</strong> finaliza inmediatamente la ejecución de un método.
+          Puede devolver un valor o nada (en métodos <strong>void</strong>).
+        </p>
+
+        <ol class="code">
+          <li><span class="type">int</span> sumar(<span class="type">int</span> a, <span class="type">int</span> b) {</li>
+          <li>    <span class="kw">return</span> a + b;</li>
+          <li>}</li>
+        </ol>
+
+        <p>
+          Si un método contiene varias rutas posibles, <strong>return</strong> marca
+          el final exacto de la que se ejecute.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide2-3-2" class="next"></label>
+          <label for="slide2-3-1" class="prev"></label>
+
+          <label for="slide2-3-3" class="next"></label>
+          <label for="slide2-3-2" class="prev"></label>
+
+          <label for="slide2-3-4" class="next"></label>
+          <label for="slide2-3-3" class="prev"></label>
+
+          <label for="slide2-3-4" class="prev"></label>
+        </div>
+
+        <div class="slide-indicators">
+          <label for="slide2-3-1" class="dot"></label>
+          <label for="slide2-3-2" class="dot"></label>
+          <label for="slide2-3-3" class="dot"></label>
+          <label for="slide2-3-4" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-2-3" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 3-0: Errores -->
+  <input type="checkbox" id="modal-card-3-0" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-3-0" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <input type="radio" name="slides3-0" id="slide3-0-1" checked>
+      <div class="slide" data-title="Errores en Java">
+        <p>
+          En Java, un <strong>error</strong> es un problema que impide que el programa se compile o se ejecute correctamente.
+          Pueden clasificarse en:
+        </p>
+
+        <h3>🔹 Errores de compilación</h3>
+        <p>
+          Detectados por el compilador. Son causados por:
+        </p>
+        <ul>
+          <li>Errores de sintaxis</li>
+          <li>Uso incorrecto de tipos de datos</li>
+          <li>Olvidar un punto y coma</li>
+          <li>Falta una llave o paréntesis</li>
+          <li>Variables no declaradas</li>
+        </ul>
+
+        <ol class="code">
+          <li><span class="type">int</span> x = <span class="num">5</span></li>
+          <li><span class="cm">// Falta el punto y coma → Error de compilación</span></li>
+        </ol>
+
+        <h3>🔹 Errores de ejecución</h3>
+        <p>
+          Ocurren mientras el programa está corriendo. Suelen estar ligados a errores lógicos o situaciones no controladas:
+        </p>
+        <ul>
+          <li>Dividir entre cero</li>
+          <li>Acceder fuera del rango de un array</li>
+          <li>Convertir tipos de forma incorrecta</li>
+        </ul>
+
+        <ol class="code">
+          <li><span class="type">int</span> a = <span class="num">10</span> / <span class="num">0</span>;</li>
+          <li><span class="cm">// ArithmeticException en tiempo de ejecución</span></li>
+        </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="slide-indicators">
+          <label for="slide3-0-1" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-3-0" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 3-1: Excepciones -->
   <input type="checkbox" id="modal-card-3-1" class="modal-toggle">
   <div class="modal">
     <label for="modal-card-3-1" class="modal-overlay"></label>
 
-      <div class="modal-content">
-        <input type="radio" name="slides3" id="slide1-1" checked>
-        <div class="slide" data-title="Propiedad del slider">
-            <p>Contenido del slide 1, Modal 1Contenido del slide 1, Modal 1Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
-            <p>Contenido del slide 1, Modal 1</p>
+    <div class="modal-content">
+
+      <input type="radio" name="slides3-1" id="slide3-1-1" checked>
+      <div class="slide" data-title="Excepciones en Java">
+        <p>
+          Una <strong>excepción</strong> es un evento inesperado que interrumpe el flujo normal del programa.
+          Java ofrece un sistema muy completo para manejarlas.
+        </p>
+
+        <h3>🔸 ¿Por qué ocurren las excepciones?</h3>
+        <ul>
+          <li>Acceso ilegal a memoria (arrays fuera de rango)</li>
+          <li>Errores aritméticos (división entre cero)</li>
+          <li>Entrada/Salida incorrecta</li>
+          <li>Conversión mal realizada entre tipos</li>
+          <li>Trabajar con objetos nulos (NullPointerException)</li>
+        </ul>
+
+        <h3>🔸 throw vs throws</h3>
+        <p><strong>throw</strong> lanza una excepción manualmente.</p>
+        <p><strong>throws</strong> indica que un método puede lanzar una excepción.</p>
+
+        <ol class="code">
+          <li><span class="kw">void</span> ejemplo() <span class="kw">throws</span> IOException {</li>
+          <li>    <span class="kw">throw</span> <span class="kw">new</span> IOException(<span class="str">"Fallo I/O"</span>);</li>
+          <li>}</li>
+        </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide3-2-1" class="prev"></label>
+          <label for="slide3-2-1" class="next"></label>
         </div>
-
-        <input type="radio" name="slides3" id="slide1-2">
-        <div class="slide" data-title="Propiedad del slide 2">
-
-          <ol class="code">
-            <li data-type="comment">// Declaración e inicialización</li>
-            <li><span class="type">int</span> x = <span class="num">10</span>;</li>
-            <li><span class="type">String</span> nombre = <span class="str">"Carlos"</span>;</li>
-          </ol>
+        <div class="slide-indicators">
+          <label for="slide3-1-1" class="dot"></label>
         </div>
-
-        <input type="radio" name="slides3" id="slide1-3">
-        <div class="slide" data-title="Propiedad del slide 3">
-            <p>Contenido del slide 3, Modal 1</p>
-        </div>
-
-        <div class="slide-footer">
-          <div class="controls">
-            <label for="slide1-2" class="next"></label>
-            <label for="slide1-1" class="prev"></label>
-            <label for="slide1-3" class="next"></label>
-            <label for="slide1-2" class="prev"></label>
-
-          </div>
-          <div class="slide-indicators">
-            <label for="slide1-1" class="dot"></label>
-            <label for="slide1-2" class="dot"></label>
-            <label for="slide1-3" class="dot"></label>
-          </div>
-        </div>
+      </div>
 
       <label for="modal-card-3-1" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 3-2: Anotaciones -->
+  <input type="checkbox" id="modal-card-3-2" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-3-2" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <!-- Slide 1: Anotaciones -->
+      <input type="radio" name="slides3-2" id="slide3-2-1" checked>
+      <div class="slide" data-title="Anotaciones (Type Hints)">
+        <p>
+          Las <strong>anotaciones</strong> (type hints) permiten indicar el tipo de datos esperado en variables,
+          parámetros de funciones y valores de retorno en Python. No afectan la ejecución, pero ayudan a:
+        </p>
+        <ul>
+          <li>Mejorar la legibilidad del código</li>
+          <li>Detectar errores de tipo con herramientas como <code>mypy</code></li>
+          <li>Facilitar autocompletado y documentación</li>
+        </ul>
+
+        <p><strong>Ejemplo:</strong></p>
+        <ol class="code">
+          <li>edad: <span class="type">int</span> = <span class="num">17</span></li>
+          <li>nombre: <span class="type">str</span> = <span class="str">"Juan"</span></li>
+          <li>precio: <span class="type">float</span> = <span class="num">19.99</span></li>
+        </ol>
+
+        <p><strong>Funciones con anotaciones:</strong></p>
+        <ol class="code">
+          <li>def saludar(nombre: <span class="type">str</span>) -&gt; <span class="type">str</span>:</li>
+          <li>    <span class="kw">return</span> f"Hola, {nombre}"</li>
+        </ol>
+
+        <p>Las anotaciones son opcionales y no lanzan errores en tiempo de ejecución.</p>
+      </div>
+
+      <!-- Footer -->
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide3-2-1" class="prev"></label>
+          <label for="slide3-2-1" class="next"></label>
+        </div>
+
+        <div class="slide-indicators">
+          <label for="slide3-2-1" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-3-2" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 3-3: Try...Catch -->
+  <input type="checkbox" id="modal-card-3-3" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-3-3" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <!-- Slide 1: Try - Catch -->
+      <input type="radio" name="slides3-3" id="slide3-3-1" checked>
+      <div class="slide" data-title="Try - Catch">
+        <p>
+          El bloque <strong>try…catch</strong> permite capturar excepciones para evitar que el programa termine de forma inesperada.
+        </p>
+
+        <h3>🔸 try</h3>
+        <p>Contiene el código que puede producir un error.</p>
+
+        <h3>🔸 catch</h3>
+        <p>Contiene el código que se ejecutará si ocurre una excepción.</p>
+
+        <ol class="code">
+          <li><span class="kw">try</span> {</li>
+          <li>    <span class="type">int</span> x = <span class="num">5</span> / <span class="num">0</span>;</li>
+          <li>} <span class="kw">catch</span>(<span class="type">ArithmeticException</span> e) {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"No puedes dividir entre cero"</span>);</li>
+          <li>}</li>
+        </ol>
+
+        <p>
+          Se pueden encadenar varios <strong>catch</strong> para capturar distintos tipos de excepciones.
+        </p>
+      </div>
+
+      <!-- Slide 2: Finally -->
+      <input type="radio" name="slides3-3" id="slide3-3-2">
+      <div class="slide" data-title="Finally">
+        <p>
+          El bloque <strong>finally</strong> se ejecuta siempre, ocurra o no ocurra una excepción.
+          Se usa para liberar recursos como archivos, conexiones o memoria.
+        </p>
+
+        <ol class="code">
+          <li><span class="kw">try</span> {</li>
+          <li>    <span class="type">int</span> x = <span class="num">10</span> / <span class="num">0</span>;</li>
+          <li>} <span class="kw">catch</span>(Exception e) {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"Error detectado"</span>);</li>
+          <li>} <span class="kw">finally</span> {</li>
+          <li>    <span class="mtd">System.out.println</span>(<span class="str">"Bloque finally ejecutado"</span>);</li>
+          <li>}</li>
+        </ol>
+
+        <p>Incluso si hay un <strong>return</strong> dentro del try o del catch, el <strong>finally</strong> siempre se ejecuta.</p>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide3-3-2" class="next"></label>
+          <label for="slide3-3-1" class="prev"></label>
+
+          <label for="slide3-3-2" class="prev"></label>
+        </div>
+
+        <div class="slide-indicators">
+          <label for="slide3-3-1" class="dot"></label>
+          <label for="slide3-3-2" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-3-3" class="close-button"></label>
     </div>
   </div>
 
