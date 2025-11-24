@@ -55,18 +55,19 @@
 
   <div class="columna">
     <div class="card" data-title="Java OOP" style="--card-color: #2563eb;" role="group" aria-label="Java OOP">
+      <label for="modal-card-4-0" class="title-label"></label>
       <table>
         <tbody>
-        <tr><td>Constructores</td></tr>
-        <tr><td>Métodos</td></tr>
-        <tr><td>Modificadores de Acceso</td></tr>
-        <tr><td>Abstracción</td></tr>
-        <tr><td>Encapsulación</td></tr>
-        <tr><td>Herencia</td></tr>
-        <tr><td>Polimorfismo</td></tr>
-        <tr><td>Enums</td></tr>
-        <tr><td>Clases Genéricas</td></tr>
-        <tr><td>Clases Anidadas</td></tr>
+        <tr><td><label for="modal-card-4-1">Constructores</label></td></tr>
+        <tr><td><label for="modal-card-4-2">Métodos</label></td></tr>
+        <tr><td><label for="modal-card-4-3">Modificadores de Acceso</label></td></tr>
+        <tr><td><label for="modal-card-4-4">Abstracción</label></td></tr>
+        <tr><td><label for="modal-card-4-5">Encapsulación</label></td></tr>
+        <tr><td><label for="modal-card-4-6">Herencia</label></td></tr>
+        <tr><td><label for="modal-card-4-7">Polimorfismo</label></td></tr>
+        <tr><td><label for="modal-card-4-8">Enums</label></td></tr>
+        <tr><td><label for="modal-card-4-9">Clases Genéricas</label></td></tr>
+        <tr><td><label for="modal-card-4-10">Clases Anidadas</label></td></tr>
         </tbody>
       </table>
     </div>
@@ -1459,30 +1460,35 @@
       <!-- Slide 1: Anotaciones -->
       <input type="radio" name="slides3-2" id="slide3-2-1" checked>
       <div class="slide" data-title="Anotaciones (Type Hints)">
-        <p>
-          Las <strong>anotaciones</strong> (type hints) permiten indicar el tipo de datos esperado en variables,
-          parámetros de funciones y valores de retorno en Python. No afectan la ejecución, pero ayudan a:
-        </p>
-        <ul>
-          <li>Mejorar la legibilidad del código</li>
-          <li>Detectar errores de tipo con herramientas como <code>mypy</code></li>
-          <li>Facilitar autocompletado y documentación</li>
-        </ul>
-
-        <p><strong>Ejemplo:</strong></p>
-        <ol class="code">
-          <li>edad: <span class="type">int</span> = <span class="num">17</span></li>
-          <li>nombre: <span class="type">str</span> = <span class="str">"Juan"</span></li>
-          <li>precio: <span class="type">float</span> = <span class="num">19.99</span></li>
-        </ol>
-
-        <p><strong>Funciones con anotaciones:</strong></p>
-        <ol class="code">
-          <li>def saludar(nombre: <span class="type">str</span>) -&gt; <span class="type">str</span>:</li>
-          <li>    <span class="kw">return</span> f"Hola, {nombre}"</li>
-        </ol>
-
-        <p>Las anotaciones son opcionales y no lanzan errores en tiempo de ejecución.</p>
+        <p>Las <strong>anotaciones</strong> proporcionan metadatos al compilador y al entorno de ejecución.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Anotación</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>@Override</code></td>
+                <td>Indica que un método sobrescribe uno de la clase padre.</td>
+              </tr>
+              <tr>
+                <td><code>@Deprecated</code></td>
+                <td>Marca un elemento como obsoleto.</td>
+              </tr>
+              <tr>
+                <td><code>@SuppressWarnings</code></td>
+                <td>Oculta advertencias del compilador.</td>
+              </tr>
+            </tbody>
+          </table>
+          <ol class="code">
+            <li><span class="kw">@Override</span></li>
+            <li><span class="kw">public</span> <span class="type">String</span> toString() {</li>
+            <li>&nbsp;&nbsp;<span class="kw">return</span> <span class="str">"Objeto"</span>;</li>
+            <li>}</li>
+          </ol>
       </div>
 
       <!-- Footer -->
@@ -1573,6 +1579,730 @@
     </div>
   </div>
 
+  <!-- Modal 4-0: Java OOP -->
+  <input type="checkbox" id="modal-card-4-0" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-4-0" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <!-- Slide 1: Clases y Objetos -->
+      <input type="radio" name="slides4-0" id="slide4-0-1" checked>
+      <div class="slide" data-title="Clases y Objetos">
+        <p>La <strong>Programación Orientada a Objetos (OOP)</strong> en Java se basa en clases y objetos.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Concepto</th>
+                <th>Descripción</th>
+                <th>Analogía</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Clase</strong></td>
+                <td>Plantilla o molde que define propiedades y comportamientos.</td>
+                <td>Plano de una casa</td>
+              </tr>
+              <tr>
+                <td><strong>Objeto</strong></td>
+                <td>Instancia específica de una clase con valores reales.</td>
+                <td>Casa construida</td>
+              </tr>
+            </tbody>
+          </table>
+            <ol class="code">
+              <li><span class="cm">// Definir una clase</span></li>
+              <li><span class="kw">public class</span> <span class="cls">Persona</span> {</li>
+              <li>    <span class="type">String</span> nombre;</li>
+              <li>    <span class="type">int</span> edad;</li>
+              <li>}</li>
+              <li></li>
+              <li><span class="cm">// Crear objetos</span></li>
+              <li><span class="cls">Persona</span> persona1 = <span class="kw">new</span> <span class="cls">Persona</span>();</li>
+              <li><span class="cls">Persona</span> persona2 = <span class="kw">new</span> <span class="cls">Persona</span>();</li>
+            </ol>
+      </div>
+
+      <!-- Footer -->
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide4-0-1" class="prev"></label>
+          <label for="slide4-0-1" class="next"></label>
+        </div>
+
+        <div class="slide-indicators">
+          <label for="slide4-0-1" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-4-0" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 4-1: Constructores -->
+  <input type="checkbox" id="modal-card-4-1" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-4-1" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides4-1" id="slide4-1-1" checked>
+      <div class="slide" data-title="Constructores">
+        <p>Los <strong>constructores</strong> son métodos especiales que se ejecutan cuando se crea un objeto.</p>
+          <ul>
+            <li>Tienen el mismo nombre que la clase</li>
+            <li>No tienen tipo de retorno (ni void)</li>
+            <li>Inicializan los atributos del objeto</li>
+          </ul>
+          <ol class="code">
+            <li><span class="kw">public class</span> <span class="cls">Persona</span> {</li>
+            <li>    <span class="type">String</span> nombre;</li>
+            <li></li>
+            <li>    <span class="cm">// Constructor</span></li>
+            <li>    <span class="kw">public</span> <span class="cls">Persona</span>(<span class="type">String</span> n) {</li>
+            <li>        nombre = n;</li>
+            <li>    }</li>
+            <li>}</li>
+          </ol>
+      </div>
+
+      <input type="radio" name="slides4-1" id="slide4-1-2">
+      <div class="slide" data-title="Uso de THIS">
+        <p>La palabra clave <strong>this.</strong> se refiere al objeto actual y evita conflictos de nombres.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Sin this.</th>
+                <th>Con this.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Puede haber confusión entre parámetros y atributos</td>
+                <td>Clarifica que se refiere al atributo del objeto</td>
+              </tr>
+            </tbody>
+          </table>
+          <ol class="code">
+            <li><span class="kw">public class</span> <span class="cls">Persona</span> {</li>
+            <li>    <span class="type">String</span> nombre;</li>
+            <li>    <span class="type">int</span> edad;</li>
+            <li></li>
+            <li>    <span class="cm">// Constructor con this.</span></li>
+            <li>    <span class="kw">public</span> <span class="cls">Persona</span>(<span class="type">String</span> nombre, <span class="type">int</span> edad) {</li>
+            <li>        <span class="kw">this</span>.nombre = nombre;</li>
+            <li>        <span class="kw">this</span>.edad = edad;</li>
+            <li>    }</li>
+            <li>}</li>
+          </ol>
+      </div>
+
+      <input type="radio" name="slides4-1" id="slide4-1-3">
+      <div class="slide" data-title="Uso de this()">
+        <p>La llamada <strong>this()</strong> permite que un constructor llame a otro constructor de la misma clase.</p>
+          <ul>
+            <li>Debe ser la primera línea del constructor</li>
+            <li>Evita duplicación de código</li>
+            <li>Facilita el mantenimiento</li>
+          </ul>
+            <ol class="code">
+              <li><span class="cm">// Constructor completo</span></li>
+              <li><span class="kw">public</span> <span class="cls">Persona</span>(<span class="type">String</span> nombre, <span class="type">int</span> edad) {</li>
+              <li>    <span class="kw">this</span>.nombre = nombre;</li>
+              <li>    <span class="kw">this</span>.edad = edad;</li>
+              <li>}</li>
+              <li></li>
+              <li><span class="cm">// Constructor que llama al anterior</span></li>
+              <li><span class="kw">public</span> <span class="cls">Persona</span>(<span class="type">String</span> nombre) {</li>
+              <li>    <span class="kw">this</span>(nombre, <span class="num">0</span>); <span class="cm">// Edad por defecto</span></li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <input type="radio" name="slides4-1" id="slide4-1-4">
+      <div class="slide" data-title="Crear Objetos con Constructor">
+        <p>Para <strong>crear objetos</strong> usamos la palabra clave <code class="kw">new</code> seguida del constructor de la clase.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Paso</th>
+                <th>Descripción</th>
+                <th>Código</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Declarar</strong></td>
+                <td>Especificar el tipo de objeto</td>
+                <td><code>Persona persona1;</code></td>
+              </tr>
+              <tr>
+                <td><strong>2. Instanciar</strong></td>
+                <td>Crear el objeto con new</td>
+                <td><code>new Persona("Ana", 25);</code></td>
+              </tr>
+              <tr>
+                <td><strong>3. Asignar</strong></td>
+                <td>Guardar referencia en variable</td>
+                <td><code>persona1 = new Persona(...);</code></td>
+              </tr>
+            </tbody>
+          </table>
+            <ol class="code">
+              <li><span class="cm">// Crear objetos usando constructor</span></li>
+              <li><span class="cls">Persona</span> persona1 = <span class="kw">new</span> <span class="cls">Persona</span>(<span class="str">"Ana"</span>, <span class="num">25</span>);</li>
+              <li><span class="cls">Persona</span> persona2 = <span class="kw">new</span> <span class="cls">Persona</span>(); <span class="cm">// Constructor por defecto</span></li>
+              <li></li>
+              <li><span class="cm">// Acceder a los atributos</span></li>
+              <li>System.out.println(persona1.nombre); <span class="cm">// "Ana"</span></li>
+            </ol>
+          <p><strong>Importante:</strong> Cada objeto es independiente y tiene su propia copia de los atributos.</p>
+      </div>
+
+      <input type="radio" name="slides4-1" id="slide4-1-5">
+      <div class="slide" data-title="Múltiples Constructores">
+        <p>Java permite tener <strong>múltiples constructores</strong> con diferentes parámetros (sobrecarga).</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Propósito</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Con parámetros</strong></td>
+                <td>Inicializa con valores específicos</td>
+              </tr>
+              <tr>
+                <td><strong>Por defecto</strong></td>
+                <td>Inicializa con valores predeterminados</td>
+              </tr>
+            </tbody>
+          </table>
+            <ol class="code">
+              <li><span class="cm">// Constructor por defecto</span></li>
+              <li><span class="kw">public</span> <span class="cls">Persona</span>() {</li>
+              <li>    <span class="kw">this</span>.nombre = <span class="str">"Sin nombre"</span>;</li>
+              <li>    <span class="kw">this</span>.edad = <span class="num">0</span>;</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide4-1-2" class="next"></label>
+          <label for="slide4-1-1" class="prev"></label>
+          <label for="slide4-1-3" class="next"></label>
+          <label for="slide4-1-2" class="prev"></label>
+          <label for="slide4-1-4" class="next"></label>
+          <label for="slide4-1-3" class="prev"></label>
+          <label for="slide4-1-5" class="next"></label>
+          <label for="slide4-1-4" class="prev"></label>
+        </div>
+        <div class="slide-indicators">
+          <label for="slide4-1-1" class="dot"></label>
+          <label for="slide4-1-2" class="dot"></label>
+          <label for="slide4-1-3" class="dot"></label>
+          <label for="slide4-1-4" class="dot"></label>
+          <label for="slide4-1-5" class="dot"></label>
+        </div>
+      </div>
+      <label for="modal-card-1-3" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 4-2: Métodos -->
+  <input type="checkbox" id="modal-card-4-2" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-4-2" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides4-2" id="slide4-2-1" checked>
+      <div class="slide" data-title="¿Qué son los métodos?">
+        <p>Los <strong>métodos</strong> son bloques de código que realizan tareas específicas y pueden ser reutilizados.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Componente</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Modificador</strong></td>
+                <td>Define la visibilidad</td>
+                <td><code>public</code>, <code>private</code></td>
+              </tr>
+              <tr>
+                <td><strong>Tipo retorno</strong></td>
+                <td>Qué devuelve el método</td>
+                <td><code>int</code>, <code>void</code></td>
+              </tr>
+              <tr>
+                <td><strong>Nombre</strong></td>
+                <td>Identificador del método</td>
+                <td><code>calcularEdad</code></td>
+              </tr>
+              <tr>
+                <td><strong>Parámetros</strong></td>
+                <td>Datos de entrada</td>
+                <td><code>(int x, String y)</code></td>
+              </tr>
+            </tbody>
+          </table>
+            <ol class="code">
+              <li><span class="cm">// Sintaxis de un método</span></li>
+              <li><span class="kw">public</span> <span class="type">int</span> <span class="mtd">sumar</span>(<span class="type">int</span> a, <span class="type">int</span> b) {</li>
+              <li>    <span class="kw">return</span> a + b;</li>
+              <li>}</li>
+              <li></li>
+              <li><span class="cm">// Llamar al método</span></li>
+              <li><span class="type">int</span> resultado = <span class="mtd">sumar</span>(<span class="num">5</span>, <span class="num">3</span>);</li>
+            </ol>
+      </div>
+
+      <input type="radio" name="slides4-2" id="slide4-2-2">
+      <div class="slide" data-title="Parámetros">
+        <p>Los <strong>parámetros</strong> son variables que recibe un método para trabajar con datos externos.</p>
+          <ul>
+            <li>Se declaran entre paréntesis en la definición del método</li>
+            <li>Pueden ser de cualquier tipo de dato</li>
+            <li>Un método puede tener cero, uno o múltiples parámetros</li>
+            <li>Los valores se pasan en el mismo orden al llamar el método</li>
+          </ul>
+            <ol class="code">
+              <li><span class="cm">// Método con múltiples parámetros</span></li>
+              <li><span class="kw">public</span> <span class="type">double</span> <span class="mtd">calcularArea</span>(<span class="type">double</span> base, <span class="type">double</span> altura) {</li>
+              <li>    <span class="kw">return</span> base * altura;</li>
+              <li>}</li>
+              <li></li>
+              <li><span class="cm">// Uso</span></li>
+              <li><span class="type">double</span> area = <span class="mtd">calcularArea</span>(<span class="num">10.5</span>, <span class="num">8.2</span>);</li>
+            </ol>
+      </div>
+
+      <input type="radio" name="slides4-2" id="slide4-2-3">
+      <div class="slide" data-title="Method Overloading">
+        <p>El <strong>Method Overloading</strong> permite tener múltiples métodos con el mismo nombre pero diferentes parámetros.</p>
+            <ol class="code">
+              <li><span class="cm">// Sobrecarga de métodos</span></li>
+              <li><span class="kw">public</span> <span class="type">int</span> <span class="mtd">sumar</span>(<span class="type">int</span> a, <span class="type">int</span> b) {</li>
+              <li>    <span class="kw">return</span> a + b;</li>
+              <li>}</li>
+              <li></li>
+              <li><span class="kw">public</span> <span class="type">double</span> <span class="mtd">sumar</span>(<span class="type">double</span> a, <span class="type">double</span> b) {</li>
+              <li>    <span class="kw">return</span> a + b;</li>
+              <li>}</li>
+              <li></li>
+              <li><span class="kw">public</span> <span class="type">int</span> <span class="mtd">sumar</span>(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c) {</li>
+              <li>    <span class="kw">return</span> a + b + c;</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <input type="radio" name="slides4-2" id="slide4-2-4">
+      <div class="slide" data-title="Scope (Alcance)">
+        <p>El <strong>scope</strong> determina dónde pueden ser accedidas las variables en el código.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Alcance</th>
+                <th>Duración</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Variables locales</strong></td>
+                <td>Solo dentro del método</td>
+                <td>Durante la ejecución del método</td>
+              </tr>
+              <tr>
+                <td><strong>Parámetros</strong></td>
+                <td>Solo dentro del método</td>
+                <td>Durante la ejecución del método</td>
+              </tr>
+              <tr>
+                <td><strong>Atributos de clase</strong></td>
+                <td>En toda la clase</td>
+                <td>Mientras exista el objeto</td>
+              </tr>
+            </tbody>
+          </table>
+            <ol class="code">
+              <li><span class="kw">public class</span> <span class="cls">Ejemplo</span> {</li>
+              <li>    <span class="type">int</span> x = <span class="num">10</span>; <span class="cm">// Atributo de clase</span></li>
+              <li></li>
+              <li>    <span class="kw">public</span> <span class="type">void</span> <span class="mtd">metodo</span>(<span class="type">int</span> y) { <span class="cm">// y es parámetro</span></li>
+              <li>        <span class="type">int</span> z = <span class="num">5</span>; <span class="cm">// z es variable local</span></li>
+              <li>        System.out.println(x + y + z);</li>
+              <li>    } <span class="cm">// y, z no existen fuera de aquí</span></li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <input type="radio" name="slides4-2" id="slide4-2-5">
+      <div class="slide" data-title="Recursión">
+        <p>La <strong>recursión</strong> es cuando un método se llama a sí mismo para resolver un problema.</p>
+          <ul>
+            <li>Debe tener una <strong>condición base</strong> para terminar</li>
+            <li>Cada llamada debe acercarse a la condición base</li>
+            <li>Útil para problemas que se pueden dividir en subproblemas similares</li>
+            <li>Cuidado con el <strong>stack overflow</strong> si no hay condición base</li>
+          </ul>
+            <ol class="code">
+              <li><span class="cm">// Ejemplo: Factorial</span></li>
+              <li><span class="kw">public</span> <span class="type">int</span> <span class="mtd">factorial</span>(<span class="type">int</span> n) {</li>
+              <li>    <span class="cm">// Condición base</span></li>
+              <li>    <span class="kw">if</span> (n &lt;= <span class="num">1</span>) {</li>
+              <li>        <span class="kw">return</span> <span class="num">1</span>;</li>
+              <li>    }</li>
+              <li>    <span class="cm">// Llamada recursiva</span></li>
+              <li>    <span class="kw">return</span> n * <span class="mtd">factorial</span>(n - <span class="num">1</span>);</li>
+              <li>}</li>
+              <li></li>
+              <li><span class="cm">// factorial(5) = 5 * 4 * 3 * 2 * 1 = 120</span></li>
+            </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide4-2-2" class="next"></label>
+          <label for="slide4-2-1" class="prev"></label>
+          <label for="slide4-2-3" class="next"></label>
+          <label for="slide4-2-2" class="prev"></label>
+          <label for="slide4-2-4" class="next"></label>
+          <label for="slide4-2-3" class="prev"></label>
+          <label for="slide4-2-5" class="next"></label>
+          <label for="slide4-2-4" class="prev"></label>
+        </div>
+        <div class="slide-indicators">
+          <label for="slide4-2-1" class="dot"></label>
+          <label for="slide4-2-2" class="dot"></label>
+          <label for="slide4-2-3" class="dot"></label>
+          <label for="slide4-2-4" class="dot"></label>
+          <label for="slide4-2-5" class="dot"></label>
+        </div>
+      </div>
+      <label for="modal-card-4-2" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 4-3: Modificadores de Acceso -->
+  <input type="checkbox" id="modal-card-4-3" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-4-3" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides4-3" id="slide4-3-1" checked>
+      <div class="slide" data-title="Modificadores de Acceso">
+        <p>Los <strong>modificadores de acceso</strong> controlan la visibilidad de clases, métodos y variables.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Modificador</th>
+                <th>Clase</th>
+                <th>Paquete</th>
+                <th>Subclase</th>
+                <th>Global</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>public</code></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td><code>protected</code></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✗</td>
+              </tr>
+              <tr>
+                <td><code>default</code></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✗</td>
+                <td>✗</td>
+              </tr>
+              <tr>
+                <td><code>private</code></td>
+                <td>✓</td>
+                <td>✗</td>
+                <td>✗</td>
+                <td>✗</td>
+              </tr>
+            </tbody>
+          </table>
+            <ol class="code">
+              <li><span class="kw">public class</span> <span class="type">Persona</span> {</li>
+              <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">String</span> nombre;</li>
+              <li>&nbsp;&nbsp;<span class="kw">private</span> <span class="type">int</span> edad;</li>
+              <li>&nbsp;&nbsp;<span class="kw">protected</span> <span class="type">String</span> direccion;</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <input type="radio" name="slides4-3" id="slide4-3-2">
+      <div class="slide" data-title="Modificadores de No-Acceso">
+        <p>Los <strong>modificadores de no-acceso</strong> proporcionan funcionalidades adicionales a clases, métodos y variables.</p>
+          <ul>
+            <li><strong>static:</strong> Pertenece a la clase, no a la instancia</li>
+            <li><strong>final:</strong> No puede ser modificado o heredado</li>
+            <li><strong>abstract:</strong> Debe ser implementado por las subclases</li>
+            <li><strong>synchronized:</strong> Controla el acceso concurrente</li>
+            <li><strong>volatile:</strong> Evita el cache de variables en hilos</li>
+          </ul>
+            <ol class="code">
+              <li><span class="kw">public class</span> <span class="type">Contador</span> {</li>
+              <li>&nbsp;&nbsp;<span class="kw">static</span> <span class="type">int</span> total = <span class="num">0</span>;</li>
+              <li>&nbsp;&nbsp;<span class="kw">final</span> <span class="type">String</span> NOMBRE = <span class="str">"Contador"</span>;</li>
+              <li>&nbsp;&nbsp;<span class="kw">volatile</span> <span class="type">boolean</span> activo;</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide4-3-2" class="next"></label>
+          <label for="slide4-3-1" class="prev"></label>
+        </div>
+        <div class="slide-indicators">
+          <label for="slide4-3-1" class="dot"></label>
+          <label for="slide4-3-2" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-4-3" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 4-4: Abstracción -->
+  <input type="checkbox" id="modal-card-4-4" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-4-4" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <!-- Slide 1: Abstracción -->
+      <input type="radio" name="slides4-4" id="slide4-4-1" checked>
+      <div class="slide" data-title="Abstracción">
+        <p>La <strong>abstracción</strong> permite ocultar los detalles complejos y mostrar solo las características esenciales de un objeto.</p>
+          <ul>
+            <li>Se logra mediante clases abstractas e interfaces</li>
+            <li>Reduce la complejidad del código</li>
+            <li>Permite centrarse en qué hace el objeto, no en cómo lo hace</li>
+            <li>Facilita el mantenimiento y reutilización del código</li>
+          </ul>
+            <ol class="code">
+              <li><span class="kw">abstract class</span> <span class="type">Vehiculo</span> {</li>
+              <li>&nbsp;&nbsp;<span class="kw">abstract</span> <span class="type">void</span> acelerar();</li>
+              <li>&nbsp;&nbsp;<span class="kw">void</span> encender() {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">// Implementación común</span></li>
+              <li>&nbsp;&nbsp;}</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <!-- Slide 2: Interfaces -->
+      <input type="radio" name="slides4-4" id="slide4-4-2">
+      <div class="slide" data-title="Interfaces">
+        <p>Una <strong>interface</strong> es un contrato que define qué métodos debe implementar una clase.</p>
+          <ul>
+            <li>Todos los métodos son implícitamente públicos y abstractos</li>
+            <li>Las variables son implícitamente public, static y final</li>
+            <li>Una clase puede implementar múltiples interfaces</li>
+            <li>Soporta herencia múltiple de tipo</li>
+          </ul>
+            <ol class="code">
+              <li><span class="kw">interface</span> <span class="type">Volador</span> {</li>
+              <li>&nbsp;&nbsp;<span class="type">void</span> volar();</li>
+              <li>&nbsp;&nbsp;<span class="type">void</span> aterrizar();</li>
+              <li>}</li>
+              <li></li>
+              <li><span class="kw">class</span> <span class="type">Avion</span> <span class="kw">implements</span> <span class="type">Volador</span> {</li>
+              <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">void</span> volar() { <span class="cm">/* ... */</span> }</li>
+              <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">void</span> aterrizar() { <span class="cm">/* ... */</span> }</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <!-- Slide 3: CLASES ABSTRACTAS VS INTERFACES -->
+      <input type="radio" name="slides4-4" id="slide4-4-3">
+      <div class="slide" data-title="Clases Abstractas vs Interfaces">
+        <p>Diferencias principales entre <strong>clases abstractas</strong> e <strong>interfaces</strong>:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>Clase Abstracta</th>
+                <th>Interface</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Herencia</td>
+                <td>Solo una clase padre</td>
+                <td>Múltiples interfaces</td>
+              </tr>
+              <tr>
+                <td>Métodos</td>
+                <td>Abstractos y concretos</td>
+                <td>Solo abstractos (Java 7)</td>
+              </tr>
+              <tr>
+                <td>Variables</td>
+                <td>Cualquier tipo</td>
+                <td>public, static, final</td>
+              </tr>
+              <tr>
+                <td>Constructor</td>
+                <td>Puede tener</td>
+                <td>No puede tener</td>
+              </tr>
+            </tbody>
+          </table>
+            <ol class="code">
+              <li><span class="cm">// Usar clase abstracta cuando:</span></li>
+              <li><span class="cm">// - Hay código común para compartir</span></li>
+              <li><span class="cm">// - Relación "es un"</span></li>
+              <li></li>
+              <li><span class="cm">// Usar interface cuando:</span></li>
+              <li><span class="cm">// - Solo definir comportamiento</span></li>
+              <li><span class="cm">// - Relación "puede hacer"</span></li>
+            </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide4-4-2" class="next"></label>
+          <label for="slide4-4-1" class="prev"></label>
+
+          <label for="slide4-4-3" class="next"></label>
+          <label for="slide4-4-2" class="prev"></label>
+        </div>
+
+        <div class="slide-indicators">
+          <label for="slide4-4-1" class="dot"></label>
+          <label for="slide4-4-2" class="dot"></label>
+          <label for="slide4-4-3" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-4-4" class="close-button"></label>
+    </div>
+  </div>
+
+  <!-- Modal 4-5: Encapsulación -->
+  <input type="checkbox" id="modal-card-4-5" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-4-5" class="modal-overlay"></label>
+
+    <div class="modal-content">
+
+      <!-- Slide 1: QUE ES LA ENCAPSULACIÓN -->
+      <input type="radio" name="slides4-5" id="slide4-5-1" checked>
+      <div class="slide" data-title="¿Qué es la Encapsulación?">
+        <p>La <strong>encapsulación</strong> es el proceso de ocultar los datos internos de un objeto y proporcionar métodos para acceder a ellos.</p>
+          <ul>
+            <li>Protege los datos de modificaciones no autorizadas</li>
+            <li>Mantiene la integridad del objeto</li>
+            <li>Facilita el mantenimiento del código</li>
+            <li>Permite validar datos antes de asignarlos</li>
+          </ul>
+            <ol class="code">
+              <li><span class="kw">public class</span> <span class="type">CuentaBancaria</span> {</li>
+              <li>&nbsp;&nbsp;<span class="kw">private</span> <span class="type">double</span> saldo; <span class="cm">// Encapsulado</span></li>
+              <li>&nbsp;&nbsp;<span class="kw">private</span> <span class="type">String</span> titular;</li>
+              <li>&nbsp;&nbsp;</li>
+              <li>&nbsp;&nbsp;<span class="cm">// Métodos públicos para acceso</span></li>
+              <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">double</span> getSaldo() { <span class="kw">return</span> saldo; }</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <!-- Slide 2: USO DE GETTERS -->
+      <input type="radio" name="slides4-5" id="slide4-5-2">
+      <div class="slide" data-title="Uso de Getters">
+        <p>Los <strong>getters</strong> son métodos que permiten acceder a los valores de atributos privados de forma controlada.</p>
+          <ul>
+            <li>Proporcionan acceso de solo lectura a los datos</li>
+            <li>Pueden incluir lógica adicional (validación, formateo)</li>
+            <li>Convención: <code>getNombreAtributo()</code></li>
+            <li>Para boolean: <code>isNombreAtributo()</code></li>
+          </ul>
+            <ol class="code">
+              <li><span class="kw">public class</span> <span class="type">Persona</span> {</li>
+              <li>&nbsp;&nbsp;<span class="kw">private</span> <span class="type">String</span> nombre;</li>
+              <li>&nbsp;&nbsp;<span class="kw">private</span> <span class="type">int</span> edad;</li>
+              <li>&nbsp;&nbsp;<span class="kw">private</span> <span class="type">boolean</span> activo;</li>
+              <li>&nbsp;&nbsp;</li>
+              <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">String</span> getNombre() {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> nombre.toUpperCase();</li>
+              <li>&nbsp;&nbsp;}</li>
+              <li>&nbsp;&nbsp;</li>
+              <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">boolean</span> isActivo() {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> activo;</li>
+              <li>&nbsp;&nbsp;}</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <!-- Slide 3: USO DE SETTERS -->
+      <input type="radio" name="slides4-5" id="slide4-5-3">
+      <div class="slide" data-title="Uso de Setters">
+        <p>Los <strong>setters</strong> son métodos que permiten modificar los valores de atributos privados con validación.</p>
+          <ul>
+            <li>Controlan cómo se asignan los valores</li>
+            <li>Pueden incluir validaciones antes de asignar</li>
+            <li>Convención: <code>setNombreAtributo(tipo valor)</code></li>
+            <li>Mantienen la integridad de los datos</li>
+          </ul>
+            <ol class="code">
+              <li><span class="kw">public class</span> <span class="type">Persona</span> {</li>
+              <li>&nbsp;&nbsp;<span class="kw">private</span> <span class="type">int</span> edad;</li>
+              <li>&nbsp;&nbsp;<span class="kw">private</span> <span class="type">String</span> email;</li>
+              <li>&nbsp;&nbsp;</li>
+              <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">void</span> setEdad(<span class="type">int</span> edad) {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">if</span> (edad > <span class="num">0</span> && edad &lt; <span class="num">150</span>) {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">this</span>.edad = edad;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+              <li>&nbsp;&nbsp;}</li>
+              <li>&nbsp;&nbsp;</li>
+              <li>&nbsp;&nbsp;<span class="kw">public</span> <span class="type">void</span> setEmail(<span class="type">String</span> email) {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">if</span> (email.contains(<span class="str">"@"</span>)) {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">this</span>.email = email;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+              <li>&nbsp;&nbsp;}</li>
+              <li>}</li>
+            </ol>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide4-5-2" class="next"></label>
+          <label for="slide4-5-1" class="prev"></label>
+
+          <label for="slide4-5-3" class="next"></label>
+          <label for="slide4-5-2" class="prev"></label>
+        </div>
+
+        <div class="slide-indicators">
+          <label for="slide4-5-1" class="dot"></label>
+          <label for="slide4-5-2" class="dot"></label>
+          <label for="slide4-5-3" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-4-5" class="close-button"></label>
+    </div>
+  </div>
 
 </div>
 
