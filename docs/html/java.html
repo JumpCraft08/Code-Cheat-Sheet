@@ -6429,8 +6429,8 @@
 
         <h3>Números aleatorios:</h3>
         <ol class="code">
-          <li>double rand = <span class="cls">Math</span>.random(); <span class="cm">// 0.0 ≤ rand < 1.0</span></li>
-          <li>int randInt = (int)(rand * 100); <span class="cm">// 0 ≤ randInt < 100</span></li>
+          <li>double rand = <span class="cls">Math</span>.random(); <span class="cm">// 0.0 ≤ rand &lt; 1.0</span></li>
+          <li>int randInt = (int)(rand * 100); <span class="cm">// 0 ≤ randInt &lt; 100</span></li>
         </ol>
       </div>
 
@@ -6620,8 +6620,8 @@
         <ul>
           <li><code>(?=abc)</code> → lookahead positivo.</li>
           <li><code>(?!abc)</code> → lookahead negativo.</li>
-          <li><code>(?<=abc)</code> → lookbehind positivo.</li>
-          <li><code>(?<!abc)</code> → lookbehind negativo.</li>
+          <li><code>(?&lt;=abc)</code> → lookbehind positivo.</li>
+          <li><code>(?&lt;!abc)</code> → lookbehind negativo.</li>
         </ul>
 
         <h3>Ejemplo de uso en Java:</h3>
@@ -6906,10 +6906,10 @@
 
         <h3>Flags importantes:</h3>
         <ul>
-          <li><code>-d <directorio></code> → carpeta de salida para archivos .class.</li>
-          <li><code>-classpath <ruta></code> → ruta de clases externas.</li>
-          <li><code>-source <versión></code> → versión de código fuente (ej: 1.8, 17).</li>
-          <li><code>-target <versión></code> → versión de bytecode a generar.</li>
+          <li><code>-d &lt;directorio&gt;</code> → carpeta de salida para archivos .class.</li>
+          <li><code>-classpath &lt;ruta&gt;</code> → ruta de clases externas.</li>
+          <li><code>-source &lt;versión&gt;</code> → versión de código fuente (ej: 1.8, 17).</li>
+          <li><code>-target &lt;versión&gt;</code> → versión de bytecode a generar.</li>
           <li><code>-Xlint</code> → mostrar advertencias detalladas.</li>
         </ul>
       </div>
@@ -6923,7 +6923,7 @@
           <li><code>-parameters</code> → incluye nombres de parámetros en bytecode (útil para reflexión).</li>
           <li><code>-proc:none</code> → desactiva procesamiento de anotaciones.</li>
           <li><code>-g</code> → generar información de depuración (breakpoints, variables).</li>
-          <li><code>-encoding <charset></code> → definir codificación del archivo fuente.</li>
+          <li><code>-encoding &lt;charset&gt;</code> → definir codificación del archivo fuente.</li>
         </ul>
 
         <h3>Ejemplo avanzado:</h3>
@@ -7042,11 +7042,11 @@
 
         <h3>Opciones importantes:</h3>
         <ul>
-          <li><code>-d <directorio></code> → carpeta de salida para archivos HTML.</li>
+          <li><code>-d &lt;directorio&gt;</code> → carpeta de salida para archivos HTML.</li>
           <li><code>-author</code> → incluir información de autor.</li>
           <li><code>-version</code> → incluir información de versión.</li>
           <li><code>-private</code> → incluir miembros privados en la documentación.</li>
-          <li><code>-link <URL></code> → enlazar documentación externa de otras librerías.</li>
+          <li><code>-link &lt;URL&gt;</code> → enlazar documentación externa de otras librerías.</li>
         </ul>
 
         <p>El resultado son archivos HTML navegables que muestran la documentación de todas las clases, métodos y variables.</p>

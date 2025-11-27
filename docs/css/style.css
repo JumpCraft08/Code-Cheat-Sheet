@@ -144,7 +144,7 @@ main.wallpaper {
 }
 
 .card table tr td {
-    border-bottom: 1px solid currentColor;
+    border-bottom: 2px solid var(--card-color, gray);
     padding: 0.2em 0;
 }
 
