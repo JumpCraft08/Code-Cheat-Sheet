@@ -13,10 +13,14 @@
 *.jpg binary
 *.jpeg binary
 
+# --- LINGUIST (SOLO CARPETA DOCS) ---
+* linguist-vendored
+!docs/** linguist-vendored
+
 # --- LINGUIST (GitHub lenguaje stats) ---
-*.html linguist-language=HTML
-*.css  linguist-language=CSS
-*.js   linguist-language=JavaScript
+docs/*.html linguist-language=HTML
+docs/*.css  linguist-language=CSS
+docs/*.js   linguist-language=JavaScript
 
 # --- IGNORAR DIFF EN ARCHIVOS MINIFICADOS ---
 *.min.js  -diff
