@@ -10,11 +10,11 @@
   </style>
 
   <noscript>
-    <meta http-equiv="refresh" content="0; url=java.html">
+    <meta http-equiv="refresh" content="0; url=html/java.html">
   </noscript>
 
   <script>
-    const paginas = ["java.html", "python.html", "cpp.html", "javascript.html"];
+    const paginas = ["html/java.html", "html/python.html", "html/cpp.html", "html/javascript.html"];
 
     function livelyPropertyListener(n, v) {
       if (n === "Init") location.href = paginas[v];
@@ -22,9 +22,9 @@
 
     window.onload = () => {
       fetch("LivelyProperties.json")
-              .then(r => r.json())
-              .then(d => location.href = paginas[d.init.value])
-              .catch(() => location.href = paginas[0]);
+        .then(r => r.json())
+        .then(d => location.href = paginas[d.init.value])
+        .catch(() => location.href = paginas[0]);
     };
   </script>
 </head>
