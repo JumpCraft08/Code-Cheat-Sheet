@@ -3,74 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Próximamente</title>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #111418;
-      font-family: system-ui, sans-serif;
-      color: #fff;
-    }
-
-    .coming-soon {
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(28px, 6vw, 64px);
-      font-weight: 700;
-    }
-
-    p {
-      margin-top: 12px;
-      font-size: clamp(14px, 2.5vw, 20px);
-      color: #94a3b8;
-    }
-
-    .line {
-      width: 80px;
-      height: 2px;
-      background: #475569;
-      margin: 22px auto 20px auto;
-      border-radius: 2px;
-    }
-
-    /* Botón volver */
-    .back-btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 10px 18px;
-      background: #1e293b;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.25s ease, transform 0.2s ease;
-    }
-
-    .back-btn:hover {
-      background: #334155;
-      transform: scale(1.05);
-    }
-  </style>
-
+  <meta name="author" content="JumpCraft">
+  <meta name="description" content="Resumen visual de los conceptos básicos de Java.">
+  <title>Columnas con Cards Ajustables</title>
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/modal.css" rel="stylesheet" type="text/css">
+  <link href="../css/modal-body.css" rel="stylesheet" type="text/css">
+  <link href="../css/indicators-cpp.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<main class="wallpaper">
 
-<div class="coming-soon">
-  <h1>Próximamente</h1>
-  <p>Estamos trabajando en algo increíble.</p>
-  <div class="line"></div>
+  <div class="columna">
 
-  <a href="java.html" class="back-btn">Volver</a>
-</div>
+    <label for="modal-lang-selector" class="title">C++ Core</label>
 
-</body>
-</html>
+    <div class="card" data-title="Fundamentos" style="--card-color: #0077b6;" role="group" aria-label="Fundamentos">
+      <label for="modal-card-1-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-1-1">Tipos de Datos</label></td></tr>
+        <tr><td><label for="modal-card-1-2">Variables</label></td></tr>
+        <tr><td><label for="modal-card-1-3">Operadores</label></td></tr>
+        <tr><td><label for="modal-card-1-4">Strings / C-Strings</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Estructuras de Control" style="--card-color: #dd9b00;" role="group" aria-label="Estructuras de Control">
+      <label for="modal-card-2-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-2-1">Estructuras de Condición</label></td></tr>
+        <tr><td><label for="modal-card-2-2">Estructuras de Bucle</label></td></tr>
+        <tr><td><label for="modal-card-2-3">Estructuras de Salto</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Errores" style="--card-color: #0ea5e9;" role="group" aria-label="Errores">
+      <label for="modal-card-3-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-3-1">Excepciones</label></td></tr>
+        <tr><td><label for="modal-card-3-2">Assert</label></td></tr>
+        <tr><td><label for="modal-card-3-3">Bloque Try... Catch</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" data-title="C++ OOP" style="--card-color: #2563eb;" role="group" aria-label="Java OOP">
+      <label for="modal-card-4-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-4-1">Constructores</label></td></tr>
+        <tr><td><label for="modal-card-4-2">Métodos</label></td></tr>
+        <tr><td><label for="modal-card-4-3">Modificadores de Acceso</label></td></tr>
+        <tr><td><label for="modal-card-4-4">Abstracción</label></td></tr>
+        <tr><td><label for="modal-card-4-5">Encapsulación</label></td></tr>
+        <tr><td><label for="modal-card-4-6">Herencia</label></td></tr>
+        <tr><td><label for="modal-card-4-7">Polimorfismo</label></td></tr>
+        <tr><td><label for="modal-card-4-8">Enums</label></td></tr>
+        <tr><td><label for="modal-card-4-9">Templates</label></td></tr>
+        <tr><td><label for="modal-card-4-10">Clases Anidadas</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="OOP Avanzado" style="--card-color: #ef4444;" role="group" aria-label="OOP Avanzado">
+      <label for="modal-card-5-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-5-1">Lambda</label></td></tr>
+        <tr><td><label for="modal-card-5-2">Smart Pointers</label></td></tr>
+        <tr><td><label for="modal-card-5-3">RAII</label></td></tr>
+        <tr><td><label for="modal-card-5-4">Move Semantics</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" data-title="Concurrencia" style="--card-color: #0ea5e9;" role="group" aria-label="Concurrencia">
+      <label for="modal-card-6-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-6-1">Threads</label></td></tr>
+        <tr><td><label for="modal-card-6-2">Async / Future</label></td></tr>
+        <tr><td><label for="modal-card-6-3">Mutex / lock_guard</label></td></tr>
+        <tr><td><label for="modal-card-6-4">Condition Variable</label></td></tr>
+        <tr><td><label for="modal-card-6-5">Parallel STL</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Estructuras de datos" style="--card-color: #9333ea;" role="group" aria-label="Estructuras de datos">
+      <label for="modal-card-7-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-7-1">Array</label></td></tr>
+        <tr><td><label for="modal-card-7-2">Vector</label></td></tr>
+        <tr><td><label for="modal-card-7-3">Set</label></td></tr>
+        <tr><td><label for="modal-card-7-4">Map</label></td></tr>
+        <tr><td><label for="modal-card-7-5">Queue / Deque</label></td></tr>
+        <tr><td><label for="modal-card-7-6">Stack</label></td></tr>
+        <tr><td><label for="modal-card-7-7">Comparators</label></td></tr>
+        <tr><td><label for="modal-card-7-8">Iterator</label></td></tr>
+        <tr><td><label for="modal-card-7-9">Algoritmos STL</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card" data-title="Networking" style="--card-color: #1e40af;" role="group" aria-label="Networking">
+      <label for="modal-card-8-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-8-1">Sockets</label></td></tr>
+        <tr><td><label for="modal-card-8-2">HTTP</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Seguridad" style="--card-color: #ef4444;" role="group" aria-label="Seguridad">
+      <label for="modal-card-9-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-9-1">Cifrado</label></td></tr>
+        <tr><td><label for="modal-card-9-2">Hashing</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="C++ Util" style="--card-color: #eab308;" role="group" aria-label="Java Util">
+      <label for="modal-card-10-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-10-1">CMath</label></td></tr>
+        <tr><td><label for="modal-card-10-2">Chrono</label></td></tr>
+        <tr><td><label for="modal-card-10-3">RegEx</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Compilación" style="--card-color: #0ea5e9;" role="group" aria-label="Compilación">
+      <label for="modal-card-11-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-11-1">Compilador</label></td></tr>
+        <tr><td><label for="modal-card-11-2">Make / CMake</label></td></tr>
+        <tr><td><label for="modal-card-11-3">Doxygen</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+
+    <div class="card" data-title="Entrada / Salida" style="--card-color: #eab308;" role="group" aria-label="Entrada / Salida">
+      <label for="modal-card-12-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-12-1">Files</label></td></tr>
+        <tr><td><label for="modal-card-12-2">FStream</label></td></tr>
+        <tr><td><label for="modal-card-12-3">Sstream</label></td></tr>
+        <tr><td><label for="modal-card-12-4">Serialización</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="C++ Memory" style="--card-color: #9333ea;" role="group" aria-label="Java Memory">
+      <label for="modal-card-13-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-13-1">Stack vs Heap</label></td></tr>
+        <tr><td><label for="modal-card-13-2">Pointers</label></td></tr>
+        <tr><td><label for="modal-card-13-3">Memory Leaks</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="C++ Misc" style="--card-color: #ef4444;" role="group" aria-label="Java Misc">
+      <label for="modal-card-14-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-14-1">Preprocesador / MacrosI</label></td></tr>
+        <tr><td><label for="modal-card-14-2">Estándares C++</label></td></tr>
+        <tr><td><label for="modal-card-14-3">Ecosistema C++</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="button-group">
+      <button class="title-button">1</button>
+      <button class="title-button">2</button>
+      <button class="title-button">3</button>
+      <button class="title-button">4</button>
+    </div>
+
+  </div>
+</main>
