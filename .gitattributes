@@ -13,7 +13,7 @@
 *.jpg binary
 *.jpeg binary
 
-# --- LINGUIST (SOLO CARPETA DOCS) ---
+# --- LINGUIST (SOLO LA CARPETA DOCS) ---
 * linguist-vendored
 !docs/** linguist-vendored
 
