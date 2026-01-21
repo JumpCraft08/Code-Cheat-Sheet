@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="JumpCraft">
+  <meta name="description" content="Resumen visual de los conceptos básicos y avanzados de SQL.">
+  <title>SQL Cheat Sheet</title>
+
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/modal.css" rel="stylesheet" type="text/css">
+  <link href="../css/modal-body.css" rel="stylesheet" type="text/css">
+  <link href="../css/indicators-sql.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<main class="wallpaper">
+
+  <!-- ========================= -->
+  <!-- COLUMNA 1 -->
+  <!-- ========================= -->
+  <div class="columna">
+
+    <label class="title">SQL Core</label>
+
+    <div class="card" data-title="Manipulación de Datos (DML)" style="--card-color: #0077b6;" role="group">
+      <label for="modal-card-1-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-1-1">SELECT</label></td></tr>
+        <tr><td><label for="modal-card-1-2">INSERT</label></td></tr>
+        <tr><td><label for="modal-card-1-3">UPDATE</label></td></tr>
+        <tr><td><label for="modal-card-1-4">DELETE</label></td></tr>
+        <tr><td><label for="modal-card-1-4">JOIN</label></td></tr>
+        <tr><td><label for="modal-card-1-4">UNION</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Condiciones de Filtro" style="--card-color: #dd9b00;" role="group">
+      <label for="modal-card-2-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-2-1">Comparación</label></td></tr>
+        <tr><td><label for="modal-card-2-2">Rango</label></td></tr>
+        <tr><td><label for="modal-card-2-3">Conjunto</label></td></tr>
+        <tr><td><label for="modal-card-2-4">Patrones</label></td></tr>
+        <tr><td><label for="modal-card-2-4">Condiciones Lógicas</label></td></tr>
+        <tr><td><label for="modal-card-2-4">Nulos</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Funciones" style="--card-color: #0ea5e9;" role="group">
+      <label for="modal-card-3-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-3-1">Funciones de Agregación</label></td></tr>
+        <tr><td><label for="modal-card-3-2">Funciones de Texto</label></td></tr>
+        <tr><td><label for="modal-card-3-3">Funciones Numéricas</label></td></tr>
+        <tr><td><label for="modal-card-3-4">Funciones de Fecha</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ========================= -->
+  <!-- COLUMNA 2 -->
+  <!-- ========================= -->
+  <div class="columna">
+
+    <div class="card" data-title="Definición de Datos (DDL)" style="--card-color: #2563eb;" role="group">
+      <label for="modal-card-4-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-4-1">CREATE</label></td></tr>
+        <tr><td><label for="modal-card-4-2">DROP</label></td></tr>
+        <tr><td><label for="modal-card-4-3">ALTER</label></td></tr>
+        <tr><td><label for="modal-card-4-4">TRUNCATE</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Control de Datos (DCL)" style="--card-color: #2563eb;" role="group">
+      <label for="modal-card-4-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-4-1">GRANT</label></td></tr>
+        <tr><td><label for="modal-card-4-2">REVOKE</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card" data-title="Control de Transacciones (TCL)" style="--card-color: #2563eb;" role="group">
+      <label for="modal-card-4-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-4-1">COMMIT</label></td></tr>
+        <tr><td><label for="modal-card-4-2">ROLLBACK</label></td></tr>
+        <tr><td><label for="modal-card-4-2">SAVEPOINT</label></td></tr>
+        <tr><td><label for="modal-card-4-2">BEGIN</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ========================= -->
+  <!-- COLUMNA 3 -->
+  <!-- ========================= -->
+  <div class="columna">
+
+    <div class="card" data-title="Consultas Avanzadas" style="--card-color: #9333ea;" role="group">
+      <label for="modal-card-6-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-6-1">JOIN</label></td></tr>
+        <tr><td><label for="modal-card-6-2">UNION / INTERSECT / EXCEPT</label></td></tr>
+        <tr><td><label for="modal-card-6-3">GROUP BY / HAVING</label></td></tr>
+        <tr><td><label for="modal-card-6-2">CTE</label></td></tr>
+        <tr><td><label for="modal-card-6-3">Subconsultas</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="CTE y Vistas" style="--card-color: #0ea5e9;" role="group">
+      <label for="modal-card-7-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-7-1">WITH (CTE)</label></td></tr>
+        <tr><td><label for="modal-card-7-2">Vistas</label></td></tr>
+        <tr><td><label for="modal-card-7-3">Vistas Materializadas</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+
+  <!-- ========================= -->
+  <!-- COLUMNA 5 -->
+  <!-- ========================= -->
+  <div class="columna">
+
+    <div class="card" data-title="Integridad y Constraints" style="--card-color: #eab308;" role="group">
+      <label for="modal-card-10-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-10-1">PRIMARY KEY</label></td></tr>
+        <tr><td><label for="modal-card-10-2">FOREIGN KEY</label></td></tr>
+        <tr><td><label for="modal-card-10-3">UNIQUE</label></td></tr>
+        <tr><td><label for="modal-card-10-4">CHECK</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Transacciones" style="--card-color: #9333ea;" role="group">
+      <label for="modal-card-11-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-11-1">BEGIN / COMMIT</label></td></tr>
+        <tr><td><label for="modal-card-11-2">ROLLBACK</label></td></tr>
+        <tr><td><label for="modal-card-11-3">ACID</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" data-title="Optimización" style="--card-color: #ef4444;" role="group">
+      <label for="modal-card-12-0" class="title-label"></label>
+      <table>
+        <tbody>
+        <tr><td><label for="modal-card-12-1">Índices</label></td></tr>
+        <tr><td><label for="modal-card-12-2">EXPLAIN</label></td></tr>
+        <tr><td><label for="modal-card-12-3">Planes de Ejecución</label></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="button-group">
+      <button class="title-button">1</button>
+      <button class="title-button">2</button>
+      <button class="title-button">3</button>
+      <button class="title-button">4</button>
+    </div>
+
+  </div>
+
+</main>
+
+<div class="modals">
+
+  <!-- Modal 1-0: Consultas Básicas (TÍTULO) -->
+  <input type="checkbox" id="modal-card-1-0" class="modal-toggle">
+  <div class="modal">
+    <label for="modal-card-1-0" class="modal-overlay"></label>
+
+    <div class="modal-content">
+      <input type="radio" name="slides2-0" id="slide1-0-1" checked>
+      <div class="slide" data-title="Estructuras de Control">
+        <table>
+          <thead>
+          <tr>
+            <th>Modal</th>
+            <th>Descripción</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><strong>SELECT</strong></td>
+            <td>SELECT DISTINCT, SELECT TOP, COUNT, SELECT INTO, ORDER BY</td>
+          </tr>
+          <tr>
+            <td><strong>INSERT</strong></td>
+            <td>INSERT INTO, INSERT INTO SELECT</td>
+          </tr>
+          <tr>
+            <td><strong>Comparacion</strong></td>
+            <td>Operadores Lógicos, Null, Exists</td>
+          </tr>
+          <tr>
+            <td><strong>Rango</strong></td>
+            <td>BETWEEN</td>
+          </tr>
+          <tr>
+            <td><strong>Conjunto</strong></td>
+            <td>IN, NOT IN</td>
+          </tr>
+          <tr>
+            <td><strong>Patrones</strong></td>
+            <td>LIKE</td>
+          </tr>
+          <tr>
+            <td><strong>TRANSACCIONES</strong></td>
+            <td>ACID</td>
+          </tr>
+          <tr>
+            <td><strong>UNION</strong></td>
+            <td>INTERSECT, EXCEPT</td>
+          </tr>
+
+
+          </tbody>
+        </table>
+        <p>Estas estructuras son fundamentales para crear programas dinámicos y eficientes, permitiendo tomar decisiones y automatizar tareas repetitivas.</p>
+      </div>
+
+      <div class="slide-footer">
+        <div class="controls">
+          <label for="slide1-0-1" class="prev"></label>
+          <label for="slide1-0-1" class="next"></label>
+        </div>
+        <div class="slide-indicators">
+          <label for="slide1-0-1" class="dot"></label>
+        </div>
+      </div>
+
+      <label for="modal-card-1-0" class="close-button"></label>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

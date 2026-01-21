@@ -1,0 +1,8 @@
+/* === Slider 1-0 (Consultas Básicas TÍTULO - 1 slide) === */
+#slide1-0-1:checked ~ .slide-footer .controls label.prev { display: none; }
+#slide1-0-1:checked ~ .slide-footer .controls label.next { display: none; }
+
+#slide1-0-1:checked ~ .slide-footer .dot[for="slide1-0-1"] {
+    background-color: #f60;
+    transform: scale(1.3);
+}
