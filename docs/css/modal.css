@@ -258,3 +258,38 @@
     .slide { font-size: clamp(10px, 2.15vw, 16px); padding: 60px 12px 3em 12px; }
     .controls label { font-size: clamp(10px, 2.5vw, 14px); padding: 3px 6px; }
 }
+
+
+
+/* =========================
+   LENGUAJE - CARDS
+========================= */
+
+.lang-option {
+    display: block;
+    text-align: center;
+    padding: 1em 1.2em;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #111827; /* texto oscuro para contraste si el fondo es claro */
+    background-color: var(--lang-color, #555);
+    border: 2px solid var(--lang-color, #555);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: 
+        background-color 0.25s ease, 
+        transform 0.2s ease, 
+        box-shadow 0.2s ease;
+}
+
+.lang-option:hover {
+    background-color: var(--lang-color, #555);
+    position: relative;
+}
+.lang-option:hover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.2); /* capa de luz */
+}
