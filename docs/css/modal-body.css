@@ -2,109 +2,207 @@
    IDE / CODE STYLES
 ========================= */
 ol.code {
-    margin: 22px 0;
-    border: 1px solid #1e293b;
-    background: #0f172a;
-    border-radius: 10px;
-    box-shadow: inset 0 10px 24px -20px rgb(0 0 0 / 80%);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-    position: relative;
-    padding: 40px 16px 10px 48px; /* ajustado para numeración y espacio superior */
-    counter-reset: list-counter;
+  margin: 22px 0;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  border-radius: 10px;
+  box-shadow: inset 0 10px 24px -20px rgb(0 0 0 / 80%);
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  position: relative;
+  padding: 40px 16px 10px 48px; /* ajustado para numeración y espacio superior */
+  counter-reset: list-counter;
 }
 
 ol.code::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 28px;
-    background: #1e293b;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: #1e293b;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 0;
 }
 
 ol.code::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 10px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ff5f57;
-    box-shadow: 20px 0 #ffbd2e, 40px 0 #28c840;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff5f57;
+  box-shadow:
+    20px 0 #ffbd2e,
+    40px 0 #28c840;
+  z-index: 1;
 }
 
 ol.code li {
-    margin-bottom: 0.25em; /* mismo espaciado que antes */
-    line-height: 1.4em; /* ajusta para que los números no se amontonen */
-    white-space: pre;
-    counter-increment: list-counter;
+  margin-bottom: 0.25em; /* mismo espaciado que antes */
+  line-height: 1.4em; /* ajusta para que los números no se amontonen */
+  white-space: pre;
+  counter-increment: list-counter;
 }
 
 ol.code li::marker {
-    color: #94a3b8;
-    font-weight: bold;
+  color: #94a3b8;
+  font-weight: bold;
 }
 
 ol.code li[data-type="comment"] {
-    color: #6a737d;
-    font-style: italic;
+  color: #6a737d;
+  font-style: italic;
 }
 
-.cm  { color: #6a737d; }
-.kw  { color: #c678dd; }
-.type{ color: #56b6c2; }
-.cls { color: #61afef; }
-.mtd { color: #98c379; }
-.str { color: #e5c07b; }
-.num { color: #d19a66; }
+.cm {
+  color: #6a737d;
+}
+.kw {
+  color: #c678dd;
+}
+.type {
+  color: #56b6c2;
+}
+.cls {
+  color: #61afef;
+}
+.mtd {
+  color: #98c379;
+}
+.str {
+  color: #e5c07b;
+}
+.num {
+  color: #d19a66;
+}
 
 /* =========================
    TABLAS
 ========================= */
 .modal table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 18px 0;
-    background: #0f172a;
-    border: 1px solid rgb(255 255 255 / 6%);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    color: #e2e8f0;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  background: #0f172a;
+  border: 1px solid rgb(255 255 255 / 6%);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #e2e8f0;
 }
 
 .modal table thead {
-    background: #15191f;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.9rem;
+  background: #15191f;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .modal table th,
 .modal table td {
-    padding: 6px 16px;
-    text-align: left;
-    border-bottom: 1px solid rgb(255 255 255 / 5%);
+  padding: 6px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgb(255 255 255 / 5%);
 }
 
-.modal table tr:last-child td { border-bottom: none; }
-.modal table tr:hover { background: rgb(255 255 255 / 2%); }
+.modal table tr:last-child td {
+  border-bottom: none;
+}
+.modal table tr:hover {
+  background: rgb(255 255 255 / 2%);
+}
 
 /* =========================
    LISTAS
 ========================= */
 .modal ul li,
-.modal ol li { margin-bottom: 2px; }
-.modal ul { margin: 8px 0 8px 40px; }
-.modal ul li::marker { color: #28c840; }
+.modal ol li {
+  margin-bottom: 2px;
+}
+.modal ul {
+  margin: 8px 0 8px 40px;
+}
+.modal ul li::marker {
+  color: #28c840;
+}
 
 .modal ol li::marker {
-    color: #94a3b8;
-    font-weight: bold;
+  color: #94a3b8;
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: light) {
+  /* CODE BLOCK */
+  ol.code {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    box-shadow: inset 0 10px 24px -20px rgba(0, 0, 0, 0.2);
+    color: #111;
+  }
+
+  ol.code::after {
+    background: #e2e8f0;
+  }
+
+  ol.code li::marker {
+    color: #64748b;
+  }
+
+  ol.code li[data-type="comment"],
+  .cm {
+    color: #9ca3af;
+  }
+
+  .kw {
+    color: #a855f7;
+  }
+  .type {
+    color: #0ea5e9;
+  }
+  .cls {
+    color: #2563eb;
+  }
+  .mtd {
+    color: #16a34a;
+  }
+  .str {
+    color: #ca8a04;
+  }
+  .num {
+    color: #ea580c;
+  }
+
+  /* TABLAS */
+  .modal table {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #111;
+  }
+
+  .modal table thead {
+    background: #f1f5f9;
+  }
+
+  .modal table th,
+  .modal table td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .modal table tr:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  /* LISTAS */
+  .modal ul li::marker {
+    color: #16a34a;
+  }
+
+  .modal ol li::marker {
+    color: #64748b;
+  }
 }
