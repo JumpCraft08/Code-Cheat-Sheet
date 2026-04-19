@@ -3,74 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Próximamente</title>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #111418;
-      font-family: system-ui, sans-serif;
-      color: #fff;
-    }
-
-    .coming-soon {
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(28px, 6vw, 64px);
-      font-weight: 700;
-    }
-
-    p {
-      margin-top: 12px;
-      font-size: clamp(14px, 2.5vw, 20px);
-      color: #94a3b8;
-    }
-
-    .line {
-      width: 80px;
-      height: 2px;
-      background: #475569;
-      margin: 22px auto 20px auto;
-      border-radius: 2px;
-    }
-
-    /* Botón volver */
-    .back-btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 10px 18px;
-      background: #1e293b;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.25s ease, transform 0.2s ease;
-    }
-
-    .back-btn:hover {
-      background: #334155;
-      transform: scale(1.05);
-    }
-  </style>
-
+  <meta name="author" content="JumpCraft">
+  <meta name="description" content="Resumen visual de los conceptos básicos de javaScript.">
+  <title>Columnas con Cards Ajustables</title>
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/modal.css" rel="stylesheet" type="text/css">
+  <link href="../css/modal-body.css" rel="stylesheet" type="text/css">
+  <link href="../css/indicators-javascript.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<div class="coming-soon">
-  <h1>Próximamente</h1>
-  <p>Estamos trabajando en algo increíble.</p>
-  <div class="line"></div>
-
-  <a href="java.html" class="back-btn">Volver</a>
-</div>
-
+  <main class="wallpaper">
+    <div class="columna">
+      <label for="modal-lang-selector" class="title">JavaScript Core</label>
+  
+      <div class="card" data-title="Fundamentos" style="--card-color: #f7df1e;" role="group">
+        <label for="modal-card-1-0" class="title-label"></label>
+        <table><tbody>
+          <tr><td><label for="modal-card-1-1">Tipos de Datos</label></td></tr>
+          <tr><td><label for="modal-card-1-2">Variables (let, const, var)</label></td></tr>
+          <tr><td><label for="modal-card-1-3">Operadores</label></td></tr>
+          <tr><td><label for="modal-card-1-4">Strings / Template Literals</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="Estructuras de Control" style="--card-color: #dd9b00;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Condicionales (if, switch)</label></td></tr>
+          <tr><td><label>Bucles (for, while)</label></td></tr>
+          <tr><td><label>Control de Flujo (break, continue)</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="Errores" style="--card-color: #0ea5e9;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Error Objects</label></td></tr>
+          <tr><td><label>Custom Errors</label></td></tr>
+          <tr><td><label>Try...Catch...Finally</label></td></tr>
+        </tbody></table>
+      </div>
+    </div>
+  
+    <div class="columna">
+      <div class="card" data-title="JS OOP" style="--card-color: #2563eb;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Constructores</label></td></tr>
+          <tr><td><label>Clases</label></td></tr>
+          <tr><td><label>Prototipos</label></td></tr>
+          <tr><td><label>Encapsulación</label></td></tr>
+          <tr><td><label>Herencia</label></td></tr>
+          <tr><td><label>Polimorfismo</label></td></tr>
+          <tr><td><label>this / bind / call / apply</label></td></tr>
+          <tr><td><label>Getters / Setters</label></td></tr>
+          <tr><td><label>Clases Privadas (#)</label></td></tr>
+          <tr><td><label>Módulos ES</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="JS Avanzado" style="--card-color: #ef4444;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Closures</label></td></tr>
+          <tr><td><label>Currying</label></td></tr>
+          <tr><td><label>Debounce / Throttle</label></td></tr>
+          <tr><td><label>Funciones de Orden Superior</label></td></tr>
+        </tbody></table>
+      </div>
+    </div>
+  
+    <div class="columna">
+      <div class="card" data-title="Asincronía" style="--card-color: #0ea5e9;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Callbacks</label></td></tr>
+          <tr><td><label>Promises</label></td></tr>
+          <tr><td><label>Async / Await</label></td></tr>
+          <tr><td><label>Event Loop</label></td></tr>
+          <tr><td><label>Microtasks / Macrotasks</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="Estructuras de Datos" style="--card-color: #9333ea;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Array</label></td></tr>
+          <tr><td><label>Object</label></td></tr>
+          <tr><td><label>Set</label></td></tr>
+          <tr><td><label>Map</label></td></tr>
+          <tr><td><label>WeakMap / WeakSet</label></td></tr>
+          <tr><td><label>Iteradores</label></td></tr>
+          <tr><td><label>Generadores</label></td></tr>
+          <tr><td><label>Spread / Rest</label></td></tr>
+          <tr><td><label>Destructuring</label></td></tr>
+        </tbody></table>
+      </div>
+    </div>
+  
+    <div class="columna">
+      <div class="card" data-title="Web APIs" style="--card-color: #1e40af;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>DOM</label></td></tr>
+          <tr><td><label>Eventos</label></td></tr>
+          <tr><td><label>Fetch API</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="Seguridad" style="--card-color: #ef4444;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>XSS</label></td></tr>
+          <tr><td><label>CORS</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="JS Util" style="--card-color: #eab308;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Math</label></td></tr>
+          <tr><td><label>Date</label></td></tr>
+          <tr><td><label>RegExp</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="Ejecución" style="--card-color: #0ea5e9;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Motor JS (V8)</label></td></tr>
+          <tr><td><label>Hoisting</label></td></tr>
+          <tr><td><label>Strict Mode</label></td></tr>
+        </tbody></table>
+      </div>
+    </div>
+  
+    <div class="columna">
+      <div class="card" data-title="Entrada / Salida" style="--card-color: #eab308;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>LocalStorage</label></td></tr>
+          <tr><td><label>SessionStorage</label></td></tr>
+          <tr><td><label>JSON</label></td></tr>
+          <tr><td><label>File API</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="Memoria JS" style="--card-color: #9333ea;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>Stack vs Heap</label></td></tr>
+          <tr><td><label>Garbage Collector</label></td></tr>
+          <tr><td><label>Memory Leaks</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="card" data-title="JS Misc" style="--card-color: #ef4444;" role="group">
+        <label class="title-label"></label>
+        <table><tbody>
+          <tr><td><label>NPM / Ecosistema</label></td></tr>
+          <tr><td><label>Histórico (ES5 → ESNext)</label></td></tr>
+          <tr><td><label>Tooling (Webpack, Vite)</label></td></tr>
+        </tbody></table>
+      </div>
+  
+      <div class="button-group">
+        <button class="title-button">1</button>
+        <button class="title-button">2</button>
+        <button class="title-button">3</button>
+        <button class="title-button">4</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
