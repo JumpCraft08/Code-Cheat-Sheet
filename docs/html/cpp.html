@@ -229,6 +229,2314 @@
         </div>
       </div>
 
+      <!-- Modal 1: Funciones Básicas -->
+      <input type="checkbox" id="modal-card-1-0" class="modal-toggle">
+      <div class="modal">
+        <label for="modal-card-1-0" class="modal-overlay"></label>
+
+        <div class="modal-content">
+          <!-- Slide 1: Sintaxis y Main -->
+          <input type="radio" name="slides1" id="slide1-0-1" checked>
+          <div class="slide" data-title="Sintaxis Básica C++">
+            <p>C++ es un lenguaje compilado y sensible a mayúsculas. El punto de entrada es siempre la función <code class="mtd">main</code>. Puntos clave:</p>
+            <ul>
+              <li>Uso de directivas de preprocesador como <code>#include</code>.</li>
+              <li>El espacio de nombres <code class="type">std</code> contiene las funciones estándar.</li>
+              <li>Cada instrucción termina con punto y coma (<code>;</code>).</li>
+            </ul>
+
+            <ol class="code">
+              <li><span class="cm">#include &lt;iostream&gt;</span></li>
+              <li></li>
+              <li><span class="kw">int</span> <span class="mtd">main</span>() {</li>
+              <li>  <span class="type">std</span>::<span class="mtd">cout</span> &lt;&lt; <span class="str">"Hola Mundo"</span> &lt;&lt; <span class="type">std</span>::<span class="mtd">endl</span>;</li>
+              <li>  <span class="kw">return</span> <span class="num">0</span>;</li>
+              <li>}</li>
+            </ol>
+          </div>
+
+          <!-- Slide 2: Estructura del Proyecto -->
+          <input type="radio" name="slides1" id="slide1-0-2">
+          <div class="slide" data-title="Estructura de Archivos">
+            <p>En proyectos de C++, es común separar la declaración de la implementación:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Extensión</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.cpp</code></td>
+                  <td>Archivos de código fuente (implementación).</td>
+                </tr>
+                <tr>
+                  <td><code>.h</code> / <code>.hpp</code></td>
+                  <td>Headers (cabeceras): declaraciones y prototipos.</td>
+                </tr>
+                <tr>
+                  <td><code>.exe</code> / <code>.out</code></td>
+                  <td>Archivo ejecutable después de la compilación.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Compilación básica con GCC: <code class="mtd">g++ main.cpp -o programa</code></p>
+          </div>
+
+          <!-- Slide 3: E/S Estándar -->
+          <input type="radio" name="slides1" id="slide1-0-3">
+          <div class="slide" data-title="Entrada y Salida (I/O)">
+            <p>Para interactuar con la consola se utiliza la librería <code>&lt;iostream&gt;</code>:</p>
+            <ul>
+              <li><code class="mtd">cout</code>: Flujo de salida (imprimir).</li>
+              <li><code class="mtd">cin</code>: Flujo de entrada (leer datos).</li>
+              <li><code class="mtd">endl</code>: Inserta un salto de línea y limpia el búfer.</li>
+            </ul>
+            <ol class="code">
+              <li><span class="type">int</span> edad;</li>
+              <li><span class="type">std</span>::<span class="mtd">cout</span> &lt;&lt; <span class="str">"Edad: "</span>;</li>
+              <li><span class="type">std</span>::<span class="mtd">cin</span> &gt;&gt; edad; <span class="cm">// Lee del teclado</span></li>
+            </ol>
+          </div>
+
+          <!-- Footer con Controles e Indicadores -->
+          <div class="slide-footer">
+            <div class="controls">
+              <!-- Controles para Slide 1 -->
+              <label for="slide1-0-2" class="next"></label>
+              <label for="slide1-0-3" class="prev"></label>
+
+              <!-- Controles para Slide 2 -->
+              <label for="slide1-0-3" class="next"></label>
+              <label for="slide1-0-1" class="prev"></label>
+
+              <!-- Controles para Slide 3 -->
+              <label for="slide1-0-1" class="next"></label>
+              <label for="slide1-0-2" class="prev"></label>
+            </div>
+            <div class="slide-indicators">
+              <label for="slide1-0-1" class="dot"></label>
+              <label for="slide1-0-2" class="dot"></label>
+              <label for="slide1-0-3" class="dot"></label>
+            </div>
+          </div>
+
+          <label for="modal-card-1-0" class="close-button"></label>
+        </div>
+      </div>
+
+      <input type="checkbox" id="modal-card-1-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1_1" id="slide1-1-1" checked>
+    <div class="slide" data-title="Tipos Primitivos">
+      <p>C++ tiene varios tipos de datos integrados para representar diferentes valores:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Tamaño (aprox)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>int</code></td><td>Enteros</td><td>4 bytes</td></tr>
+          <tr><td><code>float</code></td><td>Punto flotante</td><td>4 bytes</td></tr>
+          <tr><td><code>double</code></td><td>Punto flotante (doble)</td><td>8 bytes</td></tr>
+          <tr><td><code>char</code></td><td>Carácter único</td><td>1 byte</td></tr>
+          <tr><td><code>bool</code></td><td>Booleano (true/false)</td><td>1 byte</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <input type="radio" name="slides1_1" id="slide1-1-2">
+    <div class="slide" data-title="Modificadores">
+      <p>Se pueden añadir modificadores para alterar el rango o precisión de los tipos:</p>
+      <ul>
+        <li><strong>unsigned:</strong> Solo valores positivos.</li>
+        <li><strong>long / short:</strong> Aumenta o disminuye el tamaño en memoria.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">unsigned int</span> p = <span class="num">500</span>;</li>
+        <li><span class="kw">long double</span> precision = <span class="num">0.00001</span>;</li>
+        <li><span class="kw">short int</span> pequeño = <span class="num">10</span>;</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide1-1-2" class="next"></label>
+        <label for="slide1-1-1" class="prev"></label>
+        <label for="slide1-1-1" class="next"></label>
+        <label for="slide1-1-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide1-1-1" class="dot"></label>
+        <label for="slide1-1-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-1-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1_2" id="slide1-2-1" checked>
+    <div class="slide" data-title="Declaración">
+      <p>Una variable es un espacio de memoria con un nombre. En C++ es obligatorio declarar el tipo.</p>
+      <ol class="code">
+        <li><span class="type">int</span> edad = <span class="num">25</span>; <span class="cm">// Inicialización</span></li>
+        <li><span class="kw">const</span> <span class="type">float</span> PI = <span class="num">3.1416</span>; <span class="cm">// Constante</span></li>
+        <li><span class="type">auto</span> variable = <span class="num">10</span>; <span class="cm">// Tipo deducido (C++11)</span></li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides1_2" id="slide1-2-2">
+    <div class="slide" data-title="Ámbito (Scope)">
+      <p>El lugar donde declaras una variable define su vida útil:</p>
+      <ul>
+        <li><strong>Locales:</strong> Dentro de una función o bloque <code>{ }</code>.</li>
+        <li><strong>Globales:</strong> Fuera de todas las funciones.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="type">int</span> global = <span class="num">100</span>;</li>
+        <li><span class="kw">void</span> <span class="mtd">func</span>() {</li>
+        <li>  <span class="type">int</span> local = <span class="num">5</span>;</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide1-2-2" class="next"></label>
+        <label for="slide1-2-1" class="prev"></label>
+        <label for="slide1-2-1" class="next"></label>
+        <label for="slide1-2-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide1-2-1" class="dot"></label>
+        <label for="slide1-2-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-1-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1_3" id="slide1-3-1" checked>
+    <div class="slide" data-title="Aritméticos y Asignación">
+      <p>Operadores básicos para cálculos matemáticos:</p>
+      <table>
+        <thead><tr><th>Op</th><th>Descripción</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><code>+ - * /</code></td><td>Básicos</td><td><code>a = 5 * 2;</code></td></tr>
+          <tr><td><code>%</code></td><td>Módulo (Resto)</td><td><code>10 % 3 = 1</code></td></tr>
+          <tr><td><code>++ --</code></td><td>Inc/Dec</td><td><code>x++;</code></td></tr>
+          <tr><td><code>+= -=</code></td><td>Asig. Compuesta</td><td><code>x += 5;</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <input type="radio" name="slides1_3" id="slide1-3-2">
+    <div class="slide" data-title="Lógicos y Comparación">
+      <p>Utilizados principalmente en estructuras de control:</p>
+      <ul>
+        <li><strong>Relacionales:</strong> <code>==, !=, &lt;, &gt;, &lt;=, &gt;=</code></li>
+        <li><strong>Lógicos:</strong> <code>&amp;&amp; (AND), || (OR), ! (NOT)</code></li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">bool</span> res = (a == b) &amp;&amp; (c &gt; d);</li>
+        <li><span class="kw">bool</span> neg = !(a &lt; b);</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide1-3-2" class="next"></label>
+        <label for="slide1-3-1" class="prev"></label>
+        <label for="slide1-3-1" class="next"></label>
+        <label for="slide1-3-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide1-3-1" class="dot"></label>
+        <label for="slide1-3-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-1-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1_4" id="slide1-4-1" checked>
+    <div class="slide" data-title="std::string (Moderno)">
+      <p>Es la clase de C++ para manejar cadenas. Requiere <code>#include &lt;string&gt;</code>.</p>
+      <ol class="code">
+        <li><span class="type">string</span> s = <span class="str">"Hola"</span>;</li>
+        <li>s += <span class="str">" Mundo"</span>; <span class="cm">// Concatenar</span></li>
+        <li><span class="type">int</span> len = s.<span class="mtd">length</span>();</li>
+        <li><span class="type">string</span> sub = s.<span class="mtd">substr</span>(<span class="num">0</span>, <span class="num">4</span>);</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides1_4" id="slide1-4-2">
+    <div class="slide" data-title="C-Strings (Legacy)">
+      <p>Cadenas al estilo C: arreglos de caracteres terminados en nulo (<code>\0</code>).</p>
+      <ol class="code">
+        <li><span class="kw">char</span> saludo[] = <span class="str">"Hola"</span>;</li>
+        <li><span class="cm">// Funciones de &lt;cstring&gt;</span></li>
+        <li><span class="mtd">strlen</span>(saludo); <span class="cm">// Longitud</span></li>
+        <li><span class="mtd">strcpy</span>(destino, origen); <span class="cm">// Copiar</span></li>
+      </ol>
+      <p>Para convertir de string a C-string: <code>s.c_str();</code></p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide1-4-2" class="next"></label>
+        <label for="slide1-4-1" class="prev"></label>
+        <label for="slide1-4-1" class="next"></label>
+        <label for="slide1-4-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide1-4-1" class="dot"></label>
+        <label for="slide1-4-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-4" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 2-0: Estructuras de Control -->
+<input type="checkbox" id="modal-card-2-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-0" class="modal-overlay"></label>
+
+  <div class="modal-content">
+    <!-- Slide 1: Conceptos -->
+    <input type="radio" name="slides2_0" id="slide2-0-1" checked>
+    <div class="slide" data-title="Estructuras de Control">
+      <p>Determinan el flujo de ejecución de un programa. Sin ellas, el código se ejecutaría de forma estrictamente lineal de arriba hacia abajo.</p>
+      
+      <ul>
+        <li><strong>Selección:</strong> Elegir entre diferentes caminos (if, switch).</li>
+        <li><strong>Iteración:</strong> Repetir bloques de código (bucles for, while).</li>
+        <li><strong>Salto:</strong> Transferir el control a otra parte del programa.</li>
+      </ul>
+      <p>C++ utiliza bloques delimitados por <code>{ }</code> para agrupar las instrucciones que pertenecen a una estructura.</p>
+    </div>
+
+    <!-- Slide 2: Lógica Booleana -->
+    <input type="radio" name="slides2_0" id="slide2-0-2">
+    <div class="slide" data-title="Control mediante Condiciones">
+      <p>C++ evalúa expresiones para decidir el flujo. Cualquier valor entero distinto de cero es tratado como <code>true</code>.</p>
+      
+      <ol class="code">
+        <li><span class="kw">bool</span> condicion = <span class="kw">true</span>;</li>
+        <li></li>
+        <li><span class="kw">if</span> (condicion) {</li>
+        <li>  <span class="cm">// Se ejecuta si la condición es verdadera</span></li>
+        <li>}</li>
+      </ol>
+      <p>La correcta indentación y el uso de llaves son fundamentales para evitar errores lógicos en estructuras anidadas.</p>
+    </div>
+
+    <!-- Footer con Controles e Indicadores -->
+    <div class="slide-footer">
+      <div class="controls">
+        <!-- Controles Slide 1 -->
+        <label for="slide2-0-2" class="next"></label>
+        <label for="slide2-0-2" class="prev"></label>
+
+        <!-- Controles Slide 2 -->
+        <label for="slide2-0-1" class="next"></label>
+        <label for="slide2-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide2-0-1" class="dot"></label>
+        <label for="slide2-0-2" class="dot"></label>
+      </div>
+    </div>
+
+    <label for="modal-card-2-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-2-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides2_1" id="slide2-1-1" checked>
+    <div class="slide" data-title="if / else if / else">
+      <p>Evalúa una expresión booleana para decidir qué bloque ejecutar.</p>
+      <ol class="code">
+        <li><span class="kw">if</span> (puntos &gt;= <span class="num">90</span>) {</li>
+        <li>  <span class="mtd">cout</span> &lt;&lt; <span class="str">"Excelente"</span>;</li>
+        <li>} <span class="kw">else if</span> (puntos &gt;= <span class="num">60</span>) {</li>
+        <li>  <span class="mtd">cout</span> &lt;&lt; <span class="str">"Aprobado"</span>;</li>
+        <li>} <span class="kw">else</span> {</li>
+        <li>  <span class="mtd">cout</span> &lt;&lt; <span class="str">"Reprobado"</span>;</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides2_1" id="slide2-1-2">
+    <div class="slide" data-title="Switch / Case">
+      <p>Ideal para múltiples condiciones basadas en un mismo valor integral (int, char).</p>
+      <ol class="code">
+        <li><span class="kw">switch</span> (opcion) {</li>
+        <li>  <span class="kw">case</span> <span class="num">1</span>: <span class="mtd">iniciar</span>(); <span class="kw">break</span>;</li>
+        <li>  <span class="kw">case</span> <span class="num">2</span>: <span class="mtd">salir</span>(); <span class="kw">break</span>;</li>
+        <li>  <span class="kw">default</span>: <span class="mtd">error</span>();</li>
+        <li>}</li>
+      </ol>
+      <p><small>*No olvides el <code>break</code> para evitar el "fall-through".</small></p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide2-1-2" class="next"></label>
+        <label for="slide2-1-1" class="prev"></label>
+        <label for="slide2-1-1" class="next"></label>
+        <label for="slide2-1-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide2-1-1" class="dot"></label>
+        <label for="slide2-1-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-2-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-2-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides2_2" id="slide2-2-1" checked>
+    <div class="slide" data-title="Bucle for">
+      <p>Se usa cuando se conoce de antemano el número de iteraciones.</p>
+      <ol class="code">
+        <li><span class="cm">// (inicialización; condición; actualización)</span></li>
+        <li><span class="kw">for</span> (<span class="type">int</span> i = <span class="num">0</span>; i &lt; <span class="num">10</span>; i++) {</li>
+        <li>  <span class="mtd">cout</span> &lt;&lt; i &lt;&lt; <span class="str">" "</span>;</li>
+        <li>}</li>
+      </ol>
+      <p>También existe el <strong>range-based for</strong> (C++11):<br><code>for (int x : miArreglo) { ... }</code></p>
+    </div>
+
+    <input type="radio" name="slides2_2" id="slide2-2-2">
+    <div class="slide" data-title="While / Do-While">
+      <p>Dependen de una condición que se evalúa en cada vuelta.</p>
+      <ul>
+        <li><strong>while:</strong> Evalúa <em>antes</em> de entrar.</li>
+        <li><strong>do-while:</strong> Evalúa <em>después</em> (se ejecuta al menos una vez).</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">while</span> (condicion) { <span class="cm">/* ... */</span> }</li>
+        <li><span class="kw">do</span> {</li>
+        <li>  <span class="cm">// Código ejecutado una vez mínimo</span></li>
+        <li>} <span class="kw">while</span> (condicion);</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide2-2-2" class="next"></label>
+        <label for="slide2-2-1" class="prev"></label>
+        <label for="slide2-2-1" class="next"></label>
+        <label for="slide2-2-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide2-2-1" class="dot"></label>
+        <label for="slide2-2-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-2-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-2-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides2_3" id="slide2-3-1" checked>
+    <div class="slide" data-title="Break y Continue">
+      <p>Controlan el flujo dentro de los bucles:</p>
+      <ul>
+        <li><strong>break:</strong> Sale completamente del bucle actual.</li>
+        <li><strong>continue:</strong> Salta el resto del código y va a la siguiente iteración.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">if</span> (error) <span class="kw">break</span>;</li>
+        <li><span class="kw">if</span> (omitir) <span class="kw">continue</span>;</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides2_3" id="slide2-3-2">
+    <div class="slide" data-title="Return y Goto">
+      <ul>
+        <li><strong>return:</strong> Finaliza la ejecución de una función y devuelve un valor.</li>
+        <li><strong>goto:</strong> Transfiere el control a una etiqueta (no recomendado en programación moderna).</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">int</span> <span class="mtd">suma</span>() { <span class="kw">return</span> a + b; }</li>
+        <li><span class="kw">goto</span> etiqueta; <span class="cm">// ¡Usar con precaución!</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide2-3-2" class="next"></label>
+        <label for="slide2-3-1" class="prev"></label>
+        <label for="slide2-3-1" class="next"></label>
+        <label for="slide2-3-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide2-3-1" class="dot"></label>
+        <label for="slide2-3-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-2-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-3-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-3-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides3_0" id="slide3-0-1" checked>
+    <div class="slide" data-title="Tipos de Errores">
+      <p>En C++, los errores se categorizan según el momento en que se detectan:</p>
+      <ul>
+        <li><strong>Compilación:</strong> Errores de sintaxis o tipos detectados por el compilador.</li>
+        <li><strong>Enlace (Linker):</strong> Referencias a funciones o variables no definidas.</li>
+        <li><strong>Tiempo de ejecución:</strong> El programa falla mientras corre (división por cero, acceso inválido).</li>
+        <li><strong>Lógicos:</strong> El programa corre pero produce resultados incorrectos.</li>
+      </ul>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide3-0-1" class="next"></label>
+        <label for="slide3-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide3-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-3-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-3-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-3-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides3_1" id="slide3-1-1" checked>
+    <div class="slide" data-title="Concepto de Excepción">
+      <p>Una excepción es una señal que indica un problema inusual durante la ejecución. C++ permite separar el código de detección de errores del código de manejo.</p>
+      <p>La librería estándar provee la jerarquía <code>&lt;stdexcept&gt;</code>:</p>
+      <ul>
+        <li><code>std::runtime_error</code></li>
+        <li><code>std::logic_error</code></li>
+        <li><code>std::out_of_range</code></li>
+      </ul>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide3-1-1" class="next"></label>
+        <label for="slide3-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide3-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-3-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-3-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-3-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides3_2" id="slide3-2-1" checked>
+    <div class="slide" data-title="Uso de Assert">
+      <p>Se utiliza para verificar supuestos durante el desarrollo. Requiere <code>&lt;cassert&gt;</code>.</p>
+      <ol class="code">
+        <li><span class="cm">// Si la condición es falsa, el programa aborta</span></li>
+        <li><span class="mtd">assert</span>(puntero != <span class="kw">nullptr</span>);</li>
+        <li><span class="mtd">assert</span>(divisor != <span class="num">0</span>);</li>
+      </ol>
+      <p><strong>Nota:</strong> Los <code>assert</code> se eliminan automáticamente si se compila en modo "Release" (con <code>NDEBUG</code>).</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide3-2-1" class="next"></label>
+        <label for="slide3-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide3-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-3-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-3-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-3-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides3_3" id="slide3-3-1" checked>
+    <div class="slide" data-title="Manejo de Excepciones">
+      <p>Se utiliza <code>try</code> para envolver código propenso a errores y <code>catch</code> para manejarlos:</p>
+      <ol class="code">
+        <li><span class="kw">try</span> {</li>
+        <li>  <span class="kw">if</span> (y == <span class="num">0</span>) <span class="kw">throw</span> <span class="str">"Div por cero"</span>;</li>
+        <li>  res = x / y;</li>
+        <li>} <span class="kw">catch</span> (<span class="kw">const char</span>* msg) {</li>
+        <li>  <span class="mtd">cerr</span> &lt;&lt; msg &lt;&lt; <span class="mtd">endl</span>;</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides3_3" id="slide3-3-2">
+    <div class="slide" data-title="Atrapando Objetos">
+      <p>Es mejor práctica lanzar y atrapar objetos de excepción por referencia:</p>
+      <ol class="code">
+        <li><span class="kw">try</span> {</li>
+        <li>  vector.<span class="mtd">at</span>(<span class="num">999</span>);</li>
+        <li>} <span class="kw">catch</span> (<span class="kw">const</span> <span class="type">std</span>::<span class="type">exception</span>&amp; e) {</li>
+        <li>  <span class="mtd">cout</span> &lt;&lt; e.<span class="mtd">what</span>();</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide3-3-2" class="next"></label>
+        <label for="slide3-3-1" class="prev"></label>
+        <label for="slide3-3-1" class="next"></label>
+        <label for="slide3-3-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide3-3-1" class="dot"></label>
+        <label for="slide3-3-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-3-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_0" id="slide4-0-1" checked>
+    <div class="slide" data-title="Clases y Objetos">
+      <p>La OOP es un paradigma basado en "objetos" que contienen datos y funciones. Una <strong>clase</strong> es el molde, y el <strong>objeto</strong> es la instancia real.</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="type">Coche</span> {</li>
+        <li>  <span class="kw">public</span>:</li>
+        <li>    <span class="type">string</span> marca;</li>
+        <li>    <span class="kw">void</span> <span class="mtd">encender</span>() { <span class="cm">/*...*/</span> }</li>
+        <li>};</li>
+        <li></li>
+        <li><span class="type">Coche</span> miAuto; <span class="cm">// Instanciación</span></li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-0-1" class="next"></label>
+        <label for="slide4-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_1" id="slide4-1-1" checked>
+    <div class="slide" data-title="Constructor">
+      <p>Es un método especial que se ejecuta automáticamente al crear un objeto. Tiene el mismo nombre que la clase y no retorna nada.</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="type">Robot</span> {</li>
+        <li>  <span class="kw">public</span>:</li>
+        <li>    <span class="type">Robot</span>(<span class="type">string</span> n) { nombre = n; }</li>
+        <li>  <span class="kw">private</span>:</li>
+        <li>    <span class="type">string</span> nombre;</li>
+        <li>};</li>
+      </ol>
+    </div>
+    <input type="radio" name="slides4_1" id="slide4-1-2">
+    <div class="slide" data-title="Lista de Inicialización">
+      <p>Es la forma más eficiente de inicializar miembros en C++:</p>
+      <ol class="code">
+        <li><span class="type">Robot</span>(<span class="type">string</span> n) : nombre(n) {</li>
+        <li>  <span class="cm">// Cuerpo del constructor</span></li>
+        <li>}</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-1-2" class="next"></label>
+        <label for="slide4-1-1" class="prev"></label>
+        <label for="slide4-1-1" class="next"></label>
+        <label for="slide4-1-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-1-1" class="dot"></label>
+        <label for="slide4-1-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_2" id="slide4-2-1" checked>
+    <div class="slide" data-title="Métodos de Clase">
+      <p>Son funciones definidas dentro de la clase. Pueden ser definidos dentro o fuera (usando el operador <code>::</code>).</p>
+      <ol class="code">
+        <li><span class="kw">void</span> <span class="type">Coche</span>::<span class="mtd">acelerar</span>() {</li>
+        <li>  velocidad += <span class="num">10</span>;</li>
+        <li>}</li>
+      </ol>
+      <p>El puntero <code>this</code> representa al objeto actual que invoca el método.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-2-1" class="next"></label>
+        <label for="slide4-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_3" id="slide4-3-1" checked>
+    <div class="slide" data-title="Encapsulamiento">
+      <p>Controlan qué partes del código pueden ver los miembros de la clase:</p>
+      <ul>
+        <li><strong>public:</strong> Accesible desde cualquier lugar.</li>
+        <li><strong>private:</strong> Solo accesible dentro de la misma clase.</li>
+        <li><strong>protected:</strong> Accesible en la clase y sus herederos.</li>
+      </ul>
+      <p>Por defecto, en una <code>class</code> todo es <strong>private</strong>.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-3-1" class="next"></label>
+        <label for="slide4-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_4" id="slide4-4-1" checked>
+    <div class="slide" data-title="Abstracción">
+      <p>Consiste en mostrar solo las funciones esenciales ocultando los detalles de implementación internos.</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="type">DB</span> {</li>
+        <li>  <span class="kw">public</span>:</li>
+        <li>    <span class="kw">void</span> <span class="mtd">conectar</span>(); <span class="cm">// Interfaz pública</span></li>
+        <li>  <span class="kw">private</span>:</li>
+        <li>    <span class="kw">void</span> <span class="mtd">abrirSocket</span>(); <span class="cm">// Detalles ocultos</span></li>
+        <li>};</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-4-1" class="next"></label>
+        <label for="slide4-4-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-4" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-5" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-5" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_5" id="slide4-5-1" checked>
+    <div class="slide" data-title="Encapsulamiento">
+      <p>Es la agrupación de datos y métodos en una unidad, restringiendo el acceso directo a los detalles internos mediante métodos públicos (Getters y Setters).</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="type">Cuenta</span> {</li>
+        <li>  <span class="kw">private</span>: <span class="type">double</span> saldo;</li>
+        <li>  <span class="kw">public</span>:</li>
+        <li>    <span class="kw">void</span> <span class="mtd">setSaldo</span>(<span class="type">double</span> s) { <span class="kw">if</span>(s &gt; <span class="num">0</span>) saldo = s; }</li>
+        <li>    <span class="type">double</span> <span class="mtd">getSaldo</span>() { <span class="kw">return</span> saldo; }</li>
+        <li>};</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-5-1" class="next"></label>
+        <label for="slide4-5-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-5-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-5" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-6" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-6" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_6" id="slide4-6-1" checked>
+    <div class="slide" data-title="Herencia Simple">
+      <p>Permite que una clase (hija) derive atributos y métodos de otra (padre), facilitando la reutilización de código.</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="type">Animal</span> {</li>
+        <li>  <span class="kw">public</span>: <span class="kw">void</span> <span class="mtd">comer</span>();</li>
+        <li>};</li>
+        <li></li>
+        <li><span class="kw">class</span> <span class="type">Perro</span> : <span class="kw">public</span> <span class="type">Animal</span> {</li>
+        <li>  <span class="kw">public</span>: <span class="kw">void</span> <span class="mtd">ladrar</span>();</li>
+        <li>};</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-6-1" class="next"></label>
+        <label for="slide4-6-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-6-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-6" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-7" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-7" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_7" id="slide4-7-1" checked>
+    <div class="slide" data-title="Funciones Virtuales">
+      <p>Ocurre cuando hay una jerarquía de clases relacionadas por herencia. Permite invocar métodos de la clase derivada a través de punteros de la clase base.</p>
+      <ol class="code">
+        <li><span class="kw">virtual void</span> <span class="mtd">hacerSonido</span>() {</li>
+        <li>  <span class="mtd">cout</span> &lt;&lt; <span class="str">"Sonido genérico"</span>;</li>
+        <li>}</li>
+      </ol>
+      <p>Se usa la palabra clave <code class="kw">virtual</code> en la base y <code class="kw">override</code> en la derivada.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-7-1" class="next"></label>
+        <label for="slide4-7-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-7-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-7" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-8" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-8" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_8" id="slide4-8-1" checked>
+    <div class="slide" data-title="Enumeraciones">
+      <p>Tipos definidos por el usuario que consisten en un conjunto de constantes con nombre.</p>
+      <ol class="code">
+        <li><span class="kw">enum</span> <span class="type">Estado</span> { APAGADO, ENCENDIDO, STANDBY };</li>
+        <li></li>
+        <li><span class="kw">enum class</span> <span class="type">Color</span> { Rojo, Azul }; <span class="cm">// Strong typed</span></li>
+        <li><span class="type">Color</span> c = <span class="type">Color</span>::Rojo;</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-8-1" class="next"></label>
+        <label for="slide4-8-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-8-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-8" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-9" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-9" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_9" id="slide4-9-1" checked>
+    <div class="slide" data-title="Plantillas (Genéricos)">
+      <p>Permiten escribir código independiente del tipo de dato. El compilador genera la versión necesaria automáticamente.</p>
+      <ol class="code">
+        <li><span class="kw">template</span> &lt;<span class="kw">typename</span> <span class="type">T</span>&gt;</li>
+        <li><span class="type">T</span> <span class="mtd">maximo</span>(<span class="type">T</span> a, <span class="type">T</span> b) {</li>
+        <li>  <span class="kw">return</span> (a &gt; b) ? a : b;</li>
+        <li>}</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-9-1" class="next"></label>
+        <label for="slide4-9-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-9-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-9" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-10" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-10" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4_10" id="slide4-10-1" checked>
+    <div class="slide" data-title="Nested Classes">
+      <p>Una clase declarada dentro de otra. Se usa para organizar clases que solo tienen sentido dentro del contexto de la clase contenedora.</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="type">Ordenador</span> {</li>
+        <li>  <span class="kw">class</span> <span class="type">Procesador</span> {</li>
+        <li>    <span class="cm">// Solo relevante para Ordenador</span></li>
+        <li>  };</li>
+        <li>};</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-10-1" class="next"></label>
+        <label for="slide4-10-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-10-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-10" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5_0" id="slide5-0-1" checked>
+    <div class="slide" data-title="Conceptos Avanzados">
+      <p>C++ permite un control granular de la memoria y el comportamiento de las clases mediante:</p>
+      <ul>
+        <li><strong>Herencia Múltiple:</strong> Una clase puede derivar de varias bases.</li>
+        <li><strong>Interfaces (Clases Abstractas):</strong> Clases con al menos un método virtual puro.</li>
+        <li><strong>RTTI:</strong> Identificación de tipos en tiempo de ejecución.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="type">Interfaz</span> {</li>
+        <li>  <span class="kw">virtual void</span> <span class="mtd">metodo</span>() = <span class="num">0</span>; <span class="cm">// Virtual puro</span></li>
+        <li>};</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide5-0-1" class="next"></label>
+        <label for="slide5-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide5-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5_1" id="slide5-1-1" checked>
+    <div class="slide" data-title="Expresiones Lambda">
+      <p>Son funciones anónimas que pueden capturar variables de su entorno. Introducidas en C++11.</p>
+      <ol class="code">
+        <li><span class="cm">// [captura](parámetros) -> retorno { cuerpo }</span></li>
+        <li><span class="kw">auto</span> suma = [](<span class="kw">int</span> a, <span class="kw">int</span> b) {</li>
+        <li>  <span class="kw">return</span> a + b;</li>
+        <li>};</li>
+        <li><span class="kw">int</span> res = <span class="mtd">suma</span>(<span class="num">5</span>, <span class="num">3</span>);</li>
+      </ol>
+      <p>Útiles para algoritmos de la STL como <code>std::sort</code> o <code>std::for_each</code>.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide5-1-1" class="next"></label>
+        <label for="slide5-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide5-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5_2" id="slide5-2-1" checked>
+    <div class="slide" data-title="Gestión de Memoria">
+      <p>Diferencias clave en el acceso a memoria:</p>
+      <ul>
+        <li><strong>Puntero:</strong> Almacena una dirección. Puede ser nulo o reasignado.</li>
+        <li><strong>Referencia:</strong> Alias de una variable existente. No puede ser nula ni reasignada.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">int</span> x = <span class="num">10</span>;</li>
+        <li><span class="kw">int</span>* ptr = &amp;x; <span class="cm">// Puntero</span></li>
+        <li><span class="kw">int</span>&amp; ref = x;   <span class="cm">// Referencia</span></li>
+        <li>*ptr = <span class="num">20</span>;      <span class="cm">// Acceso por desreferencia</span></li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide5-2-1" class="next"></label>
+        <label for="slide5-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide5-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5_3" id="slide5-3-1" checked>
+    <div class="slide" data-title="RAII (Resource Acquisition Is Initialization)">
+      <p>Técnica donde la gestión de recursos (memoria, archivos, mutex) está ligada al ciclo de vida de un objeto.</p>
+      <ul>
+        <li>El recurso se adquiere en el <strong>constructor</strong>.</li>
+        <li>El recurso se libera automáticamente en el <strong>destructor</strong>.</li>
+      </ul>
+      <p>Es la base de los <strong>Smart Pointers</strong> (<code>unique_ptr</code>, <code>shared_ptr</code>).</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide5-3-1" class="next"></label>
+        <label for="slide5-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide5-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5_4" id="slide5-4-1" checked>
+    <div class="slide" data-title="Semántica de Movimiento">
+      <p>Permite "transferir" recursos de un objeto a otro en lugar de copiarlos, mejorando drásticamente el rendimiento.</p>
+      <ol class="code">
+        <li><span class="type">string</span> a = <span class="str">"Largo..."</span>;</li>
+        <li><span class="type">string</span> b = <span class="type">std</span>::<span class="mtd">move</span>(a);</li>
+      </ol>
+      <p>Utiliza <strong>Rvalue References</strong> (<code>&amp;&amp;</code>) para identificar objetos temporales que pueden ser "vaciados".</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide5-4-1" class="next"></label>
+        <label for="slide5-4-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide5-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-4" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-6-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6_0" id="slide6-0-1" checked>
+    <div class="slide" data-title="Conceptos de Multitarea">
+      <p>La concurrencia permite que un programa realice múltiples tareas "al mismo tiempo". C++ proporciona soporte nativo desde C++11 mediante la librería <code>&lt;thread&gt;</code>.</p>
+      <ul>
+        <li><strong>Concurrencia:</strong> Varias tareas progresan simultáneamente (intercaladas).</li>
+        <li><strong>Paralelismo:</strong> Varias tareas se ejecutan físicamente al mismo tiempo en diferentes núcleos.</li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide6-0-1" class="next"></label>
+        <label for="slide6-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide6-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-6-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6_1" id="slide6-1-1" checked>
+    <div class="slide" data-title="Gestión de Hilos">
+      <p>Un <code>std::thread</code> representa un hilo de ejecución individual.</p>
+      <ol class="code">
+        <li><span class="kw">void</span> <span class="mtd">tarea</span>(<span class="kw">int</span> id) { <span class="cm">/*...*/</span> }</li>
+        <li></li>
+        <li><span class="type">std</span>::<span class="type">thread</span> t1(<span class="mtd">tarea</span>, <span class="num">1</span>);</li>
+        <li>t1.<span class="mtd">join</span>(); <span class="cm">// Espera a que termine</span></li>
+      </ol>
+      <p>Es crucial llamar a <code>join()</code> o <code>detach()</code> antes de que el objeto thread sea destruido para evitar que el programa aborte.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide6-1-1" class="next"></label>
+        <label for="slide6-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide6-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-6-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6_2" id="slide6-2-1" checked>
+    <div class="slide" data-title="Programación Asíncrona">
+      <p><code>std::async</code> ejecuta una función (potencialmente en un hilo separado) y devuelve un <code>std::future</code> que contendrá el resultado.</p>
+      <ol class="code">
+        <li><span class="kw">auto</span> fut = <span class="type">std</span>::<span class="mtd">async</span>(calcular);</li>
+        <li><span class="cm">// ... realizar otras tareas ...</span></li>
+        <li><span class="kw">int</span> res = fut.<span class="mtd">get</span>(); <span class="cm">// Bloquea hasta tener el valor</span></li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide6-2-1" class="next"></label>
+        <label for="slide6-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide6-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-6-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6_3" id="slide6-3-1" checked>
+    <div class="slide" data-title="Sincronización">
+      <p>Para evitar "Race Conditions", se usan Mutex para proteger datos compartidos.</p>
+      <ol class="code">
+        <li><span class="type">std</span>::<span class="type">mutex</span> mtx;</li>
+        <li><span class="kw">void</span> <span class="mtd">seguro</span>() {</li>
+        <li>  <span class="type">std</span>::<span class="type">lock_guard</span>&lt;<span class="type">std</span>::<span class="type">mutex</span>&gt; lock(mtx);</li>
+        <li>  <span class="cm">// El mutex se libera solo al salir del scope (RAII)</span></li>
+        <li>  contador++;</li>
+        <li>}</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide6-3-1" class="next"></label>
+        <label for="slide6-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide6-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-6-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6_4" id="slide6-4-1" checked>
+    <div class="slide" data-title="Comunicación entre Hilos">
+      <p>Permiten que un hilo espere a que otro hilo cumpla una condición específica.</p>
+      <ol class="code">
+        <li><span class="type">std</span>::<span class="type">condition_variable</span> cv;</li>
+        <li><span class="cm">// Hilo 1: espera</span></li>
+        <li>cv.<span class="mtd">wait</span>(lock, []{ <span class="kw">return</span> listo; });</li>
+        <li><span class="cm">// Hilo 2: notifica</span></li>
+        <li>listo = <span class="kw">true</span>;</li>
+        <li>cv.<span class="mtd">notify_one</span>();</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide6-4-1" class="next"></label>
+        <label for="slide6-4-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide6-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-4" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-6-5" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-5" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6_5" id="slide6-5-1" checked>
+    <div class="slide" data-title="Algoritmos Paralelos">
+      <p>Desde C++17, muchos algoritmos de la STL pueden ejecutarse en paralelo pasando una política de ejecución.</p>
+      <ol class="code">
+        <li><span class="cm">#include &lt;execution&gt;</span></li>
+        <li></li>
+        <li><span class="type">std</span>::<span class="mtd">sort</span>(<span class="type">std</span>::<span class="type">execution</span>::<span class="mtd">par</span>, v.<span class="mtd">begin</span>(), v.<span class="mtd">end</span>());</li>
+      </ol>
+      <p>Políticas comunes:</p>
+      <ul>
+        <li><code>seq</code>: Secuencial (por defecto).</li>
+        <li><code>par</code>: Paralelo.</li>
+        <li><code>par_unseq</code>: Paralelo y vectorizado.</li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide6-5-1" class="next"></label>
+        <label for="slide6-5-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide6-5-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-5" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_0" id="slide7-0-1" checked>
+    <div class="slide" data-title="Conceptos de Estructuras">
+      <p>Una estructura de datos es una forma particular de organizar información en un computador para que pueda ser utilizada de manera eficiente.</p>
+      <ul>
+        <li><strong>Lineales:</strong> Los elementos siguen una secuencia (Arrays, Listas, Pilas).</li>
+        <li><strong>No Lineales:</strong> Relaciones jerárquicas o complejas (Árboles, Grafos).</li>
+      </ul>
+      <p>La elección depende de la operación que necesites optimizar: búsqueda, inserción o borrado.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-0-1" class="next"></label>
+        <label for="slide7-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_1" id="slide7-1-1" checked>
+    <div class="slide" data-title="Arreglos Estáticos">
+      <p>Colección de elementos del mismo tipo almacenados en posiciones contiguas de memoria. Su tamaño se define al compilar.</p>
+      <ol class="code">
+        <li><span class="type">int</span> numeros[<span class="num">5</span>] = {<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>};</li>
+        <li><span class="type">int</span> valor = numeros[<span class="num">0</span>]; <span class="cm">// Acceso por índice</span></li>
+      </ol>
+      <p><strong>Ventaja:</strong> Acceso instantáneo por índice $O(1)$.<br><strong>Desventaja:</strong> No puede cambiar su tamaño.</p>
+    </div>
+
+    <input type="radio" name="slides7_1" id="slide7-1-2">
+    <div class="slide" data-title="std::array (C++11)">
+      <p>Es un contenedor moderno que envuelve a los arreglos tradicionales, añadiendo seguridad y funciones miembro.</p>
+      <ol class="code">
+        <li><span class="cm">#include &lt;array&gt;</span></li>
+        <li><span class="type">std</span>::<span class="type">array</span>&lt;<span class="kw">int</span>, <span class="num">3</span>&gt; miArray = {<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>};</li>
+        <li><span class="kw">int</span> tam = miArray.<span class="mtd">size</span>();</li>
+      </ol>
+      <p>A diferencia de los arreglos clásicos, <code>std::array</code> no decae a puntero automáticamente y conoce su propio tamaño.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-1-2" class="next"></label>
+        <label for="slide7-1-1" class="prev"></label>
+        <label for="slide7-1-1" class="next"></label>
+        <label for="slide7-1-2" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-1-1" class="dot"></label>
+        <label for="slide7-1-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_2" id="slide7-2-1" checked>
+    <div class="slide" data-title="std::vector">
+      <p>Es un arreglo dinámico que puede cambiar de tamaño automáticamente. Los elementos se almacenan de forma contigua.</p>
+      <ol class="code">
+        <li><span class="cm">#include &lt;vector&gt;</span></li>
+        <li><span class="type">std</span>::<span class="type">vector</span>&lt;<span class="kw">int</span>&gt; v = {<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>};</li>
+        <li>v.<span class="mtd">push_back</span>(<span class="num">4</span>); <span class="cm">// Agrega al final</span></li>
+        <li><span class="kw">int</span> n = v[<span class="num">0</span>];   <span class="cm">// Acceso O(1)</span></li>
+      </ol>
+      <p>Es el contenedor por defecto más recomendado en C++ por su eficiencia con el caché.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-2-1" class="next"></label>
+        <label for="slide7-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_3" id="slide7-3-1" checked>
+    <div class="slide" data-title="std::set">
+      <p>Contenedor que almacena elementos únicos siguiendo un orden específico (por defecto ascendente).</p>
+      <ol class="code">
+        <li><span class="cm">#include &lt;set&gt;</span></li>
+        <li><span class="type">std</span>::<span class="type">set</span>&lt;<span class="kw">int</span>&gt; s;</li>
+        <li>s.<span class="mtd">insert</span>(<span class="num">10</span>);</li>
+        <li>s.<span class="mtd">insert</span>(<span class="num">10</span>); <span class="cm">// No se inserta (ya existe)</span></li>
+      </ol>
+      <p>Implementado usualmente como un árbol binario equilibrado. Búsqueda en $O(\log n)$.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-3-1" class="next"></label>
+        <label for="slide7-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_4" id="slide7-4-1" checked>
+    <div class="slide" data-title="std::map">
+      <p>Almacena pares <strong>clave-valor</strong>. Las claves son únicas y están ordenadas.</p>
+      <ol class="code">
+        <li><span class="cm">#include &lt;map&gt;</span></li>
+        <li><span class="type">std</span>::<span class="type">map</span>&lt;<span class="type">string</span>, <span class="kw">int</span>&gt; edades;</li>
+        <li>edades[<span class="str">"Ana"</span>] = <span class="num">25</span>;</li>
+        <li><span class="kw">int</span> e = edades[<span class="str">"Ana"</span>];</li>
+      </ol>
+      <p>Para acceso más rápido sin orden, existe <code>unordered_map</code> (basado en Hash).</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-4-1" class="next"></label>
+        <label for="slide7-4-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-4" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-5" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-5" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_5" id="slide7-5-1" checked>
+    <div class="slide" data-title="Colas y Dobles Colas">
+      <ul>
+        <li><strong>Queue:</strong> Estructura FIFO (First-In, First-Out).</li>
+        <li><strong>Deque:</strong> Permite inserción/extracción eficiente en ambos extremos.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="type">std</span>::<span class="type">queue</span>&lt;<span class="kw">int</span>&gt; q;</li>
+        <li>q.<span class="mtd">push</span>(<span class="num">1</span>); <span class="cm">// Encola</span></li>
+        <li>q.<span class="mtd">pop</span>();  <span class="cm">// Desencola</span></li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-5-1" class="next"></label>
+        <label for="slide7-5-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-5-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-5" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-6" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-6" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_6" id="slide7-6-1" checked>
+    <div class="slide" data-title="Pila (Stack)">
+      <p>Estructura LIFO (Last-In, First-Out). Solo se tiene acceso al elemento superior.</p>
+      <ol class="code">
+        <li><span class="type">std</span>::<span class="type">stack</span>&lt;<span class="kw">int</span>&gt; s;</li>
+        <li>s.<span class="mtd">push</span>(<span class="num">100</span>); <span class="cm">// Apila</span></li>
+        <li><span class="kw">int</span> tope = s.<span class="mtd">top</span>();</li>
+        <li>s.<span class="mtd">pop</span>();      <span class="cm">// Desapila</span></li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-6-1" class="next"></label>
+        <label for="slide7-6-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-6-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-6" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-7" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-7" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_7" id="slide7-7-1" checked>
+    <div class="slide" data-title="Comparadores Personalizados">
+      <p>Permiten definir el orden en sets, maps o algoritmos de ordenamiento.</p>
+      <ol class="code">
+        <li><span class="kw">struct</span> <span class="type">Comp</span> {</li>
+        <li>  <span class="kw">bool</span> <span class="kw">operator</span>()(<span class="kw">int</span> a, <span class="kw">int</span> b) <span class="kw">const</span> {</li>
+        <li>    <span class="kw">return</span> a &gt; b; <span class="cm">// Orden descendente</span></li>
+        <li>  }</li>
+        <li>};</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-7-1" class="next"></label>
+        <label for="slide7-7-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-7-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-7" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-8" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-8" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_8" id="slide7-8-1" checked>
+    <div class="slide" data-title="Iteradores">
+      <p>Objetos que actúan como punteros para recorrer los elementos de un contenedor.</p>
+      <ol class="code">
+        <li><span class="kw">auto</span> it = v.<span class="mtd">begin</span>();</li>
+        <li><span class="kw">while</span> (it != v.<span class="mtd">end</span>()) {</li>
+        <li>  <span class="mtd">cout</span> &lt;&lt; *it;</li>
+        <li>  ++it;</li>
+        <li>}</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-8-1" class="next"></label>
+        <label for="slide7-8-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-8-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-8" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-9" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-9" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7_9" id="slide7-9-1" checked>
+    <div class="slide" data-title="Librería &lt;algorithm&gt;">
+      <p>Funciones genéricas que operan sobre rangos de elementos.</p>
+      <ol class="code">
+        <li><span class="mtd">sort</span>(v.<span class="mtd">begin</span>(), v.<span class="mtd">end</span>());</li>
+        <li><span class="mtd">find</span>(v.<span class="mtd">begin</span>(), v.<span class="mtd">end</span>(), <span class="num">5</span>);</li>
+        <li><span class="mtd">reverse</span>(v.<span class="mtd">begin</span>(), v.<span class="mtd">end</span>());</li>
+      </ol>
+      <p>Proporcionan soluciones eficientes para búsqueda, ordenamiento y manipulación.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-9-1" class="next"></label>
+        <label for="slide7-9-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-9-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-9" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-8-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-8-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides8_0" id="slide8-0-1" checked>
+    <div class="slide" data-title="Redes en C++">
+      <p>C++ no tiene una librería de networking nativa en el estándar hasta la fecha (aunque existe la propuesta Networking TS). Se suelen usar librerías de terceros o APIs del sistema operativo:</p>
+      <ul>
+        <li><strong>Boost.Asio:</strong> El estándar de facto para red y E/S de bajo nivel.</li>
+        <li><strong>POCO:</strong> Un framework completo para aplicaciones en red.</li>
+        <li><strong>WinSock / POSIX Sockets:</strong> APIs nativas de Windows y Unix.</li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide8-0-1" class="next"></label>
+        <label for="slide8-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide8-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-8-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-8-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-8-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides8_1" id="slide8-1-1" checked>
+    <div class="slide" data-title="Programación de Sockets">
+      <p>Un socket es un punto final de una comunicación bidireccional entre dos programas en la red.</p>
+      <ol class="code">
+        <li><span class="cm">// Flujo básico en servidor (Unix/Win)</span></li>
+        <li><span class="mtd">socket</span>(); <span class="cm">// Crear</span></li>
+        <li><span class="mtd">bind</span>();   <span class="cm">// Asignar IP/Puerto</span></li>
+        <li><span class="mtd">listen</span>(); <span class="cm">// Esperar conexión</span></li>
+        <li><span class="mtd">accept</span>(); <span class="cm">// Aceptar cliente</span></li>
+      </ol>
+      <p>Los sockets pueden ser <strong>Stream</strong> (TCP, orientado a conexión) o <strong>Datagram</strong> (UDP, sin conexión).</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide8-1-1" class="next"></label>
+        <label for="slide8-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide8-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-8-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-8-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-8-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides8_2" id="slide8-2-1" checked>
+    <div class="slide" data-title="Protocolo HTTP">
+      <p>Protocolo de nivel de aplicación para sistemas de información distribuidos. En C++ se suelen usar librerías como <strong>libcurl</strong> o <strong>httplib</strong>.</p>
+      <ol class="code">
+        <li><span class="cm">// Ejemplo conceptual con httplib</span></li>
+        <li><span class="type">httplib</span>::<span class="type">Client</span> cli(<span class="str">"http://api.com"</span>);</li>
+        <li><span class="kw">auto</span> res = cli.<span class="mtd">Get</span>(<span class="str">"/data"</span>);</li>
+        <li><span class="kw">if</span> (res &amp;&amp; res-&gt;status == <span class="num">200</span>) {</li>
+        <li>  <span class="mtd">cout</span> &lt;&lt; res-&gt;body;</li>
+        <li>}</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide8-2-1" class="next"></label>
+        <label for="slide8-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide8-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-8-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-9-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-9-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides9_0" id="slide9-0-1" checked>
+    <div class="slide" data-title="Seguridad en C++">
+      <p>C++ otorga control total sobre la memoria, lo que introduce riesgos si no se programa con cuidado. Los pilares de la seguridad son:</p>
+      <ul>
+        <li><strong>Memoria Segura:</strong> Evitar desbordamientos de búfer (Buffer Overflow).</li>
+        <li><strong>Validación:</strong> Nunca confiar en la entrada del usuario (Sanitización).</li>
+        <li><strong>Principio de Privilegio Mínimo:</strong> Exponer solo lo estrictamente necesario.</li>
+      </ul>
+      <p>Se recomienda usar contenedores estándar (como <code>std::vector</code>) en lugar de arreglos de C para mitigar vulnerabilidades.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide9-0-1" class="next"></label>
+        <label for="slide9-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide9-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-9-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-9-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-9-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides9_1" id="slide9-1-1" checked>
+    <div class="slide" data-title="Cifrado de Datos">
+      <p>El cifrado transforma la información para que solo personas autorizadas puedan leerla. Se divide en dos tipos:</p>
+      <ul>
+        <li><strong>Simétrico:</strong> Misma clave para cifrar y descifrar (ej. AES).</li>
+        <li><strong>Asimétrico:</strong> Clave pública para cifrar y privada para descifrar (ej. RSA).</li>
+      </ul>
+      <p>En C++, librerías como <strong>OpenSSL</strong> o <strong>Crypto++</strong> son el estándar para implementar estos algoritmos de forma segura.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide9-1-1" class="next"></label>
+        <label for="slide9-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide9-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-9-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-9-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-9-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides9_2" id="slide9-2-1" checked>
+    <div class="slide" data-title="Funciones Hash">
+      <p>Un Hash es una huella digital única y de tamaño fijo generada a partir de datos de cualquier tamaño. Es irreversible.</p>
+      <ol class="code">
+        <li><span class="cm">// Usos comunes:</span></li>
+        <li><span class="cm">// 1. Verificación de integridad de archivos.</span></li>
+        <li><span class="cm">// 2. Almacenamiento seguro de contraseñas.</span></li>
+        <li><span class="cm">// 3. Estructuras de datos (Hash Maps).</span></li>
+      </ol>
+      <p>Algoritmos seguros actuales incluyen la familia <strong>SHA-256</strong> o <strong>Argon2</strong> para contraseñas. Evita usar MD5 o SHA-1 por debilidades conocidas.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide9-2-1" class="next"></label>
+        <label for="slide9-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide9-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-9-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-10-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-10-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides10_0" id="slide10-0-1" checked>
+    <div class="slide" data-title="Librerías de Utilidad">
+      <p>C++ ofrece un conjunto de cabeceras estándar que facilitan tareas comunes sin necesidad de implementar lógica compleja desde cero:</p>
+      <ul>
+        <li><code>&lt;utility&gt;</code>: Pares de datos (std::pair) y gestión de movimiento.</li>
+        <li><code>&lt;algorithm&gt;</code>: Operaciones sobre rangos.</li>
+        <li><code>&lt;random&gt;</code>: Generación avanzada de números aleatorios.</li>
+      </ul>
+      <p>Estas herramientas están optimizadas para ofrecer el mejor rendimiento posible bajo el estándar ISO.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide10-0-1" class="next"></label>
+        <label for="slide10-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide10-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-10-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-10-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-10-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides10_1" id="slide10-1-1" checked>
+    <div class="slide" data-title="Funciones Matemáticas">
+      <p>La cabecera <code>&lt;cmath&gt;</code> proporciona funciones para operaciones matemáticas comunes:</p>
+      <ol class="code">
+        <li><span class="kw">double</span> r = <span class="mtd">sqrt</span>(<span class="num">16.0</span>); <span class="cm">// Raíz cuadrada</span></li>
+        <li><span class="kw">double</span> p = <span class="mtd">pow</span>(<span class="num">2.0</span>, <span class="num">3.0</span>); <span class="cm">// Potencia</span></li>
+        <li><span class="kw">double</span> s = <span class="mtd">sin</span>(<span class="num">1.57</span>);   <span class="cm">// Seno (en radianes)</span></li>
+        <li><span class="kw">int</span> v = <span class="mtd">abs</span>(-<span class="num">10</span>);       <span class="cm">// Valor absoluto</span></li>
+      </ol>
+      <p>También define constantes y funciones de redondeo como <code>ceil()</code>, <code>floor()</code> y <code>round()</code>.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide10-1-1" class="next"></label>
+        <label for="slide10-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide10-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-10-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-10-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-10-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides10_2" id="slide10-2-1" checked>
+    <div class="slide" data-title="Medición de Tiempo">
+      <p>La librería <code>&lt;chrono&gt;</code> maneja duraciones, instantes de tiempo y relojes con alta precisión.</p>
+      <ol class="code">
+        <li><span class="kw">auto</span> inicio = <span class="type">chrono</span>::<span class="mtd">steady_clock</span>::<span class="mtd">now</span>();</li>
+        <li><span class="cm">// ... realizar tarea ...</span></li>
+        <li><span class="kw">auto</span> fin = <span class="type">chrono</span>::<span class="mtd">steady_clock</span>::<span class="mtd">now</span>();</li>
+        <li><span class="type">chrono</span>::<span class="type">duration</span>&lt;<span class="kw">double</span>&gt; diff = fin - inicio;</li>
+      </ol>
+      <p>Es preferible a las funciones de C (time.h) por su seguridad de tipos y precisión de nanosegundos.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide10-2-1" class="next"></label>
+        <label for="slide10-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide10-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-10-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-10-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-10-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides10_3" id="slide10-3-1" checked>
+    <div class="slide" data-title="Expresiones Regulares">
+      <p>Permiten la búsqueda y manipulación de texto mediante patrones. Requiere <code>#include &lt;regex&gt;</code>.</p>
+      <ol class="code">
+        <li><span class="type">std</span>::<span class="type">regex</span> patron(<span class="str">"\\d+"</span>); <span class="cm">// Busca dígitos</span></li>
+        <li><span class="kw">string</span> texto = <span class="str">"Tengo 25 años"</span>;</li>
+        <li><span class="kw">bool</span> match = <span class="type">regex_search</span>(texto, patron);</li>
+      </ol>
+      <p>Funciones principales:</p>
+      <ul>
+        <li><code>regex_match</code>: Verifica si todo el string cumple el patrón.</li>
+        <li><code>regex_search</code>: Busca el patrón dentro del string.</li>
+        <li><code>regex_replace</code>: Sustituye las coincidencias.</li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide10-3-1" class="next"></label>
+        <label for="slide10-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide10-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-10-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-11-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-11-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides11_0" id="slide11-0-1" checked>
+    <div class="slide" data-title="El Proceso de Compilación">
+      <p>Transforma el código fuente (legible por humanos) en código máquina (ejecutable). Consta de cuatro etapas principales:</p>
+      <ol>
+        <li><strong>Preprocesado:</strong> Manejo de directivas (<code>#include</code>, <code>#define</code>).</li>
+        <li><strong>Compilación:</strong> Traducción a código ensamblador.</li>
+        <li><strong>Ensamblado:</strong> Creación de archivos objeto (código binario).</li>
+        <li><strong>Enlazado (Linking):</strong> Unión de objetos y librerías en un ejecutable final.</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide11-0-1" class="next"></label>
+        <label for="slide11-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide11-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-11-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-11-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-11-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides11_1" id="slide11-1-1" checked>
+    <div class="slide" data-title="Herramientas de Compilación">
+      <p>Existen diferentes implementaciones dependiendo de la plataforma:</p>
+      <ul>
+        <li><strong>GCC (GNU Compiler Collection):</strong> El estándar en Linux.</li>
+        <li><strong>Clang:</strong> Basado en LLVM, conocido por sus mensajes de error claros.</li>
+        <li><strong>MSVC:</strong> El compilador de Microsoft Visual Studio para Windows.</li>
+      </ul>
+      <p>Banderas comunes:</p>
+      <ol class="code">
+        <li>g++ -Wall -O2 main.cpp -o programa</li>
+        <li><span class="cm">// -Wall: Muestra todas las advertencias</span></li>
+        <li><span class="cm">// -O2: Optimización de rendimiento</span></li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide11-1-1" class="next"></label>
+        <label for="slide11-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide11-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-11-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-11-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-11-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides11_2" id="slide11-2-1" checked>
+    <div class="slide" data-title="Sistemas de Construcción">
+      <ul>
+        <li><strong>Make:</strong> Utiliza un <code>Makefile</code> para automatizar la compilación mediante reglas de dependencia.</li>
+        <li><strong>CMake:</strong> Un generador de sistemas de construcción meta-plataforma.</li>
+      </ul>
+      <p>Ejemplo simple de <code>CMakeLists.txt</code>:</p>
+      <ol class="code">
+        <li><span class="mtd">cmake_minimum_required</span>(VERSION 3.10)</li>
+        <li><span class="mtd">project</span>(MiPrograma)</li>
+        <li><span class="mtd">add_executable</span>(app main.cpp)</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide11-2-1" class="next"></label>
+        <label for="slide11-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide11-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-11-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-11-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-11-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides11_3" id="slide11-3-1" checked>
+    <div class="slide" data-title="Documentación Automática">
+      <p>Doxygen genera documentación técnica (HTML/PDF) a partir de comentarios especiales en el código.</p>
+      <ol class="code">
+        <li><span class="cm">/**</span></li>
+        <li><span class="cm"> * @brief Calcula el área.</span></li>
+        <li><span class="cm"> * @param r Radio del círculo.</span></li>
+        <li><span class="cm"> * @return Área resultante.</span></li>
+        <li><span class="cm"> */</span></li>
+        <li><span class="kw">double</span> <span class="mtd">calcularArea</span>(<span class="kw">double</span> r);</li>
+      </ol>
+      <p>Ayuda a mantener la documentación sincronizada con el desarrollo de forma profesional.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide11-3-1" class="next"></label>
+        <label for="slide11-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide11-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-11-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-12-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12_0" id="slide12-0-1" checked>
+    <div class="slide" data-title="Flujos de Datos">
+      <p>C++ utiliza el concepto de <strong>streams</strong> (flujos) para manejar la comunicación entre el programa y los dispositivos externos.</p>
+      <ul>
+        <li><code>cin</code>: Flujo de entrada estándar (teclado).</li>
+        <li><code>cout</code>: Flujo de salida estándar (consola).</li>
+        <li><code>cerr</code>: Flujo de error (salida sin buffer para errores críticos).</li>
+      </ul>
+      <p>El operador <code>&lt;&lt;</code> se usa para insertar datos en el flujo y <code>&gt;&gt;</code> para extraerlos.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide12-0-1" class="next"></label>
+        <label for="slide12-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide12-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-12-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12_1" id="slide12-1-1" checked>
+    <div class="slide" data-title="Librería &lt;filesystem&gt;">
+      <p>Introducida en C++17, permite manipular rutas, directorios y metadatos de archivos de forma multiplataforma.</p>
+      <ol class="code">
+        <li><span class="kw">namespace</span> fs = <span class="type">std</span>::<span class="type">filesystem</span>;</li>
+        <li><span class="kw">if</span> (fs::<span class="mtd">exists</span>(<span class="str">"config.txt"</span>)) {</li>
+        <li>  <span class="kw">auto</span> tam = fs::<span class="mtd">file_size</span>(<span class="str">"config.txt"</span>);</li>
+        <li>}</li>
+      </ol>
+      <p>Es fundamental para tareas como crear carpetas, borrar archivos o listar el contenido de un directorio.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide12-1-1" class="next"></label>
+        <label for="slide12-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide12-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-12-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12_2" id="slide12-2-1" checked>
+    <div class="slide" data-title="Lectura y Escritura">
+      <p>La cabecera <code>&lt;fstream&gt;</code> define clases para operar con archivos en el disco:</p>
+      <ul>
+        <li><code>ifstream</code>: Para lectura (Input).</li>
+        <li><code>ofstream</code>: Para escritura (Output).</li>
+        <li><code>fstream</code>: Para ambas operaciones.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="type">ofstream</span> archivo(<span class="str">"datos.txt"</span>);</li>
+        <li>archivo &lt;&lt; <span class="str">"Guardando texto..."</span> &lt;&lt; <span class="mtd">endl</span>;</li>
+        <li>archivo.<span class="mtd">close</span>();</li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide12-2-1" class="next"></label>
+        <label for="slide12-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide12-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-12-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12_3" id="slide12-3-1" checked>
+    <div class="slide" data-title="Flujos de Strings">
+      <p><code>std::stringstream</code> permite tratar una cadena de texto como si fuera un flujo, facilitando la conversión de tipos.</p>
+      <ol class="code">
+        <li><span class="type">stringstream</span> ss;</li>
+        <li>ss &lt;&lt; <span class="num">100</span> &lt;&lt; <span class="str">" "</span> &lt;&lt; <span class="num">45.5</span>;</li>
+        <li><span class="kw">int</span> i; <span class="kw">double</span> d;</li>
+        <li>ss &gt;&gt; i &gt;&gt; d; <span class="cm">// Extrae valores formateados</span></li>
+      </ol>
+      <p>Es muy útil para parsear líneas de texto complejas o construir mensajes dinámicos.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide12-3-1" class="next"></label>
+        <label for="slide12-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide12-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-12-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12_4" id="slide12-4-1" checked>
+    <div class="slide" data-title="Persistencia de Objetos">
+      <p>Proceso de convertir un objeto en memoria a un formato que pueda ser almacenado o transmitido (binario, JSON, XML).</p>
+      <ul>
+        <li><strong>Binaria:</strong> Rápida pero difícil de leer por humanos.</li>
+        <li><strong>Texto (JSON/XML):</strong> Legible y compatible con otros lenguajes.</li>
+      </ul>
+      <p>En C++ moderno se suelen usar librerías como <strong>Cereal</strong> o <strong>nlohmann/json</strong> para automatizar este proceso.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide12-4-1" class="next"></label>
+        <label for="slide12-4-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide12-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-4" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-13-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-13-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides13_0" id="slide13-0-1" checked>
+    <div class="slide" data-title="Modelo de Memoria">
+      <p>C++ ofrece un control directo sobre la memoria del sistema. El programador decide cuándo y dónde se asignan los recursos.</p>
+      <ul>
+        <li><strong>Estática:</strong> Variables globales o <code>static</code>. Existen durante toda la vida del programa.</li>
+        <li><strong>Automática:</strong> Variables locales en funciones (Stack).</li>
+        <li><strong>Dinámica:</strong> Solicitada explícitamente en tiempo de ejecución (Heap).</li>
+      </ul>
+      <p>Un manejo ineficiente puede degradar el rendimiento o causar cierres inesperados (Crashes).</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide13-0-1" class="next"></label>
+        <label for="slide13-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide13-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-13-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-13-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-13-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides13_1" id="slide13-1-1" checked>
+    <div class="slide" data-title="Diferencias de Gestión">
+      <table>
+        <tr>
+          <th>Característica</th>
+          <th>Stack (Pila)</th>
+          <th>Heap (Montículo)</th>
+        </tr>
+        <tr>
+          <td>Gestión</td>
+          <td>Automática</td>
+          <td>Manual (new/delete)</td>
+        </tr>
+        <tr>
+          <td>Velocidad</td>
+          <td>Muy rápida</td>
+          <td>Más lenta</td>
+        </tr>
+        <tr>
+          <td>Tamaño</td>
+          <td>Limitado (fijo)</td>
+          <td>Flexible (grande)</td>
+        </tr>
+      </table>
+      <p>El <strong>Stack</strong> se gestiona por el sistema al entrar/salir de scopes. El <strong>Heap</strong> permite que los datos sobrevivan a la función que los creó.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide13-1-1" class="next"></label>
+        <label for="slide13-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide13-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-13-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-13-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-13-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides13_2" id="slide13-2-1" checked>
+    <div class="slide" data-title="Punteros Inteligentes">
+      <p>Desde C++11, se recomienda evitar punteros crudos y usar Smart Pointers para gestionar el ciclo de vida automáticamente (RAII).</p>
+      <ul>
+        <li><strong>std::unique_ptr:</strong> El objeto tiene un único dueño. No se puede copiar.</li>
+        <li><strong>std::shared_ptr:</strong> El objeto tiene múltiples dueños; se libera cuando el último desaparece.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">auto</span> p = <span class="type">std</span>::<span class="mtd">make_unique</span>&lt;<span class="type">MiClase</span>&gt;();</li>
+        <li><span class="cm">// Se libera automáticamente al final del scope</span></li>
+      </ol>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide13-2-1" class="next"></label>
+        <label for="slide13-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide13-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-13-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-13-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-13-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides13_3" id="slide13-3-1" checked>
+    <div class="slide" data-title="Fugas de Memoria">
+      <p>Ocurre cuando se reserva memoria en el Heap (<code>new</code>) y se pierde el puntero sin haber liberado el espacio (<code>delete</code>).</p>
+      <ol class="code">
+        <li><span class="kw">void</span> <span class="mtd">fuga</span>() {</li>
+        <li>  <span class="kw">int</span>* p = <span class="kw">new</span> <span class="kw">int</span>(<span class="num">10</span>);</li>
+        <li>  <span class="kw">return</span>; <span class="cm">// ¡Error! Puntero perdido, memoria ocupada</span></li>
+        <li>}</li>
+      </ol>
+      <p>Herramientas como <strong>Valgrind</strong> o el uso de <strong>Smart Pointers</strong> son las mejores defensas para prevenir estos fallos.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide13-3-1" class="next"></label>
+        <label for="slide13-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide13-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-13-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-14-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-14-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides14_0" id="slide14-0-1" checked>
+    <div class="slide" data-title="Conceptos Misceláneos">
+      <p>C++ incluye características versátiles que no encajan en una sola categoría pero son esenciales para el desarrollo profesional:</p>
+      <ul>
+        <li><strong>Type Aliasing:</strong> Uso de <code>using</code> o <code>typedef</code> para crear nombres legibles.</li>
+        <li><strong>Atributos:</strong> Anotaciones como <code>[[nodiscard]]</code> o <code>[[maybe_unused]]</code> para el compilador.</li>
+        <li><strong>Llamadas al Sistema:</strong> Interacción directa con el SO mediante librerías nativas.</li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide14-0-1" class="next"></label>
+        <label for="slide14-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide14-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-14-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-14-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-14-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides14_1" id="slide14-1-1" checked>
+    <div class="slide" data-title="Directivas y Macros">
+      <p>El preprocesador actúa antes de la compilación real, procesando líneas que comienzan con <code>#</code>.</p>
+      <ol class="code">
+        <li><span class="cm">#define MAX_BUFFER 1024  // Macro de reemplazo</span></li>
+        <li><span class="cm">#ifdef VERSION_PRO     // Compilación condicional</span></li>
+        <li>  <span class="mtd">activarFunciones</span>();</li>
+        <li><span class="cm">#endif</span></li>
+      </ol>
+      <p><strong>Nota:</strong> En C++ moderno se prefiere <code>constexpr</code> y <code>inline</code> sobre las macros tradicionales por seguridad de tipos.</p>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide14-1-1" class="next"></label>
+        <label for="slide14-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide14-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-14-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-14-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-14-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides14_2" id="slide14-2-1" checked>
+    <div class="slide" data-title="Evolución del Estándar">
+      <p>C++ es un lenguaje vivo regulado por ISO. Cada versión añade potencia y simplifica la sintaxis:</p>
+      <ul>
+        <li><strong>C++11:</strong> La gran revolución (Smart pointers, lambdas, auto).</li>
+        <li><strong>C++17:</strong> Filesystem, variantes, <code>std::optional</code>.</li>
+        <li><strong>C++20:</strong> Módulos, Conceptos y Corrutinas.</li>
+        <li><strong>C++23:</strong> Mejoras en la STL y soporte para <code>std::print</code>.</li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide14-2-1" class="next"></label>
+        <label for="slide14-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide14-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-14-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-14-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-14-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides14_3" id="slide14-3-1" checked>
+    <div class="slide" data-title="Herramientas y Comunidad">
+      <p>El desarrollo profesional en C++ va más allá del código; implica un entorno robusto de herramientas:</p>
+      <ul>
+        <li><strong>Gestores de Paquetes:</strong> Conan y vcpkg para manejar dependencias.</li>
+        <li><strong>Testing:</strong> GoogleTest (gTest) y Catch2.</li>
+        <li><strong>Análisis Estático:</strong> Clang-Tidy y Cppcheck para encontrar errores sin ejecutar.</li>
+        <li><strong>IDEs:</strong> Visual Studio, CLion y VS Code con extensiones de C++.</li>
+      </ul>
+    </div>
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide14-3-1" class="next"></label>
+        <label for="slide14-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide14-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-14-3" class="close-button"></label>
+  </div>
+</div>
+
     </div>
   </body>
 </html>

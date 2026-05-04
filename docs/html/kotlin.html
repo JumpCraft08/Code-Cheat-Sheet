@@ -206,5 +206,2448 @@
 
     </div>
   </main>
+  <div class="modals">
+    <!-- Modal Selector de Lenguaje -->
+      <input type="checkbox" id="modal-lang-selector" class="modal-toggle">
+      <div class="modal">
+        <label for="modal-lang-selector" class="modal-overlay"></label>
+        <div class="modal-content">
+
+          <!-- Slide único -->
+          <input type="radio" name="slides-lang" id="slide-lang-1" checked>
+          <div class="slide" data-title="Cambiar Code-Sheet">
+            <div style="display: flex; flex-direction: column; padding: 1.5em; gap: 0.8em;">
+              <a href="java.html" class="lang-option" style="--lang-color:#f89820;">Java Core</a>
+              <a href="python.html" class="lang-option" style="--lang-color:#3776ab;">Python</a>
+              <a href="cpp.html" class="lang-option" style="--lang-color:#00599C;">C++</a>
+              <a href="javascript.html" class="lang-option" style="--lang-color:#f7df1e;">JavaScript</a>
+              <label for="modal-lang-selector" class="lang-option" style="--lang-color:#7f52ff;">Kotlin</label>
+            </div>
+          </div>
+          <label for="modal-lang-selector" class="close-button"></label>
+        </div>
+      </div>
+
+      <!-- Modal 1-0: Fundamentos -->
+<input type="checkbox" id="modal-card-1-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1-0" id="slide1-0-1" checked>
+    <div class="slide" data-title="Sintaxis y Entry Point">
+      <p>Kotlin es un lenguaje moderno y conciso. El punto de entrada es la función <code class="mtd">main</code>. A diferencia de Java, no requiere estar dentro de una clase:</p>
+      <ul>
+        <li>No se requieren puntos y coma (<code>;</code>).</li>
+        <li>Soporta programación funcional y orientada a objetos.</li>
+        <li>Interoperable al 100% con Java.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">fun</span> <span class="mtd">main</span>() {</li>
+        <li>  <span class="mtd">println</span>(<span class="str">"¡Hola Kotlin!"</span>)</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="cm">// Con argumentos:</span></li>
+        <li><span class="kw">fun</span> <span class="mtd">main</span>(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;) { }</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides1-0" id="slide1-0-2">
+    <div class="slide" data-title="Paquetes y Comentarios">
+      <p>La organización de archivos es flexible:</p>
+      <ul>
+        <li><strong>Packages:</strong> Se definen al inicio (opcional). No tienen que coincidir con la estructura de carpetas.</li>
+        <li><strong>Comentarios:</strong> Iguales a Java (<code>//</code>, <code>/* */</code> y KDoc <code>/** */</code>).</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">package</span> org.kotlin.app</li>
+        <li></li>
+        <li><span class="cm">// Un comentario simple</span></li>
+        <li><span class="cm">/* Comentario de bloque */</span></li>
+        <li><span class="kw">fun</span> <span class="mtd">test</span>() { }</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide1-0-2" class="next"></label>
+        <label for="slide1-0-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide1-0-1" class="dot"></label>
+        <label for="slide1-0-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 1-1: Tipos de Datos -->
+<input type="checkbox" id="modal-card-1-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1-1" id="slide1-1-1" checked>
+    <div class="slide" data-title="Tipos Primitivos">
+      <p>En Kotlin, todo es un objeto. Los tipos numéricos comunes son:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Tipos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Enteros</td><td>Byte, Short, Int, Long</td></tr>
+          <tr><td>Decimales</td><td>Float, Double</td></tr>
+          <tr><td>Otros</td><td>Boolean, Char</td></tr>
+        </tbody>
+      </table>
+      <ol class="code">
+        <li><span class="kw">val</span> n: <span class="type">Int</span> = <span class="num">10</span></li>
+        <li><span class="kw">val</span> d: <span class="type">Double</span> = <span class="num">10.5</span></li>
+        <li><span class="kw">val</span> f: <span class="type">Float</span> = <span class="num">10.5f</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide1-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 1-2: Variables -->
+<input type="checkbox" id="modal-card-1-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1-2" id="slide1-2-1" checked>
+    <div class="slide" data-title="Inferencia y Declaración">
+      <p>Kotlin usa inferencia de tipos. La palabra clave define la mutabilidad:</p>
+      <ul>
+        <li><code class="kw">val</code>: (Read-only) El valor no puede cambiar tras asignarse.</li>
+        <li><code class="kw">var</code>: (Mutable) El valor puede cambiar.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">val</span> nombre = <span class="str">"Alex"</span> <span class="cm">// Inferencia a String</span></li>
+        <li><span class="kw">var</span> edad: <span class="type">Int</span> = <span class="num">25</span></li>
+        <li></li>
+        <li>edad = <span class="num">26</span> <span class="cm">// OK</span></li>
+        <li>nombre = <span class="str">"Pau"</span> <span class="cm">// Error: val no se reasigna</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide1-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 1-3: Operadores -->
+<input type="checkbox" id="modal-card-1-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1-3" id="slide1-3-1" checked>
+    <div class="slide" data-title="Aritméticos y Lógicos">
+      <p>Operadores estándar similares a otros lenguajes:</p>
+      <ul>
+        <li><strong>Aritméticos:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+        <li><strong>Comparación:</strong> <code>==</code> (valor), <code>===</code> (referencia), <code>!=</code>, <code>&lt;</code>, <code>&gt;</code></li>
+        <li><strong>Lógicos:</strong> <code>&&</code>, <code>||</code>, <code>!</code></li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">val</span> res = <span class="num">10</span> + <span class="num">5</span></li>
+        <li><span class="kw">val</span> esIgual = (<span class="num">10</span> == <span class="num">10</span>) <span class="cm">// true</span></li>
+        <li><span class="kw">val</span> check = (a &gt; <span class="num">0</span>) && (b &lt; <span class="num">10</span>)</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide1-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-3" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 1-4: Strings -->
+<input type="checkbox" id="modal-card-1-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-1-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides1-4" id="slide1-4-1" checked>
+    <div class="slide" data-title="Templates y Raw Strings">
+      <p>Los <strong>String Templates</strong> permiten insertar variables directamente usando <code>$</code>:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> user = <span class="str">"Kotlin"</span></li>
+        <li><span class="mtd">println</span>(<span class="str">"Hola <span class="kw">$</span>user"</span>) </li>
+        <li></li>
+        <li><span class="cm">// Expresiones con llaves</span></li>
+        <li><span class="mtd">println</span>(<span class="str">"Longitud: <span class="kw">${</span>user.length<span class="kw">}</span>"</span>)</li>
+      </ol>
+      <p>Para textos multilínea se usan las comillas triples <code>"""</code>:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> raw = <span class="str">"""</span></li>
+        <li><span class="str">    Línea 1</span></li>
+        <li><span class="str">    Línea 2</span></li>
+        <li><span class="str">    """</span>.trimIndent()</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide1-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-1-4" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-2-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides2-0" id="slide2-0-1" checked>
+    <div class="slide" data-title="Expresiones vs Sentencias">
+      <p>En Kotlin, la mayoría de las estructuras de control son <strong>expresiones</strong>, lo que significa que devuelven un valor:</p>
+      <ul>
+        <li>Permite asignar el resultado de un <code>if</code> o <code>when</code> directamente a una variable.</li>
+        <li>Elimina la necesidad del operador ternario (<code>a > b ? a : b</code>).</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">val</span> max = <span class="kw">if</span> (a &gt; b) a <span class="kw">else</span> b</li>
+        <li></li>
+        <li><span class="kw">val</span> status = <span class="kw">when</span>(puntos) {</li>
+        <li>  <span class="num">100</span> -&gt; <span class="str">"Ganaste"</span></li>
+        <li>  <span class="kw">else</span> -&gt; <span class="str">"Sigue intentando"</span></li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide2-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-2-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-2-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides2-1" id="slide2-1-1" checked>
+    <div class="slide" data-title="Sentencia if">
+      <p>El <code>if</code> puede usarse de forma tradicional o como expresión. Si se usa como expresión, el <code>else</code> es obligatorio.</p>
+      <ol class="code">
+        <li><span class="kw">if</span> (puntos &gt; <span class="num">50</span>) {</li>
+        <li>  <span class="mtd">println</span>(<span class="str">"Aprobado"</span>)</li>
+        <li>} <span class="kw">else</span> {</li>
+        <li>  <span class="mtd">println</span>(<span class="str">"Reprobado"</span>)</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="cm">// Como expresión</span></li>
+        <li><span class="kw">val</span> r = <span class="kw">if</span> (a &gt; b) a <span class="kw">else</span> b</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides2-1" id="slide2-1-2">
+    <div class="slide" data-title="Sentencia when">
+      <p>Es el sustituto de <code>switch</code>, pero mucho más potente. Puede evaluar rangos, tipos y condiciones:</p>
+      <ol class="code">
+        <li><span class="kw">when</span> (x) {</li>
+        <li>  <span class="num">1</span> -&gt; <span class="mtd">print</span>(<span class="str">"Es uno"</span>)</li>
+        <li>  <span class="num">2</span>, <span class="num">3</span> -&gt; <span class="mtd">print</span>(<span class="str">"Es 2 o 3"</span>)</li>
+        <li>  <span class="kw">in</span> <span class="num">4</span>..<span class="num">10</span> -&gt; <span class="mtd">print</span>(<span class="str">"En rango 4-10"</span>)</li>
+        <li>  <span class="kw">is</span> <span class="type">String</span> -&gt; <span class="mtd">print</span>(<span class="str">"Es un String"</span>)</li>
+        <li>  <span class="kw">else</span> -&gt; <span class="mtd">print</span>(<span class="str">"Otro"</span>)</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide2-1-2" class="next"></label>
+        <label for="slide2-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide2-1-1" class="dot"></label>
+        <label for="slide2-1-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-2-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-2-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides2-2" id="slide2-2-1" checked>
+    <div class="slide" data-title="Bucle for y Rangos">
+      <p>Itera sobre cualquier cosa que provea un iterador. Se usa mucho con <strong>rangos</strong>:</p>
+      <ol class="code">
+        <li><span class="kw">for</span> (i <span class="kw">in</span> <span class="num">1</span>..<span class="num">5</span>) { <span class="mtd">print</span>(i) } <span class="cm">// 12345</span></li>
+        <li></li>
+        <li><span class="kw">for</span> (i <span class="kw">in</span> <span class="num">5</span> <span class="mtd">downTo</span> <span class="num">1</span> <span class="mtd">step</span> <span class="num">2</span>) { </li>
+        <li>  <span class="mtd">print</span>(i) <span class="cm">// 5, 3, 1</span></li>
+        <li>}</li>
+        <li></li>
+        <li><span class="kw">val</span> lista = <span class="mtd">listOf</span>(<span class="str">"a"</span>, <span class="str">"b"</span>)</li>
+        <li><span class="kw">for</span> (item <span class="kw">in</span> lista) { <span class="mtd">println</span>(item) }</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides2-2" id="slide2-2-2">
+    <div class="slide" data-title="While y Do-While">
+      <p>Funcionan igual que en la mayoría de lenguajes:</p>
+      <ol class="code">
+        <li><span class="kw">var</span> x = <span class="num">5</span></li>
+        <li><span class="kw">while</span> (x &gt; <span class="num">0</span>) {</li>
+        <li>  x--</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="kw">do</span> {</li>
+        <li>  <span class="kw">val</span> y = <span class="mtd">retrieveData</span>()</li>
+        <li>} <span class="kw">while</span> (y != <span class="kw">null</span>)</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide2-2-2" class="next"></label>
+        <label for="slide2-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide2-2-1" class="dot"></label>
+        <label for="slide2-2-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-2-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-2-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides2-3" id="slide2-3-1" checked>
+    <div class="slide" data-title="Saltos y Etiquetas">
+      <p>Kotlin permite el uso de <strong>Labels</strong> (etiquetas) para especificar qué bucle romper o retornar:</p>
+      <ul>
+        <li><code>return</code>: Sale de la función más cercana.</li>
+        <li><code>break</code>: Termina el bucle más cercano.</li>
+        <li><code>continue</code>: Salta a la siguiente iteración.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="cm">// Uso de etiquetas</span></li>
+        <li>loop@ <span class="kw">for</span> (i <span class="kw">in</span> <span class="num">1</span>..<span class="num">10</span>) {</li>
+        <li>  <span class="kw">for</span> (j <span class="kw">in</span> <span class="num">1</span>..<span class="num">10</span>) {</li>
+        <li>    <span class="kw">if</span> (j == <span class="num">5</span>) <span class="kw">break</span>@loop</li>
+        <li>    <span class="cm">// Rompe el bucle externo</span></li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide2-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-2-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-2-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-2-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides2-3" id="slide2-3-1" checked>
+    <div class="slide" data-title="Saltos y Etiquetas">
+      <p>Kotlin permite el uso de <strong>Labels</strong> (etiquetas) para especificar qué bucle romper o retornar:</p>
+      <ul>
+        <li><code>return</code>: Sale de la función más cercana.</li>
+        <li><code>break</code>: Termina el bucle más cercano.</li>
+        <li><code>continue</code>: Salta a la siguiente iteración.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="cm">// Uso de etiquetas</span></li>
+        <li>loop@ <span class="kw">for</span> (i <span class="kw">in</span> <span class="num">1</span>..<span class="num">10</span>) {</li>
+        <li>  <span class="kw">for</span> (j <span class="kw">in</span> <span class="num">1</span>..<span class="num">10</span>) {</li>
+        <li>    <span class="kw">if</span> (j == <span class="num">5</span>) <span class="kw">break</span>@loop</li>
+        <li>    <span class="cm">// Rompe el bucle externo</span></li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide2-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-2-3" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 3-1: Nullable Types -->
+<input type="checkbox" id="modal-card-3-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-3-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides3-1" id="slide3-1-1" checked>
+    <div class="slide" data-title="Declaración con ?">
+      <p>Para permitir que una variable contenga el valor <code>null</code>, debemos declarar el tipo con un signo de interrogación <code>?</code>:</p>
+      <ol class="code">
+        <li><span class="kw">var</span> b: <span class="type">String</span>? = <span class="str">"Hola"</span></li>
+        <li>b = <span class="kw">null</span> <span class="cm">// Correcto</span></li>
+        <li></li>
+        <li><span class="kw">val</span> l = b.length <span class="cm">// Error: b podría ser nulo</span></li>
+      </ol>
+      <p>Si intentas acceder a una propiedad de un tipo nullable directamente, Kotlin te obligará a usar un operador de seguridad.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide3-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-3-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 3-2: Safe Call -->
+<input type="checkbox" id="modal-card-3-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-3-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides3-2" id="slide3-2-1" checked>
+    <div class="slide" data-title="Acceso Seguro">
+      <p>El operador <code>?.</code> ejecuta la llamada solo si la referencia no es nula. Si es nula, devuelve <code>null</code> en lugar de lanzar una excepción:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> nombre: <span class="type">String</span>? = <span class="kw">null</span></li>
+        <li></li>
+        <li><span class="mtd">println</span>(nombre?.length)</li>
+        <li><span class="cm">// Imprime "null" sin romper el programa</span></li>
+      </ol>
+      <p>También es muy útil para cadenas de llamadas (encadenamiento):</p>
+      <ol class="code">
+        <li><span class="cm">// Si alguno es null, el resultado es null</span></li>
+        <li>user?.address?.city?.name</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide3-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-3-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 3-3: Elvis Operator -->
+<input type="checkbox" id="modal-card-3-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-3-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides3-3" id="slide3-3-1" checked>
+    <div class="slide" data-title="Valores por Defecto">
+      <p>El operador Elvis <code>?:</code> permite definir un valor alternativo en caso de que la expresión de la izquierda sea <code>null</code>:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> b: <span class="type">String</span>? = <span class="kw">null</span></li>
+        <li></li>
+        <li><span class="kw">val</span> l = b?.length ?: <span class="num">0</span></li>
+        <li><span class="cm">// Si b es null, l vale 0</span></li>
+      </ol>
+      <p>Incluso puedes usarlo para lanzar excepciones o retornar funciones:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> s = str ?: <span class="kw">return</span> <span class="kw">false</span></li>
+        <li><span class="kw">val</span> d = data ?: <span class="mtd">error</span>(<span class="str">"Sin datos"</span>)</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide3-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-3-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-0" id="slide4-0-1" checked>
+    <div class="slide" data-title="Clases y Herencia">
+      <p>En Kotlin, las clases se declaran con la palabra <code class="kw">class</code>. Por defecto, todas las clases son <strong>final</strong> (no se pueden heredar):</p>
+      <ul>
+        <li>Para permitir la herencia, se debe usar el modificador <code class="kw">open</code>.</li>
+        <li>No es necesario el uso de <code>new</code> para instanciar.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">open class</span> <span class="cls">Animal</span> <span class="cm">// Clase heredable</span></li>
+        <li></li>
+        <li><span class="kw">class</span> <span class="cls">Perro</span> : <span class="cls">Animal</span>() <span class="cm">// Herencia</span></li>
+        <li></li>
+        <li><span class="kw">val</span> miMascota = <span class="cls">Perro</span>() <span class="cm">// Instancia</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-1" id="slide4-1-1" checked>
+    <div class="slide" data-title="Constructor Primario">
+      <p>Se define directamente en la cabecera de la clase. El bloque <code class="kw">init</code> se usa para la lógica de inicialización:</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="cls">User</span>(<span class="kw">val</span> id: <span class="type">Int</span>, <span class="kw">var</span> nick: <span class="type">String</span>) {</li>
+        <li>  <span class="kw">init</span> {</li>
+        <li>    <span class="mtd">println</span>(<span class="str">"Usuario <span class="kw">$</span>nick creado"</span>)</li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides4-1" id="slide4-1-2">
+    <div class="slide" data-title="Constructor Secundario">
+      <p>Se definen con la palabra <code class="kw">constructor</code>. Deben llamar al constructor primario usando <code>this</code>:</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="cls">Persona</span>(<span class="kw">val</span> nombre: <span class="type">String</span>) {</li>
+        <li>  <span class="kw">var</span> edad: <span class="type">Int</span> = <span class="num">0</span></li>
+        <li>  </li>
+        <li>  <span class="kw">constructor</span>(nombre: <span class="type">String</span>, edad: <span class="type">Int</span>) : <span class="kw">this</span>(nombre) {</li>
+        <li>    <span class="kw">this</span>.edad = edad</li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-1-2" class="next"></label>
+        <label for="slide4-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-1-1" class="dot"></label>
+        <label for="slide4-1-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-2" id="slide4-2-1" checked>
+    <div class="slide" data-title="Sintaxis y Expresiones">
+      <p>Las funciones pueden tener valores por defecto y usarse como expresiones simples:</p>
+      <ol class="code">
+        <li><span class="kw">fun</span> <span class="mtd">sumar</span>(a: <span class="type">Int</span>, b: <span class="type">Int</span>): <span class="type">Int</span> {</li>
+        <li>  <span class="kw">return</span> a + b</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="cm">// Función de expresión única</span></li>
+        <li><span class="kw">fun</span> <span class="mtd">doble</span>(x: <span class="type">Int</span>) = x * <span class="num">2</span></li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides4-2" id="slide4-2-2">
+    <div class="slide" data-title="Argumentos Nombrados">
+      <p>Permiten llamar a una función especificando el nombre del parámetro, mejorando la legibilidad:</p>
+      <ol class="code">
+        <li><span class="kw">fun</span> <span class="mtd">formato</span>(text: <span class="type">String</span>, upper: <span class="type">Boolean</span> = <span class="kw">false</span>) { }</li>
+        <li></li>
+        <li><span class="cm">// Llamada usando nombres</span></li>
+        <li><span class="mtd">formato</span>(upper = <span class="kw">true</span>, text = <span class="str">"Hola"</span>)</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide4-2-2" class="next"></label>
+        <label for="slide4-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide4-2-1" class="dot"></label>
+        <label for="slide4-2-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-3" id="slide4-3-1" checked>
+    <div class="slide" data-title="Visibilidad">
+      <p>Kotlin tiene 4 modificadores de visibilidad. Por defecto todo es <code class="kw">public</code>.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Modificador</th>
+            <th>Visibilidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code class="kw">public</code></td><td>Visible en todas partes.</td></tr>
+          <tr><td><code class="kw">private</code></td><td>Solo dentro de la clase/archivo.</td></tr>
+          <tr><td><code class="kw">protected</code></td><td>Clase y subclases.</td></tr>
+          <tr><td><code class="kw">internal</code></td><td>Visible dentro del mismo módulo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-4" id="slide4-4-1" checked>
+    <div class="slide" data-title="Object y Companion">
+      <p>Kotlin usa la palabra <code class="kw">object</code> para Singletons y miembros estáticos:</p>
+      <ul>
+        <li><strong>Object declaration:</strong> Crea un Singleton instantáneo.</li>
+        <li><strong>Companion Object:</strong> Equivale a miembros <code>static</code> de Java.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">object</span> <span class="cls">Database</span> {</li>
+        <li>  <span class="kw">val</span> name = <span class="str">"MySQL"</span></li>
+        <li>}</li>
+        <li></li>
+        <li><span class="kw">class</span> <span class="cls">App</span> {</li>
+        <li>  <span class="kw">companion object</span> {</li>
+        <li>    <span class="kw">fun</span> <span class="mtd">create</span>() = <span class="cls">App</span>()</li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-4" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-5" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-5" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-5" id="slide4-5-1" checked>
+    <div class="slide" data-title="Clases de Datos">
+      <p>Las <code class="kw">data class</code> sirven para almacenar datos. Kotlin genera automáticamente <code>toString()</code>, <code>equals()</code>, <code>hashCode()</code> y <code>copy()</code>:</p>
+      <ol class="code">
+        <li><span class="kw">data class</span> <span class="cls">Product</span>(<span class="kw">val</span> id: <span class="type">Int</span>, <span class="kw">val</span> name: <span class="type">String</span>)</li>
+        <li></li>
+        <li><span class="kw">val</span> p1 = <span class="cls">Product</span>(<span class="num">1</span>, <span class="str">"Bici"</span>)</li>
+        <li><span class="cm">// Función copy</span></li>
+        <li><span class="kw">val</span> p2 = p1.<span class="mtd">copy</span>(name = <span class="str">"Moto"</span>)</li>
+      </ol>
+      <p>Requisitos: Debe tener al menos un parámetro en el constructor primario y todos deben ser <code>val</code> o <code>var</code>.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-5-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-5" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-6" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-6" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-6" id="slide4-6-1" checked>
+    <div class="slide" data-title="Extensión de Clases">
+      <p>En Kotlin, todas las clases son <code>final</code> por defecto. Para permitir la herencia, se usa la palabra clave <code class="kw">open</code>:</p>
+      <ul>
+        <li>Se usa <code>:</code> seguido del constructor de la clase base.</li>
+        <li>Para sobrescribir métodos, el padre debe ser <code>open</code> y el hijo usar <code class="kw">override</code>.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">open class</span> <span class="cls">Vehiculo</span> {</li>
+        <li>  <span class="kw">open fun</span> <span class="mtd">moverse</span>() = <span class="mtd">println</span>(<span class="str">"Rodando"</span>)</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="kw">class</span> <span class="cls">Bici</span> : <span class="cls">Vehiculo</span>() {</li>
+        <li>  <span class="kw">override fun</span> <span class="mtd">moverse</span>() {</li>
+        <li>    <span class="mtd">println</span>(<span class="str">"Pedaleando"</span>)</li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-6-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-6" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-7" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-7" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-7" id="slide4-7-1" checked>
+    <div class="slide" data-title="Interfaces y Clases Abstractas">
+      <p>Kotlin soporta polimorfismo mediante interfaces y clases abstractas:</p>
+      <ul>
+        <li><strong>Abstract:</strong> No se pueden instanciar y pueden tener estado.</li>
+        <li><strong>Interface:</strong> No pueden almacenar estado (pero sí tener propiedades abstractas).</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">interface</span> <span class="cls">Reproductor</span> {</li>
+        <li>  <span class="kw">fun</span> <span class="mtd">play</span>()</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="kw">class</span> <span class="cls">Musica</span> : <span class="cls">Reproductor</span> {</li>
+        <li>  <span class="kw">override fun</span> <span class="mtd">play</span>() { <span class="cm">/* ... */</span> }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-7-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-7" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-8" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-8" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-8" id="slide4-8-1" checked>
+    <div class="slide" data-title="Enumeraciones">
+      <p>Se usan para representar un conjunto fijo de constantes. Son clases completas que pueden tener constructores y métodos:</p>
+      <ol class="code">
+        <li><span class="kw">enum class</span> <span class="cls">Direccion</span>(<span class="kw">val</span> grado: <span class="type">Int</span>) {</li>
+        <li>  NORTH(<span class="num">0</span>), SOUTH(<span class="num">180</span>), </li>
+        <li>  EAST(<span class="num">90</span>), WEST(<span class="num">270</span>);</li>
+        <li>  </li>
+        <li>  <span class="kw">fun</span> <span class="mtd">descripcion</span>() = <span class="str">"Grados: <span class="kw">$</span>grado"</span></li>
+        <li>}</li>
+      </ol>
+      <p>Son muy potentes cuando se combinan con la expresión <code class="kw">when</code>.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-8-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-8" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-9" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-9" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-9" id="slide4-9-1" checked>
+    <div class="slide" data-title="Tipos Genéricos">
+      <p>Permiten reutilizar código para diferentes tipos de datos manteniendo la seguridad de tipos:</p>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="cls">Caja</span>&lt;T&gt;(item: T) {</li>
+        <li>  <span class="kw">var</span> contenido = item</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="kw">val</span> cajaInt = <span class="cls">Caja</span>&lt;<span class="type">Int</span>&gt;(<span class="num">10</span>)</li>
+        <li><span class="kw">val</span> cajaStr = <span class="cls">Caja</span>(<span class="str">"Item"</span>) <span class="cm">// Inferencia</span></li>
+      </ol>
+      <p>El parámetro <code>T</code> actúa como un marcador de posición que se define al instanciar.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-9-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-9" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-4-10" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-4-10" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides4-10" id="slide4-10-1" checked>
+    <div class="slide" data-title="Clases Anidadas e Internas">
+      <p>Kotlin distingue entre clases que solo viven dentro de otra y clases que pueden acceder a sus miembros:</p>
+      <ul>
+        <li><strong>Nested (Anidada):</strong> Estática por defecto. No accede a la clase externa.</li>
+        <li><strong>Inner (Interna):</strong> Usa la palabra <code class="kw">inner</code>. Sí accede a miembros externos.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="cls">Externa</span> {</li>
+        <li>  <span class="kw">private val</span> bar = <span class="num">1</span></li>
+        <li>  </li>
+        <li>  <span class="kw">class</span> <span class="cls">Anidada</span> { <span class="cm">/* No ve 'bar' */</span> }</li>
+        <li>  </li>
+        <li>  <span class="kw">inner class</span> <span class="cls">Interna</span> {</li>
+        <li>    <span class="kw">fun</span> <span class="mtd">foo</span>() = bar <span class="cm">// Acceso OK</span></li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide4-10-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-4-10" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5-0" id="slide5-0-1" checked>
+    <div class="slide" data-title="Conceptos Avanzados">
+      <p>Kotlin ofrece herramientas potentes que van más allá de la POO tradicional:</p>
+      <ul>
+        <li><strong>Programación Funcional:</strong> Uso de funciones como ciudadanos de primera clase.</li>
+        <li><strong>Seguridad de Tipos:</strong> Jerarquías restringidas con Sealed Classes.</li>
+        <li><strong>Extensibilidad:</strong> Añadir funciones a clases sin usar herencia.</li>
+      </ul>
+      <p>Estas características permiten escribir código más expresivo, seguro y fácil de mantener, reduciendo el "boilerplate" típico de otros lenguajes.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide5-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5-1" id="slide5-1-1" checked>
+    <div class="slide" data-title="Expresiones Lambda">
+      <p>Las lambdas son funciones anónimas que se pueden tratar como valores. Se encierran entre llaves <code>{ }</code>:</p>
+      <ol class="code">
+        <li><span class="cm">// Sintaxis: { params -> cuerpo }</span></li>
+        <li><span class="kw">val</span> sumar = { a: <span class="type">Int</span>, b: <span class="type">Int</span> -> a + b }</li>
+        <li></li>
+        <li><span class="cm">// Si solo hay un parámetro, se usa 'it'</span></li>
+        <li><span class="kw">val</span> doble = { <span class="kw">it</span> * <span class="num">2</span> }</li>
+        <li></li>
+        <li><span class="mtd">println</span>(sumar(<span class="num">5</span>, <span class="num">10</span>)) <span class="cm">// 15</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide5-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5-2" id="slide5-2-1" checked>
+    <div class="slide" data-title="Funciones de Orden Superior">
+      <p>Son funciones que reciben otras funciones como parámetros o devuelven una función:</p>
+      <ol class="code">
+        <li><span class="kw">fun</span> <span class="mtd">operar</span>(a: <span class="type">Int</span>, b: <span class="type">Int</span>, operacion: (<span class="type">Int</span>, <span class="type">Int</span>) -> <span class="type">Int</span>) {</li>
+        <li>  <span class="kw">val</span> res = operacion(a, b)</li>
+        <li>  <span class="mtd">println</span>(<span class="str">"Resultado: <span class="kw">$</span>res"</span>)</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="cm">// Invocación</span></li>
+        <li><span class="mtd">operar</span>(<span class="num">5</span>, <span class="num">5</span>) { x, y -> x * y }</li>
+      </ol>
+      <p>Si la función es el último parámetro, se puede sacar fuera de los paréntesis (Trailing Lambda).</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide5-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5-3" id="slide5-3-1" checked>
+    <div class="slide" data-title="Clases Selladas">
+      <p>Las <code class="kw">sealed class</code> representan jerarquías de clases restringidas. Son como Enums pero con estado propio por instancia:</p>
+      <ol class="code">
+        <li><span class="kw">sealed class</span> <span class="cls">Result</span></li>
+        <li><span class="kw">data class</span> <span class="cls">Success</span>(<span class="kw">val</span> data: <span class="type">String</span>) : <span class="cls">Result</span>()</li>
+        <li><span class="kw">object</span> <span class="cls">Loading</span> : <span class="cls">Result</span>()</li>
+        <li><span class="kw">data class</span> <span class="cls">Error</span>(<span class="kw">val</span> e: <span class="type">Exception</span>) : <span class="cls">Result</span>()</li>
+      </ol>
+      <p>Al usarlas en un <code>when</code>, el compilador verifica que cubras todos los casos (Exhaustividad).</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide5-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-5-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-5-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides5-4" id="slide5-4-1" checked>
+    <div class="slide" data-title="Funciones de Extensión">
+      <p>Permiten añadir nuevas funciones a clases existentes sin modificar su código fuente original:</p>
+      <ol class="code">
+        <li><span class="cm">// Añadir función a la clase String</span></li>
+        <li><span class="kw">fun</span> <span class="type">String</span>.<span class="mtd">limpiar</span>(): <span class="type">String</span> {</li>
+        <li>  <span class="kw">return</span> <span class="kw">this</span>.trim().lowercase()</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="kw">val</span> input = <span class="str">"  HOLA  "</span></li>
+        <li><span class="mtd">println</span>(input.<span class="mtd">limpiar</span>()) <span class="cm">// "hola"</span></li>
+      </ol>
+      <p>Dentro de la función, <code class="kw">this</code> se refiere al objeto receptor (la instancia de la clase).</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide5-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-5-4" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 6-0: Coroutines -->
+<input type="checkbox" id="modal-card-6-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6-0" id="slide6-0-1" checked>
+    <div class="slide" data-title="Conceptos Básicos">
+      <p>Las corrutinas son "hilos ligeros". Permiten ejecutar código asíncrono de forma secuencial sin bloquear el hilo principal (UI Thread):</p>
+      <ul>
+        <li><strong>Suspensión:</strong> Una corrutina puede pausarse sin bloquear el hilo donde se ejecuta.</li>
+        <li><strong>Ligereza:</strong> Puedes ejecutar miles de corrutinas con un consumo de memoria mínimo comparado con los <code>Threads</code>.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="cm">// No bloquea, solo suspende</span></li>
+        <li><span class="kw">delay</span>(<span class="num">1000</span>) </li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide6-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 6-1: Launch y Async -->
+<input type="checkbox" id="modal-card-6-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6-1" id="slide6-1-1" checked>
+    <div class="slide" data-title="Constructores de Corrutinas">
+      <p>Existen dos formas principales de iniciar una corrutina dependiendo de si esperamos un resultado o no:</p>
+      <ul>
+        <li><code class="kw">launch</code>: "Dispara y olvida". Devuelve un <code>Job</code>.</li>
+        <li><code class="kw">async</code>: Devuelve un <code>Deferred&lt;T&gt;</code>. Se usa para obtener un valor con <code class="mtd">.await()</code>.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">val</span> job = <span class="mtd">launch</span> { <span class="mtd">hacerTarea</span>() }</li>
+        <li></li>
+        <li><span class="kw">val</span> deferred = <span class="mtd">async</span> { <span class="mtd">obtenerDato</span>() }</li>
+        <li><span class="kw">val</span> resultado = deferred.<span class="mtd">await</span>()</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide6-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 6-2: Dispatchers -->
+<input type="checkbox" id="modal-card-6-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6-2" id="slide6-2-1" checked>
+    <div class="slide" data-title="Hilos de Ejecución">
+      <p>Los Dispatchers indican en qué hilo o grupo de hilos se ejecutará la corrutina:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Dispatcher</th>
+            <th>Uso recomendado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>Main</code></td><td>UI, interacciones con el usuario.</td></tr>
+          <tr><td><code>IO</code></td><td>Red, bases de datos, archivos.</td></tr>
+          <tr><td><code>Default</code></td><td>Uso intensivo de CPU (filtros, cálculos).</td></tr>
+          <tr><td><code>Unconfined</code></td><td>No confinado a un hilo específico.</td></tr>
+        </tbody>
+      </table>
+      <ol class="code">
+        <li><span class="mtd">launch</span>(<span class="cls">Dispatchers</span>.<span class="type">IO</span>) { </li>
+        <li>  <span class="cm">// Código de red aquí</span></li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide6-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 6-3: Scopes -->
+<input type="checkbox" id="modal-card-6-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6-3" id="slide6-3-1" checked>
+    <div class="slide" data-title="Ámbitos de Corrutinas">
+      <p>El <code>CoroutineScope</code> controla el ciclo de vida de las corrutinas. Si el scope se cancela, todas sus corrutinas mueren:</p>
+      <ul>
+        <li><code>GlobalScope</code>: Vive mientras dure la app (no recomendado).</li>
+        <li><code>viewModelScope</code>: (Android) Muere con el ViewModel.</li>
+        <li><code>lifecycleScope</code>: (Android) Muere con la Activity/Fragment.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">class</span> <span class="cls">MyActivity</span> : <span class="cls">Scope</span> {</li>
+        <li>  <span class="kw">fun</span> <span class="mtd">load</span>() {</li>
+        <li>    <span class="mtd">lifecycleScope</span>.<span class="mtd">launch</span> { ... }</li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide6-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-3" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 6-4: Flows -->
+<input type="checkbox" id="modal-card-6-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6-4" id="slide6-4-1" checked>
+    <div class="slide" data-title="Flujos de Datos">
+      <p>Un <code>Flow</code> emite múltiples valores de forma secuencial a lo largo del tiempo (similar a una lista, pero asíncrona):</p>
+      <ol class="code">
+        <li><span class="kw">fun</span> <span class="mtd">numFlow</span>() = <span class="mtd">flow</span> {</li>
+        <li>  <span class="kw">for</span> (i <span class="kw">in</span> <span class="num">1</span>..<span class="num">3</span>) {</li>
+        <li>    <span class="kw">delay</span>(<span class="num">100</span>)</li>
+        <li>    <span class="mtd">emit</span>(i) <span class="cm">// Emite valor</span></li>
+        <li>  }</li>
+        <li>}</li>
+        <li></li>
+        <li><span class="cm">// Para consumirlo:</span></li>
+        <li><span class="mtd">numFlow</span>().<span class="mtd">collect</span> { v -&gt; <span class="mtd">print</span>(v) }</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide6-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-4" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 6-5: Suspend Functions -->
+<input type="checkbox" id="modal-card-6-5" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-6-5" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides6-5" id="slide6-5-1" checked>
+    <div class="slide" data-title="Funciones Suspendibles">
+      <p>Son funciones marcadas con la palabra clave <code class="kw">suspend</code>. Pueden llamar a otras funciones de suspensión y pausar la ejecución sin bloquear:</p>
+      <ul>
+        <li>Solo pueden ser llamadas desde otra <code>suspend function</code> o desde una corrutina.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">suspend fun</span> <span class="mtd">fetchData</span>(): <span class="type">String</span> {</li>
+        <li>  <span class="kw">val</span> res = <span class="mtd">apiCall</span>() <span class="cm">// Suspensión</span></li>
+        <li>  <span class="kw">return</span> <span class="str">"Dato: <span class="kw">$</span>res"</span></li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide6-5-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-6-5" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-0" id="slide7-0-1" checked>
+    <div class="slide" data-title="Jerarquía de Colecciones">
+      <p>Kotlin proporciona una jerarquía clara para manejar grupos de objetos. Se divide principalmente en tres tipos:</p>
+      <ul>
+        <li><strong>List:</strong> Colección ordenada con acceso por índice. Admite duplicados.</li>
+        <li><strong>Set:</strong> Colección de elementos únicos. No garantiza orden.</li>
+        <li><strong>Map:</strong> Conjunto de pares clave-valor. Las claves son únicas.</li>
+      </ul>
+      <p>A diferencia de Java, Kotlin separa las interfaces en <strong>Lectura</strong> y <strong>Mutables</strong>.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide7-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-0" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-1" id="slide7-1-1" checked>
+    <div class="slide" data-title="Arreglos en Kotlin">
+      <p>Los <code>Array</code> tienen un tamaño fijo. Se representan por la clase <code class="cls">Array</code> o clases especializadas para tipos primitivos:</p>
+      <ol class="code">
+        <li><span class="cm">// Array de Strings</span></li>
+        <li><span class="kw">val</span> arr = <span class="mtd">arrayOf</span>(<span class="str">"A"</span>, <span class="str">"B"</span>, <span class="str">"C"</span>)</li>
+        <li></li>
+        <li><span class="cm">// Arrays de tipos primitivos (más eficientes)</span></li>
+        <li><span class="kw">val</span> ints = <span class="mtd">intArrayOf</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>)</li>
+        <li></li>
+        <li><span class="cm">// Acceso</span></li>
+        <li><span class="mtd">println</span>(arr[<span class="num">0</span>]) <span class="cm">// "A"</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide7-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-1" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-2" id="slide7-2-1" checked>
+    <div class="slide" data-title="Listas (List)">
+      <p>Es la colección más común. Permite elementos repetidos y mantiene el orden de inserción:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> lista = <span class="mtd">listOf</span>(<span class="str">"Kotlin"</span>, <span class="str">"Java"</span>, <span class="str">"C#"</span>)</li>
+        <li></li>
+        <li><span class="mtd">println</span>(lista.first()) <span class="cm">// "Kotlin"</span></li>
+        <li><span class="mtd">println</span>(lista[<span class="num">1</span>])     <span class="cm">// "Java"</span></li>
+        <li><span class="mtd">println</span>(lista.last())  <span class="cm">// "C#"</span></li>
+      </ol>
+      <p>Nota: <code class="mtd">listOf</code> crea una lista inmutable (solo lectura).</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide7-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-2" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-3" id="slide7-3-1" checked>
+    <div class="slide" data-title="Conjuntos (Set)">
+      <p>Un <code>Set</code> no permite elementos duplicados. Útil para verificar pertenencia:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> nums = <span class="mtd">setOf</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">1</span>)</li>
+        <li></li>
+        <li><span class="mtd">println</span>(nums.size) <span class="cm">// 3 (el duplicado se ignora)</span></li>
+        <li><span class="mtd">println</span>(nums.<span class="mtd">contains</span>(<span class="num">2</span>)) <span class="cm">// true</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide7-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-3" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-4" id="slide7-4-1" checked>
+    <div class="slide" data-title="Mapas (Clave-Valor)">
+      <p>Los mapas almacenan pares. Las claves son únicas, pero los valores pueden repetirse:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> capitales = <span class="mtd">mapOf</span>(</li>
+        <li>  <span class="str">"ES"</span> <span class="kw">to</span> <span class="str">"Madrid"</span>,</li>
+        <li>  <span class="str">"FR"</span> <span class="kw">to</span> <span class="str">"París"</span></li>
+        <li>)</li>
+        <li></li>
+        <li><span class="mtd">println</span>(capitales[<span class="str">"ES"</span>]) <span class="cm">// "Madrid"</span></li>
+        <li><span class="mtd">println</span>(capitales.<span class="mtd">keys</span>)   <span class="cm">// ["ES", "FR"]</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide7-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-4" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-5" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-5" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-5" id="slide7-5-1" checked>
+    <div class="slide" data-title="Modificando Colecciones">
+      <p>Por seguridad, Kotlin prefiere colecciones inmutables. Para modificar, usa la versión <strong>Mutable</strong>:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Solo Lectura</th>
+            <th>Mutable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>listOf()</code></td><td><code>mutableListOf()</code></td></tr>
+          <tr><td><code>setOf()</code></td><td><code>mutableSetOf()</code></td></tr>
+          <tr><td><code>mapOf()</code></td><td><code>mutableMapOf()</code></td></tr>
+        </tbody>
+      </table>
+      <ol class="code">
+        <li><span class="kw">val</span> mut = <span class="mtd">mutableListOf</span>(<span class="num">1</span>)</li>
+        <li>mut.<span class="mtd">add</span>(<span class="num">2</span>) <span class="cm">// OK</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide7-5-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-5" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-6" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-6" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-6" id="slide7-6-1" checked>
+    <div class="slide" data-title="Evaluación Lazy">
+      <p>Las <code>Sequence</code> ejecutan las operaciones de forma "perezosa" (Lazy). Son ideales para grandes volúmenes de datos:</p>
+      <ul>
+        <li>No crean colecciones intermedias.</li>
+        <li>Solo procesan elementos cuando se solicita un resultado final.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">val</span> seq = <span class="mtd">listOf</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>).<span class="mtd">asSequence</span>()</li>
+        <li>  .<span class="mtd">filter</span> { <span class="kw">it</span> % <span class="num">2</span> == <span class="num">0</span> }</li>
+        <li>  .<span class="mtd">map</span> { <span class="kw">it</span> * <span class="num">2</span> }</li>
+        <li>  .<span class="mtd">toList</span>() <span class="cm">// Aquí se ejecuta todo</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide7-6-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-6" class="close-button"></label>
+  </div>
+</div>
+
+<input type="checkbox" id="modal-card-7-7" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-7" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-7" id="slide7-7-1" checked>
+    <div class="slide" data-title="Ordenación Personalizada">
+      <p>Para ordenar colecciones de objetos, se usan funciones de comparación:</p>
+      <ol class="code">
+        <li><span class="kw">data class</span> <span class="cls">User</span>(<span class="kw">val</span> name: <span class="type">String</span>, <span class="kw">val</span> age: <span class="type">Int</span>)</li>
+        <li><span class="kw">val</span> users = <span class="mtd">listOf</span>(...)</li>
+        <li></li>
+        <li><span class="cm">// Ordenar por edad</span></li>
+        <li><span class="kw">val</span> sorted = users.<span class="mtd">sortedBy</span> { <span class="kw">it</span>.age }</li>
+        <li></li>
+        <li><span class="cm">// Múltiples criterios</span></li>
+        <li><span class="kw">val</span> multi = users.<span class="mtd">sortedWith</span>(</li>
+        <li>  <span class="mtd">compareBy</span>({ <span class="kw">it</span>.name }, { <span class="kw">it</span>.age })</li>
+        <li>)</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide7-7-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-7" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 7-8: Iterators -->
+<input type="checkbox" id="modal-card-7-8" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-8" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-8" id="slide7-8-1" checked>
+    <div class="slide" data-title="Uso de Iteradores">
+      <p>Un <code>Iterator</code> permite recorrer una colección secuencialmente sin exponer su estructura interna. Es la base de los bucles <code>for</code>:</p>
+      <ul>
+        <li><code class="mtd">next()</code>: Obtiene el siguiente elemento.</li>
+        <li><code class="mtd">hasNext()</code>: Verifica si quedan elementos.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">val</span> lista = <span class="mtd">listOf</span>(<span class="str">"A"</span>, <span class="str">"B"</span>)</li>
+        <li><span class="kw">val</span> it = lista.<span class="mtd">iterator</span>()</li>
+        <li></li>
+        <li><span class="kw">while</span> (it.<span class="mtd">hasNext</span>()) {</li>
+        <li>  <span class="mtd">println</span>(it.<span class="mtd">next</span>())</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides7-8" id="slide7-8-2">
+    <div class="slide" data-title="MutableIterator">
+      <p>Si la colección es mutable, el <code>MutableIterator</code> permite eliminar elementos de forma segura mientras se itera:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> nums = <span class="mtd">mutableListOf</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>)</li>
+        <li><span class="kw">val</span> it = nums.<span class="mtd">iterator</span>()</li>
+        <li></li>
+        <li><span class="kw">while</span> (it.<span class="mtd">hasNext</span>()) {</li>
+        <li>  <span class="kw">if</span> (it.<span class="mtd">next</span>() % <span class="num">2</span> == <span class="num">0</span>) {</li>
+        <li>    it.<span class="mtd">remove</span>() <span class="cm">// Elimina el 2</span></li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-8-2" class="next"></label>
+        <label for="slide7-8-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-8-1" class="dot"></label>
+        <label for="slide7-8-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-8" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 7-9: Collection Operations -->
+<input type="checkbox" id="modal-card-7-9" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-7-9" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides7-9" id="slide7-9-1" checked>
+    <div class="slide" data-title="Transformación y Filtrado">
+      <p>Kotlin ofrece funciones de orden superior para procesar colecciones de forma declarativa:</p>
+      <ul>
+        <li><code class="mtd">map</code>: Transforma cada elemento.</li>
+        <li><code class="mtd">filter</code>: Selecciona elementos bajo una condición.</li>
+        <li><code class="mtd">any / all</code>: Comprueba condiciones lógicas.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">val</span> numbers = <span class="mtd">listOf</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>)</li>
+        <li></li>
+        <li><span class="kw">val</span> pares = numbers.<span class="mtd">filter</span> { <span class="kw">it</span> % <span class="num">2</span> == <span class="num">0</span> }</li>
+        <li><span class="kw">val</span> dobles = numbers.<span class="mtd">map</span> { <span class="kw">it</span> * <span class="num">2</span> }</li>
+        <li><span class="kw">val</span> hayMayores = numbers.<span class="mtd">any</span> { <span class="kw">it</span> > <span class="num">10</span> }</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides7-9" id="slide7-9-2">
+    <div class="slide" data-title="Agregación y Búsqueda">
+      <p>Operaciones para reducir la colección a un único valor o encontrar elementos específicos:</p>
+      <ul>
+        <li><code class="mtd">reduce / fold</code>: Acumula valores.</li>
+        <li><code class="mtd">find</code>: Devuelve el primero que cumpla la condición (o null).</li>
+        <li><code class="mtd">groupBy</code>: Crea un mapa agrupando por una clave.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="cm">// Suma todos los elementos</span></li>
+        <li><span class="kw">val</span> suma = numbers.<span class="mtd">reduce</span> { acc, n -> acc + n }</li>
+        <li></li>
+        <li><span class="cm">// Agrupar por paridad</span></li>
+        <li><span class="kw">val</span> grupos = numbers.<span class="mtd">groupBy</span> { </li>
+        <li>  <span class="kw">if</span> (<span class="kw">it</span> % <span class="num">2</span> == <span class="num">0</span>) <span class="str">"par"</span> <span class="kw">else</span> <span class="str">"impar"</span> </li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide7-9-2" class="next"></label>
+        <label for="slide7-9-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide7-9-1" class="dot"></label>
+        <label for="slide7-9-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-7-9" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 8-0: Networking -->
+<input type="checkbox" id="modal-card-8-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-8-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides8-0" id="slide8-0-1" checked>
+    <div class="slide" data-title="Networking en Kotlin">
+      <p>Kotlin permite manejar conexiones de red de forma eficiente gracias a las <strong>corrutinas</strong>. Los puntos clave son:</p>
+      <ul>
+        <li><strong>No bloqueo:</strong> Las peticiones se suspenden, no detienen el hilo.</li>
+        <li><strong>Serialización:</strong> Uso de <code>kotlinx.serialization</code> para convertir JSON a objetos.</li>
+        <li><strong>Dispatcher:</strong> Siempre se deben ejecutar en <code>Dispatchers.IO</code>.</li>
+      </ul>
+      <p>Aunque existen librerías como Retrofit (Java), <strong>Ktor</strong> es la solución nativa multiobjetivo de JetBrains.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide8-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-8-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 8-1: Ktor -->
+<input type="checkbox" id="modal-card-8-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-8-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides8-1" id="slide8-1-1" checked>
+    <div class="slide" data-title="Configuración de Ktor">
+      <p>Ktor funciona mediante <strong>motores</strong> (como CIO, Android o OkHttp) y <strong>plugins</strong> para añadir funcionalidades:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> client = <span class="cls">HttpClient</span>(<span class="cls">CIO</span>) {</li>
+        <li>  <span class="mtd">install</span>(<span class="cls">ContentNegotiation</span>) {</li>
+        <li>    <span class="mtd">json</span>() <span class="cm">// Soporte para JSON</span></li>
+        <li>  }</li>
+        <li>}</li>
+      </ol>
+      <p>Es importante cerrar el cliente con <code class="mtd">client.close()</code> cuando ya no se necesite para liberar recursos.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide8-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-8-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 8-2: HTTP Clients -->
+<input type="checkbox" id="modal-card-8-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-8-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides8-2" id="slide8-2-1" checked>
+    <div class="slide" data-title="Peticiones GET y POST">
+      <p>Realizar peticiones es directo usando las funciones de extensión del cliente:</p>
+      <ol class="code">
+        <li><span class="cm">// Petición GET</span></li>
+        <li><span class="kw">val</span> user: <span class="cls">User</span> = client.<span class="mtd">get</span>(<span class="str">"https://api.com/u/1"</span>).<span class="mtd">body</span>()</li>
+        <li></li>
+        <li><span class="cm">// Petición POST</span></li>
+        <li>client.<span class="mtd">post</span>(<span class="str">"https://api.com/u"</span>) {</li>
+        <li>  <span class="mtd">setBody</span>(<span class="cls">User</span>(<span class="str">"Alex"</span>))</li>
+        <li>  <span class="mtd">contentType</span>(<span class="cls">ContentType</span>.<span class="cls">Application</span>.<span class="cls">Json</span>)</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides8-2" id="slide8-2-2">
+    <div class="slide" data-title="Manejo de Errores">
+      <p>Es vital manejar los estados de respuesta HTTP para evitar fallos:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> response = client.<span class="mtd">get</span>(url)</li>
+        <li></li>
+        <li><span class="kw">if</span> (response.status.<span class="mtd">isSuccess</span>()) {</li>
+        <li>  <span class="cm">// Procesar body</span></li>
+        <li>} <span class="kw">else</span> {</li>
+        <li>  <span class="mtd">println</span>(<span class="str">"Error: <span class="kw">${</span>response.status.value<span class="kw">}</span>"</span>)</li>
+        <li>}</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide8-2-2" class="next"></label>
+        <label for="slide8-2-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide8-2-1" class="dot"></label>
+        <label for="slide8-2-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-8-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 9-0: Seguridad -->
+<input type="checkbox" id="modal-card-9-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-9-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides9-0" id="slide9-0-1" checked>
+    <div class="slide" data-title="Principios de Seguridad">
+      <p>Kotlin aprovecha la infraestructura de la JVM para ofrecer seguridad robusta. Los pilares básicos incluyen:</p>
+      <ul>
+        <li><strong>Inmutabilidad:</strong> El uso de <code>val</code> previene modificaciones accidentales de datos sensibles.</li>
+        <li><strong>Tipado Seguro:</strong> Evita desbordamientos de memoria y errores comunes en tiempo de ejecución.</li>
+        <li><strong>Manejo de Nulos:</strong> Previene vulnerabilidades causadas por referencias nulas inesperadas.</li>
+      </ul>
+      <p>Es fundamental no guardar contraseñas en texto plano y utilizar siempre <strong>TLS/HTTPS</strong> para la transmisión de datos.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide9-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-9-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 9-1: Cifrado -->
+<input type="checkbox" id="modal-card-9-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-9-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides9-1" id="slide9-1-1" checked>
+    <div class="slide" data-title="Cifrado Simétrico (AES)">
+      <p>El cifrado permite proteger datos mediante una clave. AES es el estándar recomendado para cifrado simétrico:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> cipher = <span class="cls">Cipher</span>.<span class="mtd">getInstance</span>(<span class="str">"AES/GCM/NoPadding"</span>)</li>
+        <li><span class="kw">val</span> keySpec = <span class="cls">SecretKeySpec</span>(keyBytes, <span class="str">"AES"</span>)</li>
+        <li></li>
+        <li><span class="cm">// Encriptar</span></li>
+        <li>cipher.<span class="mtd">init</span>(<span class="cls">Cipher</span>.<span class="type">ENCRYPT_MODE</span>, keySpec)</li>
+        <li><span class="kw">val</span> encrypted = cipher.<span class="mtd">doFinal</span>(textBytes)</li>
+      </ol>
+      <p><strong>Nota:</strong> Utiliza siempre modos seguros como <code>GCM</code> en lugar de <code>ECB</code> para evitar patrones en los datos cifrados.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide9-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-9-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 9-2: Hashing -->
+<input type="checkbox" id="modal-card-9-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-9-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides9-2" id="slide9-2-1" checked>
+    <div class="slide" data-title="Hashing Seguro">
+      <p>El hashing crea una "huella digital" de un dato. Para contraseñas, se debe usar algoritmos como <strong>BCrypt</strong> o <strong>Argon2</strong>, nunca MD5 o SHA1:</p>
+      <ol class="code">
+        <li><span class="cm">// Ejemplo básico con SHA-256 (solo para integridad)</span></li>
+        <li><span class="kw">fun</span> <span class="mtd">hash</span>(input: <span class="type">String</span>): <span class="type">String</span> {</li>
+        <li>  <span class="kw">val</span> bytes = <span class="cls">MessageDigest</span>.<span class="mtd">getInstance</span>(<span class="str">"SHA-256"</span>)</li>
+        <li>    .<span class="mtd">digest</span>(input.<span class="mtd">toByteArray</span>())</li>
+        <li>  <span class="kw">return</span> bytes.<span class="mtd">joinToString</span>(<span class="str">""</span>) { <span class="str">"%02x"</span>.<span class="mtd">format</span>(<span class="kw">it</span>) }</li>
+        <li>}</li>
+      </ol>
+      <p><strong>Salting:</strong> Añadir un valor aleatorio único (salt) antes del hashing es vital para prevenir ataques de tablas arcoíris.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide9-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-9-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 10-0: Kotlin Stdlib -->
+<input type="checkbox" id="modal-card-10-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-10-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides10-0" id="slide10-0-1" checked>
+    <div class="slide" data-title="Kotlin Standard Library">
+      <p>La <strong>Stdlib</strong> proporciona las herramientas esenciales para el día a día sin necesidad de dependencias externas. Incluye:</p>
+      <ul>
+        <li><strong>Extensiones:</strong> Funciones añadidas a clases de Java (ej. String, Collections).</li>
+        <li><strong>Scope Functions:</strong> <code>let</code>, <code>run</code>, <code>apply</code>, etc.</li>
+        <li><strong>Tipos intrínsecos:</strong> Manejo de rangos, progresiones y pares (<code>Pair</code>, <code>Triple</code>).</li>
+      </ul>
+      <p>A diferencia de Java, muchas funciones comunes son "inline" para mejorar el rendimiento.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide10-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-10-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 10-1: Math -->
+<input type="checkbox" id="modal-card-10-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-10-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides10-1" id="slide10-1-1" checked>
+    <div class="slide" data-title="Operaciones Matemáticas">
+      <p>Kotlin utiliza <code>kotlin.math</code> para funciones matemáticas puras. Siempre devuelven valores precisos y usan constantes estándar:</p>
+      <ol class="code">
+        <li><span class="kw">import</span> kotlin.math.*</li>
+        <li></li>
+        <li><span class="kw">val</span> raiz = <span class="mtd">sqrt</span>(<span class="num">25.0</span>) <span class="cm">// 5.0</span></li>
+        <li><span class="kw">val</span> pi = PI</li>
+        <li><span class="kw">val</span> absoluto = <span class="mtd">abs</span>(-<span class="num">10</span>)</li>
+        <li><span class="kw">val</span> redondeo = <span class="mtd">round</span>(<span class="num">3.6</span>) <span class="cm">// 4.0</span></li>
+      </ol>
+      <p>Nota: Para números aleatorios, usa <code class="cls">Random</code>.nextInt(1..10).</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide10-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-10-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 10-2: Date / Time -->
+<input type="checkbox" id="modal-card-10-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-10-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides10-2" id="slide10-2-1" checked>
+    <div class="slide" data-title="Fechas y Tiempo">
+      <p>En el ecosistema moderno se usa <code>java.time</code> (disponible en Kotlin/JVM). Permite manejar fechas de forma inmutable:</p>
+      <ol class="code">
+        <li><span class="kw">import</span> java.time.*</li>
+        <li></li>
+        <li><span class="kw">val</span> ahora = <span class="cls">LocalDateTime</span>.<span class="mtd">now</span>()</li>
+        <li><span class="kw">val</span> fecha = <span class="cls">LocalDate</span>.<span class="mtd">of</span>(<span class="num">2026</span>, <span class="num">5</span>, <span class="num">4</span>)</li>
+        <li></li>
+        <li><span class="cm">// Formateo</span></li>
+        <li><span class="kw">val</span> formatter = <span class="cls">DateTimeFormatter</span>.<span class="mtd">ofPattern</span>(<span class="str">"dd/MM/yyyy"</span>)</li>
+        <li><span class="mtd">println</span>(fecha.<span class="mtd">format</span>(formatter))</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide10-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-10-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 10-3: Regex -->
+<input type="checkbox" id="modal-card-10-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-10-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides10-3" id="slide10-3-1" checked>
+    <div class="slide" data-title="Expresiones Regulares">
+      <p>La clase <code>Regex</code> facilita la búsqueda y validación de patrones en cadenas de texto:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> patron = <span class="str">"""\d+"""</span>.<span class="mtd">toRegex</span>()</li>
+        <li><span class="kw">val</span> texto = <span class="str">"Tengo 25 años"</span></li>
+        <li></li>
+        <li><span class="cm">// ¿Contiene el patrón?</span></li>
+        <li><span class="kw">val</span> tieneNumeros = patron.<span class="mtd">containsMatchIn</span>(texto)</li>
+        <li></li>
+        <li><span class="cm">// Encontrar coincidencia</span></li>
+        <li><span class="kw">val</span> match = patron.<span class="mtd">find</span>(texto)?.value <span class="cm">// "25"</span></li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides10-3" id="slide10-3-2">
+    <div class="slide" data-title="Reemplazo y Validación">
+      <p>También puedes usar Regex para limpiar strings o validar formatos (como emails):</p>
+      <ol class="code">
+        <li><span class="kw">val</span> emailRegex = <span class="str">"^[A-Za-z0-9+_.-]+@(.+)<span class="kw">$</span>"</span>.<span class="mtd">toRegex</span>()</li>
+        <li><span class="kw">val</span> esValido = emailRegex.<span class="mtd">matches</span>(<span class="str">"test@mail.com"</span>)</li>
+        <li></li>
+        <li><span class="cm">// Reemplazar</span></li>
+        <li><span class="kw">val</span> limpio = <span class="str">"Hola 123"</span>.<span class="mtd">replace</span>(<span class="str">"""\d"""</span>.<span class="mtd">toRegex</span>(), <span class="str">""</span>)</li>
+        <li><span class="cm">// Result: "Hola "</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide10-3-2" class="next"></label>
+        <label for="slide10-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide10-3-1" class="dot"></label>
+        <label for="slide10-3-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-10-3" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 11-0: Compilación -->
+<input type="checkbox" id="modal-card-11-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-11-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides11-0" id="slide11-0-1" checked>
+    <div class="slide" data-title="Ciclo de Vida">
+      <p>A diferencia de lenguajes puramente interpretados, Kotlin pasa por un proceso de compilación que transforma el código fuente (<code>.kt</code>) en un formato ejecutable:</p>
+      <ul>
+        <li><strong>Análisis:</strong> El compilador verifica la sintaxis y los tipos de datos.</li>
+        <li><strong>Generación:</strong> Se produce el código intermedio o final según el destino.</li>
+        <li><strong>Optimización:</strong> Se eliminan redundancias y se aplican funciones <code>inline</code>.</li>
+      </ul>
+      <p>En el ecosistema JVM, el resultado son archivos <code>.class</code> con bytecode compatible con Java.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide11-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-11-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 11-1: Kotlin Compiler -->
+<input type="checkbox" id="modal-card-11-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-11-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides11-1" id="slide11-1-1" checked>
+    <div class="slide" data-title="Uso de kotlinc">
+      <p>El compilador de línea de comandos se llama <code class="mtd">kotlinc</code>. Permite compilar archivos individuales o proyectos completos:</p>
+      <ol class="code">
+        <li><span class="cm">// Compilar a Bytecode de Java</span></li>
+        <li>kotlinc <span class="str">Main.kt</span> -include-runtime -d <span class="str">Main.jar</span></li>
+        <li></li>
+        <li><span class="cm">// Ejecutar el archivo generado</span></li>
+        <li>java -jar <span class="str">Main.jar</span></li>
+      </ol>
+      <p>El flag <code>-include-runtime</code> es necesario para que el JAR sea autónomo e incluya las librerías estándar de Kotlin.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide11-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-11-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 11-2: Multiplatform -->
+<input type="checkbox" id="modal-card-11-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-11-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides11-2" id="slide11-2-1" checked>
+    <div class="slide" data-title="Plataformas de Destino">
+      <p>Kotlin es un lenguaje <strong>Multiplataforma</strong>. Dependiendo del backend del compilador, puede ejecutarse en distintos entornos:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Destino</th>
+            <th>Salida</th>
+            <th>Uso Común</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Kotlin/JVM</strong></td>
+            <td>Bytecode (JAR)</td>
+            <td>Android, Backend (Spring/Ktor).</td>
+          </tr>
+          <tr>
+            <td><strong>Kotlin/JS</strong></td>
+            <td>JavaScript</td>
+            <td>Web Frontend, React, Node.js.</td>
+          </tr>
+          <tr>
+            <td><strong>Kotlin/Native</strong></td>
+            <td>Binario (EXE/Mach-O)</td>
+            <td>iOS, Windows, Linux, Embedded.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide11-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-11-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 11-3: KDoc -->
+<input type="checkbox" id="modal-card-11-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-11-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides11-3" id="slide11-3-1" checked>
+    <div class="slide" data-title="Documentación de Código">
+      <p><strong>KDoc</strong> es el lenguaje de documentación de Kotlin (similar a Javadoc). Utiliza Markdown para el formato:</p>
+      <ol class="code">
+        <li><span class="cm">/**</span></li>
+        <li><span class="cm"> * Calcula el área de un círculo.</span></li>
+        <li><span class="cm"> *</span></li>
+        <li><span class="cm"> * @param radius El radio en metros.</span></li>
+        <li><span class="cm"> * @return El área calculada.</span></li>
+        <li><span class="cm"> */</span></li>
+        <li><span class="kw">fun</span> <span class="mtd">calculateArea</span>(radius: <span class="type">Double</span>): <span class="type">Double</span> { ... }</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides11-3" id="slide11-3-2">
+    <div class="slide" data-title="Etiquetas Comunes">
+      <p>KDoc soporta etiquetas especiales para estructurar la información técnica:</p>
+      <ul>
+        <li><code>@param</code>: Describe un parámetro de función.</li>
+        <li><code>@return</code>: Describe el valor de retorno.</li>
+        <li><code>@throws</code> / <code>@exception</code>: Indica qué excepciones puede lanzar.</li>
+        <li><code>@property</code>: Documenta una propiedad de una clase.</li>
+        <li><code>@see</code>: Añade enlaces a otras clases o métodos.</li>
+      </ul>
+      <p>Para generar sitios web de documentación a partir de estos comentarios, se utiliza la herramienta <strong>Dokka</strong>.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide11-3-2" class="next"></label>
+        <label for="slide11-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide11-3-1" class="dot"></label>
+        <label for="slide11-3-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-11-3" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 12-0: Entrada / Salida -->
+<input type="checkbox" id="modal-card-12-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12-0" id="slide12-0-1" checked>
+    <div class="slide" data-title="I/O en Kotlin">
+      <p>Kotlin utiliza las librerías de la JVM para el manejo de I/O, pero añade <strong>funciones de extensión</strong> que simplifican enormemente las tareas comunes:</p>
+      <ul>
+        <li><strong>Salida estándar:</strong> <code>print()</code> y <code>println()</code>.</li>
+        <li><strong>Entrada estándar:</strong> <code>readln()</code> (disponible desde Kotlin 1.6).</li>
+        <li><strong>Interoperabilidad:</strong> Acceso total a <code>java.io</code> y <code>java.nio</code>.</li>
+      </ul>
+      <p>La ventaja de Kotlin es que reduce el "boilerplate" necesario para abrir y cerrar flujos de datos.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide12-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 12-1: Files -->
+<input type="checkbox" id="modal-card-12-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12-1" id="slide12-1-1" checked>
+    <div class="slide" data-title="Lectura de Archivos">
+      <p>Kotlin permite leer el contenido de un archivo en una sola línea de código de forma segura:</p>
+      <ol class="code">
+        <li><span class="kw">import</span> java.io.File</li>
+        <li></li>
+        <li><span class="kw">val</span> file = <span class="cls">File</span>(<span class="str">"datos.txt"</span>)</li>
+        <li></li>
+        <li><span class="cm">// Leer todo el texto</span></li>
+        <li><span class="kw">val</span> contenido = file.<span class="mtd">readText</span>()</li>
+        <li></li>
+        <li><span class="cm">// Leer líneas como lista</span></li>
+        <li><span class="kw">val</span> lineas = file.<span class="mtd">readLines</span>()</li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides12-1" id="slide12-1-2">
+    <div class="slide" data-title="Escritura de Archivos">
+      <p>Escribir datos también es directo, gestionando automáticamente la apertura y cierre del archivo:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> file = <span class="cls">File</span>(<span class="str">"output.txt"</span>)</li>
+        <li></li>
+        <li><span class="cm">// Sobrescribir contenido</span></li>
+        <li>file.<span class="mtd">writeText</span>(<span class="str">"Hola Kotlin"</span>)</li>
+        <li></li>
+        <li><span class="cm">// Añadir al final (Append)</span></li>
+        <li>file.<span class="mtd">appendText</span>(<span class="str">"\nNueva línea"</span>)</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide12-1-2" class="next"></label>
+        <label for="slide12-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide12-1-1" class="dot"></label>
+        <label for="slide12-1-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 12-2: Streams -->
+<input type="checkbox" id="modal-card-12-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12-2" id="slide12-2-1" checked>
+    <div class="slide" data-title="Manejo de Streams">
+      <p>Para archivos grandes, los <code>Streams</code> procesan los datos por partes (buffers) sin cargar todo en memoria:</p>
+      <ol class="code">
+        <li><span class="kw">val</span> file = <span class="cls">File</span>(<span class="str">"grande.log"</span>)</li>
+        <li></li>
+        <li><span class="cm">// Uso de 'use' para cerrar el stream automáticamente</span></li>
+        <li>file.<span class="mtd">inputStream</span>().<span class="mtd">bufferedReader</span>().<span class="mtd">use</span> { reader -></li>
+        <li>  <span class="mtd">println</span>(reader.<span class="mtd">readLine</span>())</li>
+        <li>}</li>
+      </ol>
+      <p>La función <code class="mtd">use</code> es equivalente al <em>try-with-resources</em> de Java.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide12-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 12-3: ReadLine -->
+<input type="checkbox" id="modal-card-12-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12-3" id="slide12-3-1" checked>
+    <div class="slide" data-title="Lectura de Consola">
+      <p>Para aplicaciones de CLI, <code>readln()</code> es la forma estándar de obtener entrada del usuario:</p>
+      <ol class="code">
+        <li><span class="mtd">print</span>(<span class="str">"Dime tu nombre: "</span>)</li>
+        <li><span class="kw">val</span> nombre = <span class="mtd">readln</span>()</li>
+        <li></li>
+        <li><span class="mtd">print</span>(<span class="str">"Tu edad: "</span>)</li>
+        <li><span class="kw">val</span> edad = <span class="mtd">readln</span>().<span class="mtd">toIntOrNull</span>() ?: <span class="num">0</span></li>
+      </ol>
+      <p><code>readln()</code> lanza una excepción si la entrada es nula (EOF), mientras que <code>readlnOrNull()</code> devuelve null de forma segura.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide12-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-3" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 12-4: Serialization -->
+<input type="checkbox" id="modal-card-12-4" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-12-4" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides12-4" id="slide12-4-1" checked>
+    <div class="slide" data-title="kotlinx.serialization">
+      <p>Es la librería oficial de Kotlin para convertir objetos a formatos como <strong>JSON</strong>:</p>
+      <ol class="code">
+        <li><span class="kw">@Serializable</span></li>
+        <li><span class="kw">data class</span> <span class="cls">User</span>(<span class="kw">val</span> name: <span class="type">String</span>, <span class="kw">val</span> id: <span class="type">Int</span>)</li>
+        <li></li>
+        <li><span class="cm">// De Objeto a JSON</span></li>
+        <li><span class="kw">val</span> json = <span class="cls">Json</span>.<span class="mtd">encodeToString</span>(<span class="cls">User</span>(<span class="str">"Alex"</span>, <span class="num">1</span>))</li>
+        <li></li>
+        <li><span class="cm">// De JSON a Objeto</span></li>
+        <li><span class="kw">val</span> user = <span class="cls">Json</span>.<span class="mtd">decodeFromString</span>&lt;<span class="cls">User</span>&gt;(json)</li>
+      </ol>
+      <p>Requiere el plugin de serialización en el archivo de construcción (Gradle/Maven).</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide12-4-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-12-4" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 13-0: Memoria -->
+<input type="checkbox" id="modal-card-13-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-13-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides13-0" id="slide13-0-1" checked>
+    <div class="slide" data-title="Gestión de Memoria">
+      <p>Kotlin, al ejecutarse mayoritariamente sobre la <strong>JVM</strong>, delega la gestión de memoria al entorno de ejecución. Los puntos clave son:</p>
+      <ul>
+        <li><strong>Automatización:</strong> No necesitas liberar memoria manualmente (como en C++).</li>
+        <li><strong>Seguridad:</strong> El sistema evita accesos a posiciones de memoria inválidas.</li>
+        <li><strong>Eficiencia:</strong> La memoria se organiza en diferentes áreas según el ciclo de vida del dato.</li>
+      </ul>
+      <p>Entender cómo se distribuye la memoria es vital para evitar problemas de rendimiento o fugas (Memory Leaks).</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide13-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-13-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 13-1: Stack vs Heap -->
+<input type="checkbox" id="modal-card-13-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-13-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides13-1" id="slide13-1-1" checked>
+    <div class="slide" data-title="Stack y Heap">
+      <p>La memoria se divide principalmente en dos estructuras con propósitos distintos:</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>Stack (Pila)</th>
+            <th>Heap (Montículo)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Almacena</strong></td>
+            <td>Variables locales y llamadas a métodos.</td>
+            <td>Objetos y variables de instancia.</td>
+          </tr>
+          <tr>
+            <td><strong>Acceso</strong></td>
+            <td>LIFO (Last In, First Out). Muy rápido.</td>
+            <td>Acceso aleatorio. Más lento.</td>
+          </tr>
+          <tr>
+            <td><strong>Ciclo de vida</strong></td>
+            <td>Muere cuando el método termina.</td>
+            <td>Vive hasta que nadie lo referencia.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <input type="radio" name="slides13-1" id="slide13-1-2">
+    <div class="slide" data-title="Ejemplo de Asignación">
+      <p>Cómo interactúan el Stack y el Heap en el código:</p>
+      <ol class="code">
+        <li><span class="kw">fun</span> <span class="mtd">main</span>() {</li>
+        <li>  <span class="kw">val</span> edad = <span class="num">25</span> <span class="cm">// Stack</span></li>
+        <li>  <span class="kw">val</span> user = <span class="cls">User</span>(<span class="str">"Ana"</span>) <span class="cm">// Ref en Stack, Objeto en Heap</span></li>
+        <li>}</li>
+      </ol>
+      <p>En el Stack se guarda la "dirección" (referencia), pero el cuerpo del objeto <code>User</code> reside en el Heap.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide13-1-2" class="next"></label>
+        <label for="slide13-1-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide13-1-1" class="dot"></label>
+        <label for="slide13-1-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-13-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 13-2: Garbage Collector -->
+<input type="checkbox" id="modal-card-13-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-13-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides13-2" id="slide13-2-1" checked>
+    <div class="slide" data-title="El Recolector de Basura">
+      <p>El <strong>Garbage Collector (GC)</strong> es un proceso automático que libera la memoria del Heap ocupada por objetos que ya no son accesibles.</p>
+      
+      <ul>
+        <li><strong>Rastreo:</strong> El GC busca objetos que no tienen referencias activas desde el "Stack" o "Static roots".</li>
+        <li><strong>Compactación:</strong> A veces mueve objetos para evitar la fragmentación de la memoria.</li>
+        <li><strong>Stop-the-world:</strong> Breves pausas en la ejecución para limpiar la memoria.</li>
+      </ul>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide13-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-13-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 13-3: Referencias -->
+<input type="checkbox" id="modal-card-13-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-13-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides13-3" id="slide13-3-1" checked>
+    <div class="slide" data-title="Tipos de Referencias">
+      <p>No todas las referencias son iguales para el Garbage Collector:</p>
+      <ul>
+        <li><strong>Strong Reference:</strong> Es la normal (<code>val a = User()</code>). Mientras exista, el GC nunca borrará el objeto.</li>
+        <li><strong>Weak Reference:</strong> Permite que el objeto sea recolectado si no hay referencias fuertes hacia él. Útil para caches.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">val</span> refFuerte = <span class="cls">User</span>()</li>
+        <li><span class="kw">val</span> refDebil = <span class="cls">WeakReference</span>(refFuerte)</li>
+        <li></li>
+        <li><span class="cm">// Si hacemos refFuerte = null, el objeto</span></li>
+        <li><span class="cm">// puede ser borrado aunque exista refDebil.</span></li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide13-3-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-13-3" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 14-0: Kotlin Misc -->
+<input type="checkbox" id="modal-card-14-0" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-14-0" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides14-0" id="slide14-0-1" checked>
+    <div class="slide" data-title="Conceptos Varios">
+      <p>Kotlin incluye herramientas pequeñas pero potentes que facilitan el desarrollo diario y la legibilidad:</p>
+      <ul>
+        <li><strong>Type Aliases:</strong> Permite dar nombres alternativos a tipos complejos o largos.</li>
+        <li><strong>TODO():</strong> Función que lanza una excepción siempre, útil para marcar código pendiente.</li>
+        <li><strong>Destructuring:</strong> Descomponer objetos en variables individuales.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="kw">typealias</span> <span class="cls">UserMap</span> = <span class="cls">Map</span>&lt;<span class="type">String</span>, <span class="cls">User</span>&gt;</li>
+        <li></li>
+        <li><span class="kw">val</span> (nombre, edad) = usuario <span class="cm">// Destructuring</span></li>
+        <li><span class="mtd">TODO</span>(<span class="str">"Implementar lógica de guardado"</span>)</li>
+      </ol>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide14-0-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-14-0" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 14-1: Paquetes e Importaciones -->
+<input type="checkbox" id="modal-card-14-1" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-14-1" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides14-1" id="slide14-1-1" checked>
+    <div class="slide" data-title="Estructura de Paquetes">
+      <p>Los paquetes organizan el código en espacios de nombres. A diferencia de Java, el nombre del paquete no tiene que coincidir estrictamente con la estructura de carpetas (aunque es recomendable):</p>
+      <ol class="code">
+        <li><span class="kw">package</span> com.proyecto.app</li>
+        <li></li>
+        <li><span class="kw">import</span> kotlin.math.PI</li>
+        <li><span class="kw">import</span> kotlin.math.* <span class="cm">// Importar todo</span></li>
+        <li></li>
+        <li><span class="kw">fun</span> <span class="mtd">main</span>() { <span class="mtd">println</span>(PI) }</li>
+      </ol>
+      <p>Kotlin importa por defecto paquetes básicos como <code>kotlin.*</code>, <code>kotlin.collections.*</code> y <code>kotlin.io.*</code>.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide14-1-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-14-1" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 14-2: Evolución de Kotlin -->
+<input type="checkbox" id="modal-card-14-2" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-14-2" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides14-2" id="slide14-2-1" checked>
+    <div class="slide" data-title="Versiones y Kotlin 2.0">
+      <p>Kotlin evoluciona constantemente. Los hitos más recientes incluyen:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Versión</th>
+            <th>Novedad Principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1.3</strong></td>
+            <td>Corrutinas estables.</td>
+          </tr>
+          <tr>
+            <td><strong>1.5 / 1.6</strong></td>
+            <td>Sealed Interfaces y clases Value.</td>
+          </tr>
+          <tr>
+            <td><strong>1.9</strong></td>
+            <td>Nuevo operador <code>..&lt;</code> para rangos abiertos.</td>
+          </tr>
+          <tr>
+            <td><strong>2.0</strong></td>
+            <td>Nuevo compilador <strong>K2</strong> (mucho más rápido).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls"></div>
+      <div class="slide-indicators">
+        <label for="slide14-2-1" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-14-2" class="close-button"></label>
+  </div>
+</div>
+
+<!-- Modal 14-3: Kotlin Multiplatform (KMP) -->
+<input type="checkbox" id="modal-card-14-3" class="modal-toggle">
+<div class="modal">
+  <label for="modal-card-14-3" class="modal-overlay"></label>
+  <div class="modal-content">
+    <input type="radio" name="slides14-3" id="slide14-3-1" checked>
+    <div class="slide" data-title="Compartir Código">
+      <p><strong>Kotlin Multiplatform (KMP)</strong> permite compartir lógica de negocio entre Android, iOS, Web y Desktop:</p>
+      <ul>
+        <li><strong>Common Kotlin:</strong> Código que funciona en todas las plataformas.</li>
+        <li><strong>Expect / Actual:</strong> Mecanismo para acceder a APIs nativas específicas.</li>
+      </ul>
+      <ol class="code">
+        <li><span class="cm">// En código común</span></li>
+        <li><span class="kw">expect fun</span> <span class="mtd">getPlatformName</span>(): <span class="type">String</span></li>
+        <li></li>
+        <li><span class="cm">// En módulo Android</span></li>
+        <li><span class="kw">actual fun</span> <span class="mtd">getPlatformName</span>() = <span class="str">"Android"</span></li>
+      </ol>
+    </div>
+
+    <input type="radio" name="slides14-3" id="slide14-3-2">
+    <div class="slide" data-title="Compose Multiplatform">
+      <p>Es el framework de UI basado en Jetpack Compose para crear interfaces nativas compartidas:</p>
+      <ul>
+        <li><strong>Android/iOS:</strong> UI 100% nativa con un solo código.</li>
+        <li><strong>Desktop:</strong> Apps para Windows, Mac y Linux (usando Skia).</li>
+        <li><strong>Web:</strong> Basado en Canvas o WebAssembly (Wasm).</li>
+      </ul>
+      <p>Ideal para proyectos donde la lógica de validación, red y persistencia es idéntica en todos los dispositivos.</p>
+    </div>
+
+    <div class="slide-footer">
+      <div class="controls">
+        <label for="slide14-3-2" class="next"></label>
+        <label for="slide14-3-1" class="prev"></label>
+      </div>
+      <div class="slide-indicators">
+        <label for="slide14-3-1" class="dot"></label>
+        <label for="slide14-3-2" class="dot"></label>
+      </div>
+    </div>
+    <label for="modal-card-14-3" class="close-button"></label>
+  </div>
+</div>
+
+  </div>
 </body>
 </html>
